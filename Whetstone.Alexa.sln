@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa", "Whetstone.Alexa\Whetstone.Alexa.csproj", "{EE09DEB3-26AF-4E8C-9549-3B3FD3437CB5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.Test", "Whetstone.Alexa.Test\Whetstone.Alexa.Test.csproj", "{CFECB451-7614-48EA-980B-75689752C661}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE09DEB3-26AF-4E8C-9549-3B3FD3437CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE09DEB3-26AF-4E8C-9549-3B3FD3437CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE09DEB3-26AF-4E8C-9549-3B3FD3437CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE09DEB3-26AF-4E8C-9549-3B3FD3437CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFECB451-7614-48EA-980B-75689752C661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFECB451-7614-48EA-980B-75689752C661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFECB451-7614-48EA-980B-75689752C661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFECB451-7614-48EA-980B-75689752C661}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {505320F9-3536-4327-A627-731130317DF6}
+	EndGlobalSection
+EndGlobal
