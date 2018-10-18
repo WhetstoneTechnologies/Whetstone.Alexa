@@ -1,0 +1,672 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Whetstone.Alexa</name>
+    </assembly>
+    <members>
+        <member name="P:Whetstone.Alexa.AlexaSession.User">
+            <summary>
+            Alexa user data, including the UserId.
+            </summary>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.PlayerActivityEnum">
+            <summary>
+            Indicates state of the audio player interface
+            </summary>
+            <remarks>
+            For more information see <a href="https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html">Audio Player Interface</a>.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Idle">
+            <summary>
+            AudioPlayer is only in an idle state when a product is initially powered on or rebooted and prior to acting on a Play directive.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Playing">
+            <summary>
+            When your client initiates playback of an audio stream, AudioPlayer must transition from an idle state to playing.
+            </summary>
+            <remarks>
+            <para>
+            If you receive a directive instructing your client to perform an action, such as pausing or stopping the audio stream, if the client 
+            has trouble buffering the stream, or if playback fails, AudioPlayer must transition to the appropriate state when the action is performed 
+            (and send an event to AVS). Otherwise, AudioPlayer must remain in the playing state until the current stream has finished.
+            </para>
+            <para>
+            Additionally, AudioPlayer must remain in the playing state when:
+            </para>
+            <list type="bullet">
+            <item>
+            <description>Reporting playback progress to AVS</description>        
+            </item>
+            <item>
+            <description>Sending stream metadata to AVS</description>        
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Stopped">
+            <summary>
+            Default value of the request when starting a new session.
+            </summary>
+            <remarks>
+            <para>There are four instances when AudioPlayer must transition to the stopped state. While in the playing state, AudioPlayer must transition to stopped when:</para>
+            <list type="bullet">
+            <item><description>An issue with the stream is encountered and playback fails</description></item>
+            <item><description>Sending stream metadata to AVS</description></item>
+            <item><description>A ClearQueue directive with a clearBehavior of CLEAR_ALL is received</description></item>
+            <item><description>A Play directive with a playBehavior of REPLACE_ALL is received</description></item>
+            </list>
+            <para>While in the paused or buffer_underrun states, AudioPlayer must transition to stopped when a ClearQueue directive to CLEAR_ALL is received.</para>
+            <para>AudioPlayer must transition from stopped to playing whenever your client receives a Play directive, starts playing an audio stream, and sends a PlaybackStarted event to the AVS.</para>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Paused">
+            <summary>
+            AudioPlayer must transition to the paused state when audio on the Content channel is paused to accommodate a higher priority input/output (such as user or Alexa speech). 
+            </summary>
+            <remarks> Playback must resume when the prioritized activity completes. For more information on prioritizing audio input/outputs. See <a href="https://developer.amazon.com/docs/alexa-voice-service/interaction-model.html">Interaction Model</a></remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.BufferUnderrun">
+            <summary>
+            AudioPlayer must transition to the buffer_underrun state when the client is being fed data slower than it is being read. 
+            AudioPlayer must remain in this state until the buffer is full enough to resume playback, 
+            at which point it must return to the playing state.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Finished">
+            <summary>
+            When a stream is finished playing, AudioPlayer must transition to the finished state. This is true for every stream in your playback queue. Even if there are streams queued to play, your client is required to send a PlaybackFinished event to AVS, 
+            and subsequently, transition from the playing state to finished when each stream is finished playing.
+            </summary>
+            <remarks>
+            <para>AudioPlayer must transition from finished to playing when:</para>
+            <list type="bullet">
+            <item><description>The client receives a Play directive</description></item>
+            <item><description>The next stream in the playback queue starts playing (following a PlaybackStarted event).</description></item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AudioRequestAttributes">
+            <summary>
+            Contains the state of audio player on the user's device.
+            </summary>
+            <remarks>
+            For more information about the audio player, see: https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.Audio.AudioRequestAttributes.PlayerActivity">
+            <summary>
+            Indicates the client status of the audio player. Defaults to Stopped on launch.
+            </summary>
+        </member>
+        <member name="T:Whetstone.Alexa.BuiltInIntents">
+            <summary>
+            Encloses the built-in intents supported by Alexa.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.CancelIntent">
+            <summary>
+            Either of the following:
+            <list type="bullet">
+            <item>
+            <description>Let the user cancel a transaction or task (but remain in the skill)</description>        
+            </item>
+            <item>
+            <description>Let the user completely exit the skill</description>
+            </item>
+            </list>
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the AudioPlayer interface, users can invoke this intent without using your 
+            invocation name if your skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this 
+            case even if AMAZON.CancelIntent is not in your intent schema.</para>
+            <para>
+            Common utterances are:
+            </para>
+            <list type="bullet">
+            <item>
+            <description>forget it</description>        
+            </item>
+            <item>
+            <description>never mind</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.FallbackIntent">
+            <summary>
+            <para>Provides a fallback for user utterances that do not match any of your skill's intents. 
+            Your AMAZON.FallbackIntent handler can give the user more details on what your skill does and how they can interact with it.</para>
+            <para>
+            (Available for English locales only)
+            </para>
+            </summary>
+            <remarks>
+            Utterances vary. This intent uses an out-of-domain model generated based on your interaction model. See Provide a Fallback for Unmatched Utterances.
+            https://developer.amazon.com/docs/custom-skills/standard-built-in-intents.html#fallback
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.HelpIntent">
+            <summary>
+            Provide help about how to use the skill. See What Alexa Says (https://developer.amazon.com/designing-for-voice/what-alexa-says/) 
+            for guidelines about contextualized help.
+            </summary>
+            <remarks>
+            <para>
+            Common utterances are:
+            </para>
+            <list type="bullet">
+            <item>
+            <description>help</description>        
+            </item>
+            <item>
+            <description>help me</description>
+            </item>
+            <item>
+            <description>can you help me</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.LoopOffIntent">
+            <summary>
+            Lets the user request that the skill turn off a loop or repeat mode, usually for audio skills that stream a playlist of tracks.
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the AudioPlayer interface, users can invoke this intent without using your invocation name if your skill is currently playing audio 
+            or was the most recent skill to play audio. 
+            The intent is sent to your skill in this case even if AMAZON.LoopOffIntent is not in your intent schema.</para>
+            <para>
+            The utterance is:
+            </para>
+            <list type="bullet">
+            <item>
+            <description>loop off</description>        
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.LoopOnIntent">
+            <summary>
+            Lets the user request that the skill turn on a loop or repeat mode, usually for audio skills that stream a playlist of tracks.
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the AudioPlayer interface, users can invoke this intent without using your invocation name if your skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this case even if AMAZON.LoopOnIntent is not in your intent schema.</para>
+            <list type="bullet">
+            <item>
+            <description>loop</description>        
+            </item>
+            <item>
+            <description>loop on</description>        
+            </item>
+            <item>
+            <description>keep playing this</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.NextIntent">
+            <summary>
+            Let the user navigate to the next item in a list.
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the AudioPlayer interface, users can invoke this intent without using your invocation name if your 
+            skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this case even if AMAZON.NextIntent 
+            is not in your intent schema.</para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>next</description>        
+            </item>
+            <item>
+            <description>skip</description>        
+            </item>
+            <item>
+            <description>skip forward</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.NoIntent">
+            <summary>
+            Let the user provide a negative response to a yes/no question for confirmation.
+            </summary>
+            <remarks>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>no</description>        
+            </item>
+            <item>
+            <description>no thanks</description>        
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.PauseIntent">
+            <summary>
+            Let the user pause an action in progress, such as pausing a game or pausing an audio track that is playing.
+            </summary>
+            <remarks>
+            <para>You <i>must</i> implement this intent if your skill streams audio using the AudioPlayer interface. Users can invoke this intent without using your invocation name if your skill is currently playing audio or was the most recent skill to play audio.</para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>pause</description>        
+            </item>
+            <item>
+            <description>pause that</description>        
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.RepeatIntent">
+            <summary>
+            Let the user request to repeat the last action.
+            </summary>
+            <remarks>
+            <para>
+            For skills that stream audio using the <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html" target="_blank">AudioPlayer interface</a>, users can 
+            <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html#intents" target="_blank">invoke this intent without using your invocation name</a> if your 
+            skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this case even if 
+            AMAZON.RepeatIntent is not in your intent schema.
+            </para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>repeat</description>        
+            </item>
+            <item>
+            <description>repeat that</description>        
+            </item>
+            <item>
+            <description>say that again</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ResumeIntent">
+            <summary>
+            Let the user resume or continue an action.
+            </summary>
+            <remarks>
+            <para>
+            You <i>must</i> implement this intent if your skill streams audio using the <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html" target="_blank">AudioPlayer interface</a>. 
+            Users can <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html#intents" target="_blank">invoke this intent without using your invocation name</a> if your skill is currently playing audio or was the most recent skill to play audio.
+            </para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>resume</description>        
+            </item>
+            <item>
+            <description>continue</description>        
+            </item>
+            <item>
+            <description>keep going</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ShuffleOffIntent">
+            <summary>
+            Lets the user request that the skill turn <i>off</i> a shuffle mode, usually for audio skills that stream a playlist of tracks.
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html" target="_blank">AudioPlayer interface</a>, 
+            users can <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html#intents" target="_blank">invoke this intent without using your invocation name</a> 
+            if your skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this case even if AMAZON.ShuffleOffIntent is not in your intent schema.</para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>stop shuffling</description>        
+            </item>
+            <item>
+            <description>shuffle off</description>        
+            </item>
+            <item>
+            <description>turn off shuffle</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ShuffleOnIntent">
+            <summary>
+            Lets the user request that the skill turn <i>on</i> a shuffle mode, usually for audio skills that stream a playlist of tracks.
+            </summary>
+            <remarks>
+            <para>
+            For skills that stream audio using the <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html" target="_blank">AudioPlayer interface</a>, 
+            users can <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html#intents" target="_blank">invoke this intent without using your invocation name</a>  
+            if your skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this case even 
+            if AMAZON.ShuffleOnIntent is not in your intent schema.
+            </para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>shuffle</description>        
+            </item>
+            <item>
+            <description>shuffle on</description>        
+            </item>
+            <item>
+            <description>shuffle the music</description>
+            </item>
+            <item>
+            <description>shuffle mode</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.StartOverIntent">
+            <summary>
+            Let the user request to restart an action, such as restarting a game, transaction, or audio track.
+            </summary>
+            <remarks>
+            <para>For skills that stream audio using the <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html" target="_blank">AudioPlayer interface</a>, 
+            users can <a href="https://developer.amazon.com/docs/custom-skills/audioplayer-interface-reference.html#intents" target="_blank">invoke this intent without using your invocation name</a> 
+            if your skill is currently playing audio or was the most recent skill to play audio. The intent is sent to your skill in this 
+            case even if AMAZON.StartOverIntent is not in your intent schema.</para>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>start over</description>        
+            </item>
+            <item>
+            <description>restart</description>        
+            </item>
+            <item>
+            <description>start again</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.StopIntent">
+            <summary>
+            Either of the following:
+            <list type="bullet">
+            <item><description>Let the user stop an action(but remain in the skill)</description></item>
+            <item><description>Let the user completely exit the skill</description></item>
+            </list>
+            </summary>
+            <remarks>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>stop</description>        
+            </item>
+            <item>
+            <description>off</description>        
+            </item>
+            <item>
+            <description>shut up</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.YesIntent">
+            <summary>
+            Let the user provide a positive response to a yes/no question for confirmation.
+            </summary>
+            <remarks>
+            <para>Common utterances are:</para>
+            <list type="bullet">
+            <item>
+            <description>yes</description>        
+            </item>
+            <item>
+            <description>yes please</description>        
+            </item>
+            <item>
+            <description>sure</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ScrollUpIntent">
+            <summary>
+            For use with devices with screens. Scrolls the display up.
+            </summary>
+            <remarks>
+            Scroll up in the display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ScrollDownIntent">
+            <summary>
+            For use with devices with screens. Scrolls the display down.
+            </summary>
+            <remarks>
+            Scroll down in the display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ScrollLeftIntent">
+            <summary>
+            For use with devices with screens. Scrolls the display left.
+            </summary>
+            <remarks>
+            Scroll left in the display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.ScrollRightIntent">
+            <summary>
+            For use with devices with screens. Scrolls the display right.
+            </summary>
+            <remarks>
+            Scroll right in the display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.PageUpIntent">
+            <summary>
+            For use with display devices. Similar to the <see cref="F:Whetstone.Alexa.BuiltInIntents.ScrollUpIntent">AMAZON.ScrollUpIntent</see>.
+            </summary>
+            <remarks>
+            Page up in a display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.PageDownIntent">
+            <summary>
+            For use with display devices. Similar to the <see cref="F:Whetstone.Alexa.BuiltInIntents.ScrollDownIntent">AMAZON.ScrollDownIntent</see>.
+            </summary>
+            <remarks>
+            Page down in a display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.MoreIntent">
+            <summary>
+            For use with display devices. Similar to the <see cref="F:Whetstone.Alexa.BuiltInIntents.ScrollDownIntent">AMAZON.ScrollDownIntent</see> and
+            <see cref="F:Whetstone.Alexa.BuiltInIntents.ScrollRightIntent">AMAZON.ScrollRightIntent</see>.
+            </summary>
+            <remarks>
+            Page down or move right in a display device, like Echo Show.
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.NavigateHomeIntent">
+            <summary>
+            Navigate user to the device home screen. The skill session will end. 
+            </summary>
+            <remarks>For use with display devices, like Echo Show.</remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.BuiltInIntents.NavigateSettingsIntent">
+            <summary>
+            Navigate user to the Device Settings screen, and the skill session will continue.
+            </summary>
+            <remarks>For use with display devices, like Echo Show.</remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.CanFulfill.CanFulfillEnum">
+            <summary>
+            Used by the <see cref="T:Whetstone.Alexa.CanFulfill.CanFulfillResponseAttributes">CanFullfillResponseAttributes</see> to tell 
+            Alexa whether the intent is supported by the Alexa skill.
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.CanFulfill.CanFulfillEnum.Yes">
+            <summary>
+            Use if your skill understands all slots, can fulfill all slots, and can fulfill the request in its entirety.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.CanFulfill.CanFulfillEnum.No">
+            <summary>
+            Use if your skill cannot understand the intent, and/or cannot understand any of the slots, and/or cannot fulfill any of the slots.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.CanFulfill.CanFulfillEnum.Maybe">
+            <summary>
+            Use if your skill can understand the intent, can partially or fully understand the slots, and can partially or fully fulfill the slots.
+            </summary>
+            <remarks>
+            <para>
+            The only cases where your skill should respond with MAYBE is when your skill can potentially complete the request if your skill get more data 
+            through a multi-turn conversation with the user. For example, if the skill understands the intent, such as orderCabIntent, but needs the customer 
+            to link their account before being able to fulfill the request. Another example is travelBookingIntent, where the skill understands a subset of all 
+            identified slots and needs more information before it can determine whether it can fulfill the intent for each slot value.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.CanFulfill.CanFulfillResponseAttributes.CanFulfill">
+            <summary>
+            Must be set to string "YES" or "NO"
+            </summary>
+        </member>
+        <member name="P:Whetstone.Alexa.CanFulfill.CanFulfillSlotResponse.CanUnderstand">
+            <summary>
+            Serializes to "YES", "NO" or "MAYBE"
+            </summary>
+        </member>
+        <member name="P:Whetstone.Alexa.CanFulfill.CanFulfillSlotResponse.CanFulfill">
+            <summary>
+            Serializes to "YES", "NO" or "MAYBE"
+            </summary>
+        </member>
+        <member name="T:Whetstone.Alexa.PermissionAttributes">
+            <summary>
+            Alexa permission attributes coming in on an Alexa request. 
+            </summary>
+            <remarks>
+            <para>
+            This will be present if the user has granted the skill permission to access user information like the user name, email, etc.
+            </para>
+            <para>For more information, the <see cref="T:Whetstone.Alexa.Security.AlexaUserDataManager">AlexaUserDataManager</see></para>
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.PermissionAttributes.ConsentToken">
+            <summary>
+            This is used with the Alexa List management API.
+            </summary>
+            <remarks>If consent has not been granted, this value will not be present in the request.</remarks>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor">
+            <summary>
+            Initializes a new instance of the System.Exception class.
+            </summary>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the System.Exception class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor(System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance of the System.Exception class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="statusCode">Http status code of the Alexa Http response.</param>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor(Whetstone.Alexa.Security.AlexaSecurityErrorResponse,System.Net.HttpStatusCode)">
+            <summary>
+            Initializes a new instance of the System.Exception class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="errorType">Type of the error, according to the Alexa error response message.</param>
+            <param name="statusCode">Http status code of the Alexa Http response.</param>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor(System.String,System.Exception)">
+            <summary>
+             Initializes a new instance of the System.Exception class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor(System.String,System.Nullable{System.Net.HttpStatusCode},System.Exception)">
+            <summary>
+             Initializes a new instance of the System.Exception class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="statusCode">Http status code of the Alexa Http response.</param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference.</param>
+        </member>
+        <member name="P:Whetstone.Alexa.Security.AlexaSecurityException.StatusCode">
+            <summary>
+            Status code of the Alexa http response.
+            </summary>
+            <remarks>
+            If the code is 403, then the user
+            
+            <list type="table">
+            <listheader>  
+            <term>Status Code</term>  
+            <description>Description</description>  
+            </listheader>  
+            <item>  
+             <term>Unauthorized (401)</term>  
+             <description>The API authentication token is invalid or has expired.</description>  
+            </item>  
+            <item>
+            <term>Forbidden (403)</term>
+            <description>API authentication token is valid, but access to the resource is denied. An appropriate response is to send
+            a card authorization request.</description>
+            </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaUserDataManager.GetAlexaUserFullNameAsync(System.String,System.String)">
+            <summary>
+            Retrieves the user's full name if it is available.
+            </summary>
+            <param name="apiEndpoint"></param>
+            <param name="apiToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaUserDataManager.GetAlexaUserGivenNameAsync(System.String,System.String)">
+            <summary>
+            Retrieves the user's full name if it is available.
+            </summary>
+            <param name="apiEndpoint"></param>
+            <param name="apiToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Whetstone.Alexa.UserAttributes">
+            <summary>
+            Represents the Alexa user. Encapsulates the UserId and the ConsentToken.
+            </summary>
+            <remarks>
+            <para></para>
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.UserAttributes.UserId">
+            <summary>
+            Unique and immutable Alexa skill user id. Returning users can be identified using this value.
+            </summary>
+            <remarks>
+            <para>The UserId can be used to identify returning users. It cannot be used to identify users across multiple skills. This value is
+            unique per user per Alexa Skill. If a developer has published multiple Skills and the same Amazon user launches each Skill, the single user
+            will have a different UserId for each Skill.</para> 
+            <para>Also, a new user id is generated if the user disables the Skill and enables the Skill again.</para>
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.UserAttributes.Permissions">
+            <summary>
+            Permissions are populated if the user has granted the skill access to user information like email, address, etc.
+            </summary>
+            <remarks>If permissions have not been granted, this value will be missing from the response.</remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.ViewportAttributes.Keyboard">
+            <summary>
+            The internal values of the keyboard object are unknown.
+            </summary>
+        </member>
+    </members>
+</doc>

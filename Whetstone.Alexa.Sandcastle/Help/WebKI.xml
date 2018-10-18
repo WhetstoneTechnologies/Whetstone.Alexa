@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AccessToken property" Url="html/003a3ce3-57be-309d-49e3-44cdd987b645.htm" />
+  <HelpKINode Title="AddressLine1 property" Url="html/7a139997-c081-0aed-73f2-6d4836519cf0.htm" />
+  <HelpKINode Title="AddressLine2 property" Url="html/30bf7760-3e8b-2c8f-e7d9-a6b5e8404eda.htm" />
+  <HelpKINode Title="AddressLine3 property" Url="html/73237c01-0e49-b7fb-4a79-e661af3b3349.htm" />
+  <HelpKINode Title="AlexaErrorAttributes class">
+    <HelpKINode Title="AlexaErrorAttributes Class" Url="html/8fcabf03-a235-9fcb-7b48-e926c7789aa1.htm" />
+    <HelpKINode Title="constructor" Url="html/7ff02c66-07a1-d4e1-767e-4b3f22bccdec.htm" />
+    <HelpKINode Title="methods" Url="html/d3b6a86d-669f-cd17-385d-56249142bca8.htm" />
+    <HelpKINode Title="properties" Url="html/f5ea8f59-3085-9ef0-f185-a2dd03d25bfa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaErrorAttributes.AlexaErrorAttributes constructor" Url="html/7ff02c66-07a1-d4e1-767e-4b3f22bccdec.htm" />
+  <HelpKINode Title="AlexaErrorAttributes.Message property" Url="html/3dba0651-7af5-355d-68d2-6bda4bc703df.htm" />
+  <HelpKINode Title="AlexaErrorAttributes.Type property" Url="html/45eea978-c4a4-2c76-f6ee-c0433d5dccdd.htm" />
+  <HelpKINode Title="AlexaImageAttributes class">
+    <HelpKINode Title="AlexaImageAttributes Class" Url="html/1daf0bf1-2a1e-c8eb-e2f2-a1914a2ffab4.htm" />
+    <HelpKINode Title="constructor" Url="html/11e91452-9713-9c03-a218-ec91bcad7545.htm" />
+    <HelpKINode Title="methods" Url="html/ddbe89c5-7f9c-fd5d-3551-daa579283b48.htm" />
+    <HelpKINode Title="properties" Url="html/c2512d23-98bc-fe95-057f-3701fe8b522a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaImageAttributes.AlexaImageAttributes constructor" Url="html/11e91452-9713-9c03-a218-ec91bcad7545.htm" />
+  <HelpKINode Title="AlexaImageAttributes.LargeImageUrl property" Url="html/7a0dca25-641e-5b7e-056e-5030b6dfa64e.htm" />
+  <HelpKINode Title="AlexaImageAttributes.SmallImageUrl property" Url="html/b2a403ae-1b06-aa64-dec7-1bfee276a65a.htm" />
+  <HelpKINode Title="AlexaRecord class">
+    <HelpKINode Title="AlexaRecord Class" Url="html/585aa8a5-ca0e-8394-2191-203eeedd0763.htm" />
+    <HelpKINode Title="constructor" Url="html/4f7dc617-5abd-4dd6-c5f3-98220e616fc9.htm" />
+    <HelpKINode Title="methods" Url="html/3374be01-b92e-2a87-ae96-e95e1537e3fe.htm" />
+    <HelpKINode Title="properties" Url="html/37a4976e-4b31-6ad6-e42f-a9c26957943e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaRecord.AlexaRecord constructor" Url="html/4f7dc617-5abd-4dd6-c5f3-98220e616fc9.htm" />
+  <HelpKINode Title="AlexaRecord.CreateTime property" Url="html/f0ee702f-2302-2ec1-c88d-525e718115c0.htm" />
+  <HelpKINode Title="AlexaRecord.Error property" Url="html/f809bf36-d11f-e81c-86ed-32cc497dcfcf.htm" />
+  <HelpKINode Title="AlexaRecord.ExpireTime property" Url="html/449a691d-a6f3-7e09-643f-1cda8e668262.htm" />
+  <HelpKINode Title="AlexaRecord.Request property" Url="html/4299528b-018e-ca96-512f-618fe35aeddb.htm" />
+  <HelpKINode Title="AlexaRecord.RequestId property" Url="html/ad24833d-ceb9-0e76-03d1-e27fa95f5659.htm" />
+  <HelpKINode Title="AlexaRecord.Response property" Url="html/17ce7ec0-5e0a-0e23-4c52-87d5bff44d2c.htm" />
+  <HelpKINode Title="AlexaRequest class">
+    <HelpKINode Title="AlexaRequest Class" Url="html/1c4187b0-ac87-fd7c-56c5-4a3865224db5.htm" />
+    <HelpKINode Title="constructor" Url="html/b99e0404-b45a-c5a9-a7a2-ba3726d4c9c2.htm" />
+    <HelpKINode Title="methods" Url="html/5e4bb0c5-c24d-9b85-96b2-c6a8ec68e3ca.htm" />
+    <HelpKINode Title="properties" Url="html/40c23548-1d08-02ea-c898-9ffdff809f42.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaRequest.AlexaRequest constructor" Url="html/b99e0404-b45a-c5a9-a7a2-ba3726d4c9c2.htm" />
+  <HelpKINode Title="AlexaRequest.Context property" Url="html/689dd04c-5a3f-90c5-126e-4d33f21386b3.htm" />
+  <HelpKINode Title="AlexaRequest.Request property" Url="html/79dd4333-3f7c-347d-c450-178dbba39abb.htm" />
+  <HelpKINode Title="AlexaRequest.Session property" Url="html/24ba3c78-c0e8-c776-c391-a3c115c3c4b7.htm" />
+  <HelpKINode Title="AlexaRequest.Version property" Url="html/610a2ca5-e764-a2ed-f868-7320433a7851.htm" />
+  <HelpKINode Title="AlexaResponse class">
+    <HelpKINode Title="AlexaResponse Class" Url="html/17772634-ba75-f23b-4731-f6c1a5a8be04.htm" />
+    <HelpKINode Title="constructor" Url="html/118cfd68-8d2a-d470-f916-ebcb8eaed8ca.htm" />
+    <HelpKINode Title="methods" Url="html/57ad9761-dbc7-9c1e-c987-631c5636827d.htm" />
+    <HelpKINode Title="properties" Url="html/e08cd355-69d0-4ddd-9c28-615799aa1ac6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaResponse.AlexaResponse constructor" Url="html/118cfd68-8d2a-d470-f916-ebcb8eaed8ca.htm" />
+  <HelpKINode Title="AlexaResponse.Response property" Url="html/d83a06c4-7e6f-a68f-84e6-b07ef583bc37.htm" />
+  <HelpKINode Title="AlexaResponse.Session property" Url="html/e83e3529-696b-98d8-4a19-df6df44310cf.htm" />
+  <HelpKINode Title="AlexaResponse.Version property" Url="html/d71ac825-a15d-bf2f-da4a-54af6b6c9b40.htm" />
+  <HelpKINode Title="AlexaResponseAttributes class">
+    <HelpKINode Title="AlexaResponseAttributes Class" Url="html/33ee196c-4d4c-8671-8b30-a551827ded84.htm" />
+    <HelpKINode Title="constructor" Url="html/8ee428ba-ed13-cd7e-a155-53c22bea7389.htm" />
+    <HelpKINode Title="methods" Url="html/e9cc44df-a51c-5680-1c05-c3724dc3ab7e.htm" />
+    <HelpKINode Title="properties" Url="html/ac2d3da9-50f9-101f-9f4c-f3ea1bb3d070.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaResponseAttributes.AlexaResponseAttributes constructor" Url="html/8ee428ba-ed13-cd7e-a155-53c22bea7389.htm" />
+  <HelpKINode Title="AlexaResponseAttributes.CanFulfill property" Url="html/ca31a331-4792-2c7b-43fe-8cf3e69fa86e.htm" />
+  <HelpKINode Title="AlexaResponseAttributes.Card property" Url="html/9d492356-4af8-188f-5e20-005e12674592.htm" />
+  <HelpKINode Title="AlexaResponseAttributes.OutputSpeech property" Url="html/e8d2365e-ab54-82eb-5406-c846eff3ae33.htm" />
+  <HelpKINode Title="AlexaResponseAttributes.Reprompt property" Url="html/698cb47e-b33a-7f62-d4c9-1f45cf86dedd.htm" />
+  <HelpKINode Title="AlexaResponseAttributes.ShouldEndSession property" Url="html/0062a2f8-dea2-9ec0-96b9-13d41977e6d5.htm" />
+  <HelpKINode Title="AlexaSecurityErrorResponse class">
+    <HelpKINode Title="AlexaSecurityErrorResponse Class" Url="html/f512986e-a627-22da-81d6-2d411c39aa70.htm" />
+    <HelpKINode Title="constructor" Url="html/5ccfd978-8b63-831b-af8c-6b3470b3d9e3.htm" />
+    <HelpKINode Title="methods" Url="html/d7cb2a0e-b14f-fa93-aaee-c225edd8950d.htm" />
+    <HelpKINode Title="properties" Url="html/1a4a0c5d-bafa-72dc-db3a-7dc39ce7c6b9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaSecurityErrorResponse.AlexaSecurityErrorResponse constructor" Url="html/5ccfd978-8b63-831b-af8c-6b3470b3d9e3.htm" />
+  <HelpKINode Title="AlexaSecurityErrorResponse.Code property" Url="html/a8b33c4c-ef8d-e7b7-9ec6-f107d2e51339.htm" />
+  <HelpKINode Title="AlexaSecurityErrorResponse.Message property" Url="html/a7d7a167-062b-b824-c424-f0100d345f8a.htm" />
+  <HelpKINode Title="AlexaSecurityErrorResponse.Type property" Url="html/79396f79-7444-213e-8556-ad660d894acc.htm" />
+  <HelpKINode Title="AlexaSecurityException class">
+    <HelpKINode Title="AlexaSecurityException Class" Url="html/1fcb6307-e909-3a61-0174-1fea24c0f2c2.htm" />
+    <HelpKINode Title="constructor" Url="html/ae09daa6-c9b7-07f4-6873-c1226e706c43.htm" />
+    <HelpKINode Title="methods" Url="html/1cd655ad-7fa7-2054-0378-ba65bc5cd375.htm" />
+    <HelpKINode Title="properties" Url="html/c6b1b667-3a50-6b37-653d-4cbf86ffefe3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaSecurityException.AlexaSecurityException constructor" Url="html/ae09daa6-c9b7-07f4-6873-c1226e706c43.htm" />
+  <HelpKINode Title="AlexaSecurityException.ErrorCode property" Url="html/8eccd59d-f0c6-28d6-1e9f-b79cc1b92a9b.htm" />
+  <HelpKINode Title="AlexaSecurityException.ErrorType property" Url="html/5652960b-7b11-501a-f6dd-3c77d2491dfe.htm" />
+  <HelpKINode Title="AlexaSecurityException.StatusCode property" Url="html/535ec00d-6abe-870c-221a-d5b33bd45b17.htm" />
+  <HelpKINode Title="AlexaSecurityInfo class">
+    <HelpKINode Title="AlexaSecurityInfo Class" Url="html/4fffcbdf-efb8-e5fb-2903-5f2c7a777316.htm" />
+    <HelpKINode Title="constructor" Url="html/4bda5116-7bd6-58ed-0e2d-5a7f4a6a81eb.htm" />
+    <HelpKINode Title="methods" Url="html/95d2f58b-6cf5-9a04-0e02-1de6cdb7c0b4.htm" />
+    <HelpKINode Title="properties" Url="html/7f453a85-9b8a-a2d4-e575-e81792ddb1b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaSecurityInfo.AccessToken property" Url="html/003a3ce3-57be-309d-49e3-44cdd987b645.htm" />
+  <HelpKINode Title="AlexaSecurityInfo.AlexaSecurityInfo constructor" Url="html/4bda5116-7bd6-58ed-0e2d-5a7f4a6a81eb.htm" />
+  <HelpKINode Title="AlexaSecurityInfo.ApiEndpoint property" Url="html/c9687a25-1b44-62cd-8600-460e26010138.htm" />
+  <HelpKINode Title="AlexaSecurityInfo.DeviceId property" Url="html/19863a07-26d5-f464-7fb3-b265bc18dde4.htm" />
+  <HelpKINode Title="AlexaSession class">
+    <HelpKINode Title="AlexaSession Class" Url="html/78f9c7a7-ec14-a15b-7064-f9ab8e5d4925.htm" />
+    <HelpKINode Title="constructor" Url="html/4c5630f8-9ab3-ee8c-467e-473114e4516c.htm" />
+    <HelpKINode Title="methods" Url="html/d65522e4-d3b0-5678-7a5e-22dfe54764f2.htm" />
+    <HelpKINode Title="properties" Url="html/4e2a7c73-de2f-e484-9ac7-9c762657e69d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaSession.AlexaSession constructor" Url="html/4c5630f8-9ab3-ee8c-467e-473114e4516c.htm" />
+  <HelpKINode Title="AlexaSession.Application property" Url="html/46ece002-23a3-b5fc-dc2c-97226ee9c020.htm" />
+  <HelpKINode Title="AlexaSession.Attributes property" Url="html/65ed61e4-fd94-aa8f-51b7-e6f87b36aa7e.htm" />
+  <HelpKINode Title="AlexaSession.New property" Url="html/64a8c539-5083-cb48-493a-93d16ba982ab.htm" />
+  <HelpKINode Title="AlexaSession.SessionId property" Url="html/5d4bcb47-37b4-da41-6700-d2a36cbdf578.htm" />
+  <HelpKINode Title="AlexaSession.User property" Url="html/f9945b72-4076-e9b5-9c21-53ed232c3435.htm" />
+  <HelpKINode Title="AlexaSessionAttributes class">
+    <HelpKINode Title="AlexaSessionAttributes Class" Url="html/817e3660-cebb-a040-a17a-7e67a11209ae.htm" />
+    <HelpKINode Title="constructor" Url="html/b426baff-d935-cfa4-cfb0-cf1d6288f737.htm" />
+    <HelpKINode Title="methods" Url="html/08d9e197-5083-bec6-3447-7b8629234889.htm" />
+    <HelpKINode Title="properties" Url="html/5ce48ffc-bd50-d87b-eb2c-c7a4df5f4656.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaSessionAttributes.AlexaSessionAttributes constructor" Url="html/b426baff-d935-cfa4-cfb0-cf1d6288f737.htm" />
+  <HelpKINode Title="AlexaSessionAttributes.MemberId property" Url="html/f5bdcabf-0eec-c073-0fa6-6e1388c4115b.htm" />
+  <HelpKINode Title="AlexaSessionAttributes.NodeId property" Url="html/3b2df15c-5fce-1357-baad-9ce093d08546.htm" />
+  <HelpKINode Title="AlexaUserDataManager class">
+    <HelpKINode Title="AlexaUserDataManager Class" Url="html/f6845cf5-ae32-e342-79a2-ae8f0d804dc1.htm" />
+    <HelpKINode Title="constructor" Url="html/b56eb98c-162f-1a18-96d9-826d1ba87eca.htm" />
+    <HelpKINode Title="methods" Url="html/07f0ce60-290c-9266-4795-230ed9f80740.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaUserDataManager.AlexaUserDataManager constructor" Url="html/b56eb98c-162f-1a18-96d9-826d1ba87eca.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserEmailAsync method" Url="html/6b1b3401-d6e5-5924-5411-b4729e5d9f2c.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserFullAddressAsync method" Url="html/b14b374c-7dbf-23d6-c9de-6da531a60553.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserFullNameAsync method" Url="html/73a619d8-5ddc-2504-205c-a52d197dc706.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserGivenNameAsync method" Url="html/70f1d13e-b379-45a0-9d6e-9ba22d16d4cb.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserPhoneNumberAsync method" Url="html/1e7f17bd-0476-457b-cf8c-1aed2e6e35f6.htm" />
+  <HelpKINode Title="AlexaUserDataManager.GetAlexaUserPostalCodeAsync method" Url="html/8d6a20b9-2b87-7e5b-0efc-c02f9fa677e8.htm" />
+  <HelpKINode Title="AlexaUserFullAddress class">
+    <HelpKINode Title="AlexaUserFullAddress Class" Url="html/15d3ad14-a5a6-358f-38d9-6d4d55df6700.htm" />
+    <HelpKINode Title="constructor" Url="html/98f6689d-de08-d57f-f40d-0e82a38ad040.htm" />
+    <HelpKINode Title="methods" Url="html/66db583c-d1b8-3cab-1ebe-b99608cd4022.htm" />
+    <HelpKINode Title="properties" Url="html/aa1e4424-d89b-db43-aba5-b70ea5018224.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaUserFullAddress.AddressLine1 property" Url="html/7a139997-c081-0aed-73f2-6d4836519cf0.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.AddressLine2 property" Url="html/30bf7760-3e8b-2c8f-e7d9-a6b5e8404eda.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.AddressLine3 property" Url="html/73237c01-0e49-b7fb-4a79-e661af3b3349.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.AlexaUserFullAddress constructor" Url="html/98f6689d-de08-d57f-f40d-0e82a38ad040.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.City property" Url="html/a9369f26-02b2-8841-4783-ad805d879cfd.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.CountryCode property" Url="html/f1f77221-cb47-8c47-eec4-bc8c66fcdc9e.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.DistrictOrCounty property" Url="html/b1b7a16c-c340-19a7-6be4-5008a8186951.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.PostalCode property" Url="html/b8fb058b-8d59-ed82-4464-a28fa8f83a52.htm" />
+  <HelpKINode Title="AlexaUserFullAddress.StateOrRegion property" Url="html/4dcfa290-3b43-4288-aa0e-6062187289c3.htm" />
+  <HelpKINode Title="AlexaUserPhoneNumber class">
+    <HelpKINode Title="AlexaUserPhoneNumber Class" Url="html/80d13131-a634-ca79-c08d-1894074ab683.htm" />
+    <HelpKINode Title="constructor" Url="html/743168f9-d9fc-c0da-3666-213bf2e096e5.htm" />
+    <HelpKINode Title="methods" Url="html/085e80aa-0ef8-27ff-36f5-362c2178b786.htm" />
+    <HelpKINode Title="properties" Url="html/8f29b074-89e7-be04-74fd-3cdf80c98b92.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaUserPhoneNumber.AlexaUserPhoneNumber constructor" Url="html/743168f9-d9fc-c0da-3666-213bf2e096e5.htm" />
+  <HelpKINode Title="AlexaUserPhoneNumber.CountryCode property" Url="html/38b9fcd1-b61e-45ba-0068-d99a2b927f5e.htm" />
+  <HelpKINode Title="AlexaUserPhoneNumber.PhoneNumber property" Url="html/28bf1117-ea2a-be73-fb5f-8c46a2c89565.htm" />
+  <HelpKINode Title="AlexaUserPostalCode class">
+    <HelpKINode Title="AlexaUserPostalCode Class" Url="html/d1b70fae-5b38-463b-1cef-c5f5374b9dc2.htm" />
+    <HelpKINode Title="constructor" Url="html/4d9feb39-5db7-86fe-ee70-1e570b3200df.htm" />
+    <HelpKINode Title="methods" Url="html/f1e91f8b-47de-4e8f-db0e-48c7745cbda7.htm" />
+    <HelpKINode Title="properties" Url="html/9de62913-fe5c-745f-7be5-493e98bb428a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlexaUserPostalCode.AlexaUserPostalCode constructor" Url="html/4d9feb39-5db7-86fe-ee70-1e570b3200df.htm" />
+  <HelpKINode Title="AlexaUserPostalCode.CountryCode property" Url="html/dd110701-1b4f-80bc-87c7-e85439d69f63.htm" />
+  <HelpKINode Title="AlexaUserPostalCode.PostalCode property" Url="html/6187ddb9-34bf-928a-29ff-a65ff6009171.htm" />
+  <HelpKINode Title="ApiAccessToken property" Url="html/0a25a4aa-5f5c-6650-92b5-b6362203db84.htm" />
+  <HelpKINode Title="ApiEndpoint property">
+    <HelpKINode Title="AlexaSecurityInfo.ApiEndpoint Property " Url="html/c9687a25-1b44-62cd-8600-460e26010138.htm" />
+    <HelpKINode Title="SystemAttributes.ApiEndpoint Property " Url="html/579b2f5c-1657-b0f4-5d37-de6fb782eff0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Application property">
+    <HelpKINode Title="AlexaSession.Application Property " Url="html/46ece002-23a3-b5fc-dc2c-97226ee9c020.htm" />
+    <HelpKINode Title="SystemAttributes.Application Property " Url="html/7c95f1e0-1af1-111a-473a-ae2e1f0bb484.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationAttributes class">
+    <HelpKINode Title="ApplicationAttributes Class" Url="html/cfef0b35-890d-ea1b-0afe-655e7c35d746.htm" />
+    <HelpKINode Title="constructor" Url="html/21bbafbd-a564-ea81-9458-74cb2268875b.htm" />
+    <HelpKINode Title="methods" Url="html/c996e209-6c43-85a4-d379-c0f60cd9cfcd.htm" />
+    <HelpKINode Title="properties" Url="html/9c5f1627-8663-f674-b4eb-d58027107ac9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ApplicationAttributes.ApplicationAttributes constructor" Url="html/21bbafbd-a564-ea81-9458-74cb2268875b.htm" />
+  <HelpKINode Title="ApplicationAttributes.ApplicationId property" Url="html/15776106-2a47-91bb-fe40-be82f8bfba80.htm" />
+  <HelpKINode Title="ApplicationId property" Url="html/15776106-2a47-91bb-fe40-be82f8bfba80.htm" />
+  <HelpKINode Title="AskForPermissionsConsent enumeration member" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="Attributes property" Url="html/65ed61e4-fd94-aa8f-51b7-e6f87b36aa7e.htm" />
+  <HelpKINode Title="BuiltInIntents class">
+    <HelpKINode Title="BuiltInIntents Class" Url="html/75e90cd2-f7a8-8fcf-4c0e-ed6bb1949588.htm" />
+    <HelpKINode Title="constructor" Url="html/d773e4c5-c52c-0460-97a4-afefab361cb0.htm" />
+    <HelpKINode Title="fields" Url="html/eadd1fd0-7cdc-0aa1-3698-ae7f26abbf65.htm" />
+    <HelpKINode Title="methods" Url="html/ae436b33-d810-9d03-2012-f3312e0ebe84.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BuiltInIntents.BuiltInIntents constructor" Url="html/d773e4c5-c52c-0460-97a4-afefab361cb0.htm" />
+  <HelpKINode Title="BuiltInIntents.CancelIntent field" Url="html/dc1c87f1-6d1b-ceb6-a75a-a12931068e3a.htm" />
+  <HelpKINode Title="BuiltInIntents.FallbackIntent field" Url="html/4cd3bb71-06d1-d2b4-199c-edbf8ba032dc.htm" />
+  <HelpKINode Title="BuiltInIntents.HelpIntent field" Url="html/d9af0f39-fe94-2016-912d-d4efdab3226e.htm" />
+  <HelpKINode Title="BuiltInIntents.LoopOffIntent field" Url="html/bae13e46-2e48-0c1b-7efe-7be28b64d797.htm" />
+  <HelpKINode Title="BuiltInIntents.LoopOnIntent field" Url="html/d3a7dfe5-4eb6-5a25-dc53-7360a99cdbe9.htm" />
+  <HelpKINode Title="BuiltInIntents.NextIntent field" Url="html/d389d5ed-0aa2-73aa-cfec-b2fa86032b6c.htm" />
+  <HelpKINode Title="BuiltInIntents.NoIntent field" Url="html/1e134460-20b6-b6ed-284f-55b478a64914.htm" />
+  <HelpKINode Title="BuiltInIntents.PauseIntent field" Url="html/86f38513-f903-28d3-1822-769c3a937a71.htm" />
+  <HelpKINode Title="CancelIntent field" Url="html/dc1c87f1-6d1b-ceb6-a75a-a12931068e3a.htm" />
+  <HelpKINode Title="CanConvert method">
+    <HelpKINode Title="CanFulfillSlotResponseConverter.CanConvert Method " Url="html/3bd5f093-0df3-b585-9805-c492093d286c.htm" />
+    <HelpKINode Title="JsonEnumConverter(T).CanConvert Method " Url="html/60a8d418-f25e-886f-d482-494ad9c46903.htm" />
+    <HelpKINode Title="SlotConverter.CanConvert Method " Url="html/f6b17033-3fa0-dc24-e437-33a91e02e799.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanFulfill property">
+    <HelpKINode Title="AlexaResponseAttributes.CanFulfill Property " Url="html/ca31a331-4792-2c7b-43fe-8cf3e69fa86e.htm" />
+    <HelpKINode Title="CanFulfillResponseAttributes.CanFulfill Property " Url="html/fad7654e-3ac5-fd60-82d9-9eaa7c5a5928.htm" />
+    <HelpKINode Title="CanFulfillSlotResponse.CanFulfill Property " Url="html/524de684-ee18-4f5c-2f2d-a4500fc46f92.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanFulfillEnum enumeration" Url="html/80c2dbae-89e8-92d7-e556-c89eb4a658c0.htm" />
+  <HelpKINode Title="CanFulfillIntentRequest enumeration member" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="CanFulfillResponseAttributes class">
+    <HelpKINode Title="CanFulfillResponseAttributes Class" Url="html/9decf012-0758-7e76-7d72-474298ecfc96.htm" />
+    <HelpKINode Title="constructor" Url="html/71f73cc1-8208-83ff-5d4f-eefd0dc2a449.htm" />
+    <HelpKINode Title="methods" Url="html/ab054938-eb73-70ad-8cf7-99e1d8d5f6ac.htm" />
+    <HelpKINode Title="properties" Url="html/9608d8ec-39a0-49fb-fd44-992a5b9d81f3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanFulfillResponseAttributes.CanFulfill property" Url="html/fad7654e-3ac5-fd60-82d9-9eaa7c5a5928.htm" />
+  <HelpKINode Title="CanFulfillResponseAttributes.CanFulfillResponseAttributes constructor" Url="html/71f73cc1-8208-83ff-5d4f-eefd0dc2a449.htm" />
+  <HelpKINode Title="CanFulfillResponseAttributes.Slots property" Url="html/8b7b948a-2730-5a97-aeb2-da80c0f6c897.htm" />
+  <HelpKINode Title="CanFulfillSlotResponse class">
+    <HelpKINode Title="CanFulfillSlotResponse Class" Url="html/22072cba-e636-8b06-a966-640323c3b476.htm" />
+    <HelpKINode Title="constructor" Url="html/5d9d14f6-f003-38cb-316f-b9d7101ecbc0.htm" />
+    <HelpKINode Title="methods" Url="html/376368bf-d43e-9335-8884-36f1557f8ca4.htm" />
+    <HelpKINode Title="properties" Url="html/cf14c640-a8b7-9bea-68c4-075f0bd911a0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanFulfillSlotResponse.CanFulfill property" Url="html/524de684-ee18-4f5c-2f2d-a4500fc46f92.htm" />
+  <HelpKINode Title="CanFulfillSlotResponse.CanFulfillSlotResponse constructor" Url="html/5d9d14f6-f003-38cb-316f-b9d7101ecbc0.htm" />
+  <HelpKINode Title="CanFulfillSlotResponse.CanUnderstand property" Url="html/aea8c295-ec19-e9b8-9469-53e5f8e4095b.htm" />
+  <HelpKINode Title="CanFulfillSlotResponse.Name property" Url="html/074f61a9-4744-eb71-7db6-8d457a7353c2.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter class">
+    <HelpKINode Title="CanFulfillSlotResponseConverter Class" Url="html/8dbde76b-ec7c-f2bf-fcb5-0a0f0703850c.htm" />
+    <HelpKINode Title="constructor" Url="html/35ce523a-3f2a-9fbd-6b44-6dd8ab161a14.htm" />
+    <HelpKINode Title="methods" Url="html/92ba6e31-6b05-3ce9-778b-b34d426e2e78.htm" />
+    <HelpKINode Title="properties" Url="html/e05d16d6-6d8b-97b4-42f3-5bc6e953430c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CanFulfillSlotResponseConverter.CanConvert method" Url="html/3bd5f093-0df3-b585-9805-c492093d286c.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter.CanFulfillSlotResponseConverter constructor" Url="html/35ce523a-3f2a-9fbd-6b44-6dd8ab161a14.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter.CanRead property" Url="html/cb8754ec-c637-e7bb-441d-accc135132cd.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter.CanWrite property" Url="html/5b398ce4-9db5-57c8-0e8e-bd9f63996bdf.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter.ReadJson method" Url="html/811dab38-a3c2-c0e9-0edb-23645963570a.htm" />
+  <HelpKINode Title="CanFulfillSlotResponseConverter.WriteJson method" Url="html/cb7a2f2f-3dc7-e9ac-797a-ec0c9af2c36c.htm" />
+  <HelpKINode Title="CanRead property" Url="html/cb8754ec-c637-e7bb-441d-accc135132cd.htm" />
+  <HelpKINode Title="CanUnderstand property" Url="html/aea8c295-ec19-e9b8-9469-53e5f8e4095b.htm" />
+  <HelpKINode Title="CanWrite property" Url="html/5b398ce4-9db5-57c8-0e8e-bd9f63996bdf.htm" />
+  <HelpKINode Title="Card property" Url="html/9d492356-4af8-188f-5e20-005e12674592.htm" />
+  <HelpKINode Title="CardAttributes class">
+    <HelpKINode Title="CardAttributes Class" Url="html/a508e2cf-f64f-e07d-6ce7-679250a88452.htm" />
+    <HelpKINode Title="constructor" Url="html/14bd813f-bc90-c452-b656-14f323cc89bf.htm" />
+    <HelpKINode Title="methods" Url="html/1fe9cf67-8bec-e3cc-8647-3cc244836da4.htm" />
+    <HelpKINode Title="properties" Url="html/6f8b7d9c-7867-3d57-a8f0-473df0284ad6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CardAttributes.CardAttributes constructor" Url="html/14bd813f-bc90-c452-b656-14f323cc89bf.htm" />
+  <HelpKINode Title="CardAttributes.Content property" Url="html/f0421c1d-59bd-5fb6-416e-ba41cb44b402.htm" />
+  <HelpKINode Title="CardAttributes.ImageAttributes property" Url="html/1337bd00-3eb9-6c5d-e14a-530b28a63395.htm" />
+  <HelpKINode Title="CardAttributes.Permissions property" Url="html/981da622-2598-54ee-f50d-2b238b5ae5a2.htm" />
+  <HelpKINode Title="CardAttributes.Text property" Url="html/37da2084-3cc7-e5f0-705d-26b30cb506ef.htm" />
+  <HelpKINode Title="CardAttributes.Title property" Url="html/07e50786-5352-b7b0-d17c-714f18d48afb.htm" />
+  <HelpKINode Title="CardAttributes.Type property" Url="html/f537a86e-74cc-dfee-e1c0-de506904f3c4.htm" />
+  <HelpKINode Title="CardBuilder class">
+    <HelpKINode Title="CardBuilder Class" Url="html/4a958ae4-0277-2b9d-7ba7-036c104ce63d.htm" />
+    <HelpKINode Title="methods" Url="html/e0edaf18-47bc-3e43-36a6-ccc9fd76e679.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CardBuilder.GetPermissionRequestCard method" Url="html/1c6dcff7-4f5d-f62c-4c10-58900936f976.htm" />
+  <HelpKINode Title="CardType enumeration" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="City property" Url="html/a9369f26-02b2-8841-4783-ad805d879cfd.htm" />
+  <HelpKINode Title="Code property" Url="html/a8b33c4c-ef8d-e7b7-9ec6-f107d2e51339.htm" />
+  <HelpKINode Title="ConsentToken property" Url="html/e4d6be00-c5ff-f26f-2ee1-8b1c859b112e.htm" />
+  <HelpKINode Title="Content property" Url="html/f0421c1d-59bd-5fb6-416e-ba41cb44b402.htm" />
+  <HelpKINode Title="Context property" Url="html/689dd04c-5a3f-90c5-126e-4d33f21386b3.htm" />
+  <HelpKINode Title="ContextAttributes class">
+    <HelpKINode Title="ContextAttributes Class" Url="html/f14b4008-7211-873d-977e-34e37391964b.htm" />
+    <HelpKINode Title="constructor" Url="html/924bdc86-ee72-bf8b-7159-f41c02d93aef.htm" />
+    <HelpKINode Title="methods" Url="html/14600bf6-c149-1279-9dc1-077cdf4b284b.htm" />
+    <HelpKINode Title="properties" Url="html/bfcb7a0b-68c4-8f03-750d-5ed1ce9e6982.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ContextAttributes.ContextAttributes constructor" Url="html/924bdc86-ee72-bf8b-7159-f41c02d93aef.htm" />
+  <HelpKINode Title="ContextAttributes.System property" Url="html/c2a4ed68-9797-758c-f788-64e7aac60347.htm" />
+  <HelpKINode Title="CountryCode property">
+    <HelpKINode Title="AlexaUserFullAddress.CountryCode Property " Url="html/f1f77221-cb47-8c47-eec4-bc8c66fcdc9e.htm" />
+    <HelpKINode Title="AlexaUserPhoneNumber.CountryCode Property " Url="html/38b9fcd1-b61e-45ba-0068-d99a2b927f5e.htm" />
+    <HelpKINode Title="AlexaUserPostalCode.CountryCode Property " Url="html/dd110701-1b4f-80bc-87c7-e85439d69f63.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreateTime property" Url="html/f0ee702f-2302-2ec1-c88d-525e718115c0.htm" />
+  <HelpKINode Title="Device property" Url="html/cb70a20b-1f97-24f8-9f60-c1bd929ede5c.htm" />
+  <HelpKINode Title="DeviceAttributes class">
+    <HelpKINode Title="DeviceAttributes Class" Url="html/1339642a-07f9-997f-67e4-d5526f23bd49.htm" />
+    <HelpKINode Title="constructor" Url="html/b1ac8345-60e0-941d-e99a-d0272a8a81c5.htm" />
+    <HelpKINode Title="methods" Url="html/18715ada-1999-bf6a-c840-fa34c0bdf334.htm" />
+    <HelpKINode Title="properties" Url="html/a3aef527-9baa-603a-81bb-2231149409db.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeviceAttributes.DeviceAttributes constructor" Url="html/b1ac8345-60e0-941d-e99a-d0272a8a81c5.htm" />
+  <HelpKINode Title="DeviceAttributes.DeviceId property" Url="html/a8d47174-f208-9da4-c626-036c013bfba9.htm" />
+  <HelpKINode Title="DeviceId property">
+    <HelpKINode Title="AlexaSecurityInfo.DeviceId Property " Url="html/19863a07-26d5-f464-7fb3-b265bc18dde4.htm" />
+    <HelpKINode Title="DeviceAttributes.DeviceId Property " Url="html/a8d47174-f208-9da4-c626-036c013bfba9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DistrictOrCounty property" Url="html/b1b7a16c-c340-19a7-6be4-5008a8186951.htm" />
+  <HelpKINode Title="Email enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="Error property">
+    <HelpKINode Title="AlexaRecord.Error Property " Url="html/f809bf36-d11f-e81c-86ed-32cc497dcfcf.htm" />
+    <HelpKINode Title="RequestAttributes.Error Property " Url="html/168f3ac8-c738-2a89-dea0-06fb47988830.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ErrorCode property" Url="html/8eccd59d-f0c6-28d6-1e9f-b79cc1b92a9b.htm" />
+  <HelpKINode Title="ErrorType property" Url="html/5652960b-7b11-501a-f6dd-3c77d2491dfe.htm" />
+  <HelpKINode Title="ExpireTime property" Url="html/449a691d-a6f3-7e09-643f-1cda8e668262.htm" />
+  <HelpKINode Title="FallbackIntent field" Url="html/4cd3bb71-06d1-d2b4-199c-edbf8ba032dc.htm" />
+  <HelpKINode Title="FullAddress enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="FullName enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="GetAlexaUserEmailAsync method" Url="html/6b1b3401-d6e5-5924-5411-b4729e5d9f2c.htm" />
+  <HelpKINode Title="GetAlexaUserFullAddressAsync method" Url="html/b14b374c-7dbf-23d6-c9de-6da531a60553.htm" />
+  <HelpKINode Title="GetAlexaUserFullNameAsync method" Url="html/73a619d8-5ddc-2504-205c-a52d197dc706.htm" />
+  <HelpKINode Title="GetAlexaUserGivenNameAsync method" Url="html/70f1d13e-b379-45a0-9d6e-9ba22d16d4cb.htm" />
+  <HelpKINode Title="GetAlexaUserPhoneNumberAsync method" Url="html/1e7f17bd-0476-457b-cf8c-1aed2e6e35f6.htm" />
+  <HelpKINode Title="GetAlexaUserPostalCodeAsync method" Url="html/8d6a20b9-2b87-7e5b-0efc-c02f9fa677e8.htm" />
+  <HelpKINode Title="GetDescriptionFromEnumValue method" Url="html/e3dd9de7-bf1f-fb97-0fdd-0329705cb5ce.htm" />
+  <HelpKINode Title="GetPermissionRequestCard method" Url="html/1c6dcff7-4f5d-f62c-4c10-58900936f976.htm" />
+  <HelpKINode Title="GivenName enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="HelpIntent field" Url="html/d9af0f39-fe94-2016-912d-d4efdab3226e.htm" />
+  <HelpKINode Title="Id property">
+    <HelpKINode Title="SlotAttributes.Id Property " Url="html/c35edda8-2bfb-66bf-888a-81cb9bc566f9.htm" />
+    <HelpKINode Title="SlotEntry.Id Property " Url="html/c7d63b52-c35d-dc24-a46b-34892ed1ba46.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ImageAttributes property" Url="html/1337bd00-3eb9-6c5d-e14a-530b28a63395.htm" />
+  <HelpKINode Title="Intent property" Url="html/0b464b52-75ed-b102-5997-3f5cbcb556df.htm" />
+  <HelpKINode Title="IntentAttributes class">
+    <HelpKINode Title="IntentAttributes Class" Url="html/9918941e-1114-d97b-c2b9-9c1dde54a866.htm" />
+    <HelpKINode Title="constructor" Url="html/183f4daa-8049-35b4-21a6-c4e6a41300f9.htm" />
+    <HelpKINode Title="methods" Url="html/48b8f05f-0e4a-03f6-eebb-f0680641e5e5.htm" />
+    <HelpKINode Title="properties" Url="html/d7e9b7c7-0852-8f85-0d8c-12d7adcc6a8c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IntentAttributes.IntentAttributes constructor" Url="html/183f4daa-8049-35b4-21a6-c4e6a41300f9.htm" />
+  <HelpKINode Title="IntentAttributes.Name property" Url="html/7d9b4ac4-8565-c938-657d-2a18a5d2bb46.htm" />
+  <HelpKINode Title="IntentAttributes.Slots property" Url="html/a2e5887e-76cd-5c29-4458-0c5471b483bb.htm" />
+  <HelpKINode Title="IntentModel class">
+    <HelpKINode Title="IntentModel Class" Url="html/ff82497b-5ed2-0b6a-3054-a1fa4d4275e1.htm" />
+    <HelpKINode Title="constructor" Url="html/1b68c4d4-43b5-1987-9969-5ceaa04df919.htm" />
+    <HelpKINode Title="methods" Url="html/64246faf-9af9-53cd-b49d-33d76a151a05.htm" />
+    <HelpKINode Title="properties" Url="html/8434cfcb-934e-6d19-0db9-66aedf566a7c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IntentModel.IntentModel constructor" Url="html/1b68c4d4-43b5-1987-9969-5ceaa04df919.htm" />
+  <HelpKINode Title="IntentModel.Name property" Url="html/6aa86650-53f2-2532-9dc0-4d1e7a0408e7.htm" />
+  <HelpKINode Title="IntentModel.Samples property" Url="html/3ccfeb10-13f0-8c88-28c8-64744a37961c.htm" />
+  <HelpKINode Title="IntentModel.Slots property" Url="html/38d9637a-206d-9be4-9a6d-dfe0ac410794.htm" />
+  <HelpKINode Title="IntentRequest enumeration member" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="Intents property" Url="html/e3d6fab8-ee3a-8bd6-bb44-54ff15ce2e9b.htm" />
+  <HelpKINode Title="InteractionModel class">
+    <HelpKINode Title="InteractionModel Class" Url="html/d8894e4e-a0f9-e407-b37b-c651ffe8bf1f.htm" />
+    <HelpKINode Title="constructor" Url="html/706cdd17-421e-6420-4408-b116b68b1c60.htm" />
+    <HelpKINode Title="methods" Url="html/997e8494-f6ca-e211-74e1-076975da79f6.htm" />
+    <HelpKINode Title="properties" Url="html/80baf553-42b0-d274-d43e-4a19ccd185c5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InteractionModel.InteractionModel constructor" Url="html/706cdd17-421e-6420-4408-b116b68b1c60.htm" />
+  <HelpKINode Title="InteractionModel.LanguageModel property" Url="html/f2d7bc6d-a72f-2e0e-3f4e-3b4cec8fae37.htm" />
+  <HelpKINode Title="InvocationName property" Url="html/4c48909b-f641-25fb-264f-e8392ab2a8b7.htm" />
+  <HelpKINode Title="JsonEnumConverter(Of T) class">
+    <HelpKINode Title="JsonEnumConverter(T) Class" Url="html/51a04c92-4d38-368c-78d3-583efe6db3e1.htm" />
+    <HelpKINode Title="constructor" Url="html/4267d293-fcca-b68c-14a8-ff366181404f.htm" />
+    <HelpKINode Title="methods" Url="html/123e87b7-182f-df50-c71d-277fb6bcdc8c.htm" />
+    <HelpKINode Title="properties" Url="html/07c2c5df-51cf-90a0-9d90-1b9b8470cdd4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JsonEnumConverter(Of T).CanConvert method" Url="html/60a8d418-f25e-886f-d482-494ad9c46903.htm" />
+  <HelpKINode Title="JsonEnumConverter(Of T).JsonEnumConverter constructor" Url="html/4267d293-fcca-b68c-14a8-ff366181404f.htm" />
+  <HelpKINode Title="JsonEnumConverter(Of T).ReadJson method" Url="html/7e48bbb8-c5eb-02d4-3934-996f585912ec.htm" />
+  <HelpKINode Title="JsonEnumConverter(Of T).WriteJson method" Url="html/31f8dce3-3c92-c977-f7da-49ba3d299cbf.htm" />
+  <HelpKINode Title="JsonEnumConverter&lt;T&gt; class">
+    <HelpKINode Title="JsonEnumConverter(T) Class" Url="html/51a04c92-4d38-368c-78d3-583efe6db3e1.htm" />
+    <HelpKINode Title="constructor" Url="html/4267d293-fcca-b68c-14a8-ff366181404f.htm" />
+    <HelpKINode Title="methods" Url="html/123e87b7-182f-df50-c71d-277fb6bcdc8c.htm" />
+    <HelpKINode Title="properties" Url="html/07c2c5df-51cf-90a0-9d90-1b9b8470cdd4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="JsonEnumConverter&lt;T&gt;.CanConvert method" Url="html/60a8d418-f25e-886f-d482-494ad9c46903.htm" />
+  <HelpKINode Title="JsonEnumConverter&lt;T&gt;.JsonEnumConverter constructor" Url="html/4267d293-fcca-b68c-14a8-ff366181404f.htm" />
+  <HelpKINode Title="JsonEnumConverter&lt;T&gt;.ReadJson method" Url="html/7e48bbb8-c5eb-02d4-3934-996f585912ec.htm" />
+  <HelpKINode Title="JsonEnumConverter&lt;T&gt;.WriteJson method" Url="html/31f8dce3-3c92-c977-f7da-49ba3d299cbf.htm" />
+  <HelpKINode Title="LanguageModel class">
+    <HelpKINode Title="LanguageModel Class" Url="html/98f2a68b-74ed-2bcb-c904-34fd3c78c910.htm" />
+    <HelpKINode Title="constructor" Url="html/b1412be3-e447-81ae-91c8-c9710230a83d.htm" />
+    <HelpKINode Title="methods" Url="html/9ccda551-9b0f-e97e-ed75-221de114b8c8.htm" />
+    <HelpKINode Title="properties" Url="html/f601c4b0-1bfb-f488-1503-fadcb618d8ef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LanguageModel property" Url="html/f2d7bc6d-a72f-2e0e-3f4e-3b4cec8fae37.htm" />
+  <HelpKINode Title="LanguageModel.Intents property" Url="html/e3d6fab8-ee3a-8bd6-bb44-54ff15ce2e9b.htm" />
+  <HelpKINode Title="LanguageModel.InvocationName property" Url="html/4c48909b-f641-25fb-264f-e8392ab2a8b7.htm" />
+  <HelpKINode Title="LanguageModel.LanguageModel constructor" Url="html/b1412be3-e447-81ae-91c8-c9710230a83d.htm" />
+  <HelpKINode Title="LanguageModel.SlotTypes property" Url="html/347e0c5d-e2f9-7af0-67aa-0e711cef3bd2.htm" />
+  <HelpKINode Title="LargeImageUrl property" Url="html/7a0dca25-641e-5b7e-056e-5030b6dfa64e.htm" />
+  <HelpKINode Title="LaunchRequest enumeration member" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="LinkAccount enumeration member" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="Locale property" Url="html/9c7336ed-ae76-0ddf-4968-2cce9230e8b1.htm" />
+  <HelpKINode Title="LoopOffIntent field" Url="html/bae13e46-2e48-0c1b-7efe-7be28b64d797.htm" />
+  <HelpKINode Title="LoopOnIntent field" Url="html/d3a7dfe5-4eb6-5a25-dc53-7360a99cdbe9.htm" />
+  <HelpKINode Title="Maybe enumeration member" Url="html/80c2dbae-89e8-92d7-e556-c89eb4a658c0.htm" />
+  <HelpKINode Title="MemberId property" Url="html/f5bdcabf-0eec-c073-0fa6-6e1388c4115b.htm" />
+  <HelpKINode Title="Message property">
+    <HelpKINode Title="AlexaErrorAttributes.Message Property " Url="html/3dba0651-7af5-355d-68d2-6bda4bc703df.htm" />
+    <HelpKINode Title="AlexaSecurityErrorResponse.Message Property " Url="html/a7d7a167-062b-b824-c424-f0100d345f8a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Name property">
+    <HelpKINode Title="CanFulfillSlotResponse.Name Property " Url="html/074f61a9-4744-eb71-7db6-8d457a7353c2.htm" />
+    <HelpKINode Title="IntentAttributes.Name Property " Url="html/7d9b4ac4-8565-c938-657d-2a18a5d2bb46.htm" />
+    <HelpKINode Title="IntentModel.Name Property " Url="html/6aa86650-53f2-2532-9dc0-4d1e7a0408e7.htm" />
+    <HelpKINode Title="SlotAttributes.Name Property " Url="html/c052e604-473b-dcff-5ba3-89791b2bdce8.htm" />
+    <HelpKINode Title="SlotModel.Name Property " Url="html/d0e6724a-47ed-88ad-8d4a-09bc9eec1847.htm" />
+    <HelpKINode Title="SlotTypeModel.Name Property " Url="html/2d0610d7-271c-9196-3ac9-da50d4ad2143.htm" />
+  </HelpKINode>
+  <HelpKINode Title="New property" Url="html/64a8c539-5083-cb48-493a-93d16ba982ab.htm" />
+  <HelpKINode Title="NextIntent field" Url="html/d389d5ed-0aa2-73aa-cfec-b2fa86032b6c.htm" />
+  <HelpKINode Title="No enumeration member" Url="html/80c2dbae-89e8-92d7-e556-c89eb4a658c0.htm" />
+  <HelpKINode Title="NodeId property" Url="html/3b2df15c-5fce-1357-baad-9ce093d08546.htm" />
+  <HelpKINode Title="NoIntent field" Url="html/1e134460-20b6-b6ed-284f-55b478a64914.htm" />
+  <HelpKINode Title="OutputSpeech property">
+    <HelpKINode Title="AlexaResponseAttributes.OutputSpeech Property " Url="html/e8d2365e-ab54-82eb-5406-c846eff3ae33.htm" />
+    <HelpKINode Title="RepromptAttributes.OutputSpeech Property " Url="html/40ac9c3c-42f2-f07f-fb94-111fbb6f4506.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OutputSpeechAttributes class">
+    <HelpKINode Title="OutputSpeechAttributes Class" Url="html/2c8506bf-2caa-d435-ec42-3c61c27590c3.htm" />
+    <HelpKINode Title="constructor" Url="html/f8f245f9-8eb3-5922-226a-6b942ad27517.htm" />
+    <HelpKINode Title="methods" Url="html/3c86caaf-3b85-ab11-a5d7-1bfa7f2e1f88.htm" />
+    <HelpKINode Title="properties" Url="html/6b779ea1-39d2-e27b-e47a-e3e338731efb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OutputSpeechAttributes.OutputSpeechAttributes constructor" Url="html/f8f245f9-8eb3-5922-226a-6b942ad27517.htm" />
+  <HelpKINode Title="OutputSpeechAttributes.Ssml property" Url="html/25ef49f2-eb31-f90a-65c3-c05339ee509d.htm" />
+  <HelpKINode Title="OutputSpeechAttributes.Text property" Url="html/c9c09068-f0dc-6fb5-d17d-c1af8c6e39a1.htm" />
+  <HelpKINode Title="OutputSpeechAttributes.Type property" Url="html/922e89e1-33d9-a154-e93a-b79bb320cc85.htm" />
+  <HelpKINode Title="OutputSpeechType enumeration" Url="html/27f497b7-d671-0606-444b-91ab9a8d851d.htm" />
+  <HelpKINode Title="PauseIntent field" Url="html/86f38513-f903-28d3-1822-769c3a937a71.htm" />
+  <HelpKINode Title="PermissionAttributes class">
+    <HelpKINode Title="PermissionAttributes Class" Url="html/1c2dce0e-43be-189e-58f0-a005e5fca24a.htm" />
+    <HelpKINode Title="constructor" Url="html/e96e15d5-c268-0fd4-231e-dae8f1289a87.htm" />
+    <HelpKINode Title="methods" Url="html/967597ef-16f7-4bbd-cf71-81381c72cb08.htm" />
+    <HelpKINode Title="properties" Url="html/3e1ba0ee-10fb-125b-76d8-4b34f4989b43.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PermissionAttributes.ConsentToken property" Url="html/e4d6be00-c5ff-f26f-2ee1-8b1c859b112e.htm" />
+  <HelpKINode Title="PermissionAttributes.PermissionAttributes constructor" Url="html/e96e15d5-c268-0fd4-231e-dae8f1289a87.htm" />
+  <HelpKINode Title="Permissions property">
+    <HelpKINode Title="CardAttributes.Permissions Property " Url="html/981da622-2598-54ee-f50d-2b238b5ae5a2.htm" />
+    <HelpKINode Title="UserAttributes.Permissions Property " Url="html/4a58f98d-187c-1ddf-c055-0541365335ec.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PersonalDataType enumeration" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="PhoneNumber enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="PhoneNumber property" Url="html/28bf1117-ea2a-be73-fb5f-8c46a2c89565.htm" />
+  <HelpKINode Title="PlainText enumeration member" Url="html/27f497b7-d671-0606-444b-91ab9a8d851d.htm" />
+  <HelpKINode Title="PostalCode enumeration member" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="PostalCode property">
+    <HelpKINode Title="AlexaUserFullAddress.PostalCode Property " Url="html/b8fb058b-8d59-ed82-4464-a28fa8f83a52.htm" />
+    <HelpKINode Title="AlexaUserPostalCode.PostalCode Property " Url="html/6187ddb9-34bf-928a-29ff-a65ff6009171.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ReadJson method">
+    <HelpKINode Title="CanFulfillSlotResponseConverter.ReadJson Method " Url="html/811dab38-a3c2-c0e9-0edb-23645963570a.htm" />
+    <HelpKINode Title="JsonEnumConverter(T).ReadJson Method " Url="html/7e48bbb8-c5eb-02d4-3934-996f585912ec.htm" />
+    <HelpKINode Title="SlotConverter.ReadJson Method " Url="html/70f5dc92-1f08-34f3-f1d5-96e4d7441b46.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reason property" Url="html/810d71d7-0aeb-b417-6dd4-a5fe43e52b79.htm" />
+  <HelpKINode Title="Reprompt property" Url="html/698cb47e-b33a-7f62-d4c9-1f45cf86dedd.htm" />
+  <HelpKINode Title="RepromptAttributes class">
+    <HelpKINode Title="RepromptAttributes Class" Url="html/2ed00e46-9a7c-bd7f-54b1-5d4ea9d36c16.htm" />
+    <HelpKINode Title="constructor" Url="html/ea768243-820c-ccf9-66fe-17fe1a07c7cf.htm" />
+    <HelpKINode Title="methods" Url="html/a5d09bab-8d55-c9f5-1ccb-66924a89ad1c.htm" />
+    <HelpKINode Title="properties" Url="html/274c17f3-c667-ab7b-00b7-3e68118ddd5f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RepromptAttributes.OutputSpeech property" Url="html/40ac9c3c-42f2-f07f-fb94-111fbb6f4506.htm" />
+  <HelpKINode Title="RepromptAttributes.RepromptAttributes constructor" Url="html/ea768243-820c-ccf9-66fe-17fe1a07c7cf.htm" />
+  <HelpKINode Title="Request property">
+    <HelpKINode Title="AlexaRecord.Request Property " Url="html/4299528b-018e-ca96-512f-618fe35aeddb.htm" />
+    <HelpKINode Title="AlexaRequest.Request Property " Url="html/79dd4333-3f7c-347d-c450-178dbba39abb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RequestAttributes class">
+    <HelpKINode Title="RequestAttributes Class" Url="html/123d9b02-c3d0-4992-3007-760b55030c53.htm" />
+    <HelpKINode Title="constructor" Url="html/19710b76-f35f-b88a-741b-96933efb8c67.htm" />
+    <HelpKINode Title="methods" Url="html/8a1b624c-a98f-fdd0-8895-95dd76fdef0b.htm" />
+    <HelpKINode Title="properties" Url="html/afee62b6-1487-7370-3335-02a847d57214.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RequestAttributes.Error property" Url="html/168f3ac8-c738-2a89-dea0-06fb47988830.htm" />
+  <HelpKINode Title="RequestAttributes.Intent property" Url="html/0b464b52-75ed-b102-5997-3f5cbcb556df.htm" />
+  <HelpKINode Title="RequestAttributes.Locale property" Url="html/9c7336ed-ae76-0ddf-4968-2cce9230e8b1.htm" />
+  <HelpKINode Title="RequestAttributes.Reason property" Url="html/810d71d7-0aeb-b417-6dd4-a5fe43e52b79.htm" />
+  <HelpKINode Title="RequestAttributes.RequestAttributes constructor" Url="html/19710b76-f35f-b88a-741b-96933efb8c67.htm" />
+  <HelpKINode Title="RequestAttributes.RequestId property" Url="html/b937efc4-14f1-5c14-2faf-9cbb3087c352.htm" />
+  <HelpKINode Title="RequestAttributes.ShouldLinkResultBeReturned property" Url="html/68ee5a35-cb33-be61-2128-4846b007827d.htm" />
+  <HelpKINode Title="RequestAttributes.Timestamp property" Url="html/5ac504a4-6ae1-5116-64e0-ca0c17066858.htm" />
+  <HelpKINode Title="RequestAttributes.TimestampEpoch property" Url="html/6b43bd7f-ca49-7338-5035-43e08d04ecee.htm" />
+  <HelpKINode Title="RequestAttributes.Type property" Url="html/53d917fc-65d3-291c-48c0-3cf10a69ad50.htm" />
+  <HelpKINode Title="RequestId property">
+    <HelpKINode Title="AlexaRecord.RequestId Property " Url="html/ad24833d-ceb9-0e76-03d1-e27fa95f5659.htm" />
+    <HelpKINode Title="RequestAttributes.RequestId Property " Url="html/b937efc4-14f1-5c14-2faf-9cbb3087c352.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RequestType enumeration" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="Response property">
+    <HelpKINode Title="AlexaRecord.Response Property " Url="html/17ce7ec0-5e0a-0e23-4c52-87d5bff44d2c.htm" />
+    <HelpKINode Title="AlexaResponse.Response Property " Url="html/d83a06c4-7e6f-a68f-84e6-b07ef583bc37.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Samples property" Url="html/3ccfeb10-13f0-8c88-28c8-64744a37961c.htm" />
+  <HelpKINode Title="SerializationExtensions class">
+    <HelpKINode Title="SerializationExtensions Class" Url="html/104aca1a-1f9b-d6d0-783a-8ad966cf6580.htm" />
+    <HelpKINode Title="methods" Url="html/77b9fff6-264e-f3e9-84ed-db77759855f4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SerializationExtensions.GetDescriptionFromEnumValue method" Url="html/e3dd9de7-bf1f-fb97-0fdd-0329705cb5ce.htm" />
+  <HelpKINode Title="Session property">
+    <HelpKINode Title="AlexaRequest.Session Property " Url="html/24ba3c78-c0e8-c776-c391-a3c115c3c4b7.htm" />
+    <HelpKINode Title="AlexaResponse.Session Property " Url="html/e83e3529-696b-98d8-4a19-df6df44310cf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SessionEndedRequest enumeration member" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="SessionId property" Url="html/5d4bcb47-37b4-da41-6700-d2a36cbdf578.htm" />
+  <HelpKINode Title="ShouldEndSession property" Url="html/0062a2f8-dea2-9ec0-96b9-13d41977e6d5.htm" />
+  <HelpKINode Title="ShouldLinkResultBeReturned property" Url="html/68ee5a35-cb33-be61-2128-4846b007827d.htm" />
+  <HelpKINode Title="Simple enumeration member" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="SlotAttributes class">
+    <HelpKINode Title="SlotAttributes Class" Url="html/aa448916-0700-2896-9d98-54c7ccda7ca1.htm" />
+    <HelpKINode Title="constructor" Url="html/4ebd181f-cd09-e1ef-5c88-7bf52f4e80eb.htm" />
+    <HelpKINode Title="methods" Url="html/79e47258-f814-bc42-e972-4aab4512f535.htm" />
+    <HelpKINode Title="properties" Url="html/2c2fe043-6ea0-c7b2-af04-996494bc178b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotAttributes.Id property" Url="html/c35edda8-2bfb-66bf-888a-81cb9bc566f9.htm" />
+  <HelpKINode Title="SlotAttributes.Name property" Url="html/c052e604-473b-dcff-5ba3-89791b2bdce8.htm" />
+  <HelpKINode Title="SlotAttributes.SlotAttributes constructor" Url="html/4ebd181f-cd09-e1ef-5c88-7bf52f4e80eb.htm" />
+  <HelpKINode Title="SlotAttributes.Value property" Url="html/b2f3bfdd-fee0-a730-0008-30ace3987e16.htm" />
+  <HelpKINode Title="SlotConverter class">
+    <HelpKINode Title="SlotConverter Class" Url="html/633ca819-2942-fa62-635e-aeb306466ecf.htm" />
+    <HelpKINode Title="constructor" Url="html/d362b943-709d-7c47-85f6-b2c1b9151d0f.htm" />
+    <HelpKINode Title="methods" Url="html/8ad4fd02-3ef5-3d99-366b-054b350987a7.htm" />
+    <HelpKINode Title="properties" Url="html/a091cc0c-ffb5-ed44-61a1-157c663175f8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotConverter.CanConvert method" Url="html/f6b17033-3fa0-dc24-e437-33a91e02e799.htm" />
+  <HelpKINode Title="SlotConverter.ReadJson method" Url="html/70f5dc92-1f08-34f3-f1d5-96e4d7441b46.htm" />
+  <HelpKINode Title="SlotConverter.SlotConverter constructor" Url="html/d362b943-709d-7c47-85f6-b2c1b9151d0f.htm" />
+  <HelpKINode Title="SlotConverter.WriteJson method" Url="html/8fc944f8-c1de-9539-a252-d3039f6e9356.htm" />
+  <HelpKINode Title="SlotEntry class">
+    <HelpKINode Title="SlotEntry Class" Url="html/a5b1198b-80eb-dcd2-a9e3-beed9b738ea7.htm" />
+    <HelpKINode Title="constructor" Url="html/1921698c-3430-da8b-69d5-b6c184b5dfae.htm" />
+    <HelpKINode Title="methods" Url="html/54c3423c-0979-f13f-cc5e-e761bdb4554f.htm" />
+    <HelpKINode Title="properties" Url="html/a2b578b8-1f5a-4f23-7210-60c57dc21c14.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotEntry.Id property" Url="html/c7d63b52-c35d-dc24-a46b-34892ed1ba46.htm" />
+  <HelpKINode Title="SlotEntry.SlotEntry constructor" Url="html/1921698c-3430-da8b-69d5-b6c184b5dfae.htm" />
+  <HelpKINode Title="SlotEntry.SlotValue property" Url="html/5af3e760-d2c0-f477-afad-1adf7debf068.htm" />
+  <HelpKINode Title="SlotModel class">
+    <HelpKINode Title="SlotModel Class" Url="html/8fa9a0fa-5a06-ea78-f6cc-ee8bece4ee03.htm" />
+    <HelpKINode Title="constructor" Url="html/2bb43b21-7404-606f-ed42-2ca3becbd0f1.htm" />
+    <HelpKINode Title="methods" Url="html/f12530b4-0f53-e6a5-29a2-09a0d43a6c46.htm" />
+    <HelpKINode Title="properties" Url="html/8134d99e-e4d1-605a-ef45-9e49b01df2f0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotModel.Name property" Url="html/d0e6724a-47ed-88ad-8d4a-09bc9eec1847.htm" />
+  <HelpKINode Title="SlotModel.SlotModel constructor" Url="html/2bb43b21-7404-606f-ed42-2ca3becbd0f1.htm" />
+  <HelpKINode Title="SlotModel.Type property" Url="html/6ab25a82-81ae-ced2-8c8d-443a2cb1b85f.htm" />
+  <HelpKINode Title="Slots property">
+    <HelpKINode Title="CanFulfillResponseAttributes.Slots Property " Url="html/8b7b948a-2730-5a97-aeb2-da80c0f6c897.htm" />
+    <HelpKINode Title="IntentAttributes.Slots Property " Url="html/a2e5887e-76cd-5c29-4458-0c5471b483bb.htm" />
+    <HelpKINode Title="IntentModel.Slots Property " Url="html/38d9637a-206d-9be4-9a6d-dfe0ac410794.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotTypeModel class">
+    <HelpKINode Title="SlotTypeModel Class" Url="html/2db1ff3a-3133-d548-e070-37d3d99cdf3a.htm" />
+    <HelpKINode Title="constructor" Url="html/cf554f46-8964-0b2d-013c-42c1d0103758.htm" />
+    <HelpKINode Title="methods" Url="html/cf2ee701-a975-eae1-3e11-3f662d2413ab.htm" />
+    <HelpKINode Title="properties" Url="html/8e830797-061d-9b45-cef4-3418369c1f13.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotTypeModel.Name property" Url="html/2d0610d7-271c-9196-3ac9-da50d4ad2143.htm" />
+  <HelpKINode Title="SlotTypeModel.SlotTypeModel constructor" Url="html/cf554f46-8964-0b2d-013c-42c1d0103758.htm" />
+  <HelpKINode Title="SlotTypeModel.Values property" Url="html/67d9c2b8-3bc0-4896-8d6b-3bb701394e1c.htm" />
+  <HelpKINode Title="SlotTypes property" Url="html/347e0c5d-e2f9-7af0-67aa-0e711cef3bd2.htm" />
+  <HelpKINode Title="SlotValue property" Url="html/5af3e760-d2c0-f477-afad-1adf7debf068.htm" />
+  <HelpKINode Title="SlotValueItem class">
+    <HelpKINode Title="SlotValueItem Class" Url="html/43e77e46-25cd-af94-6ce0-d908977aeec7.htm" />
+    <HelpKINode Title="constructor" Url="html/40deae8f-86cd-2f14-35ae-3687ff50f21c.htm" />
+    <HelpKINode Title="methods" Url="html/ac8bdf95-c61e-34a6-00a0-dbdecc553526.htm" />
+    <HelpKINode Title="properties" Url="html/5ccf93d9-f66f-fd38-100d-620091ab6846.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SlotValueItem.SlotValueItem constructor" Url="html/40deae8f-86cd-2f14-35ae-3687ff50f21c.htm" />
+  <HelpKINode Title="SlotValueItem.Synonyms property" Url="html/23c034fe-92a2-4928-bb08-550e654209a4.htm" />
+  <HelpKINode Title="SlotValueItem.Value property" Url="html/9b19c094-dce9-f12e-0f2c-8663c415939f.htm" />
+  <HelpKINode Title="SmallImageUrl property" Url="html/b2a403ae-1b06-aa64-dec7-1bfee276a65a.htm" />
+  <HelpKINode Title="Ssml enumeration member" Url="html/27f497b7-d671-0606-444b-91ab9a8d851d.htm" />
+  <HelpKINode Title="Ssml property" Url="html/25ef49f2-eb31-f90a-65c3-c05339ee509d.htm" />
+  <HelpKINode Title="Standard enumeration member" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="StateOrRegion property" Url="html/4dcfa290-3b43-4288-aa0e-6062187289c3.htm" />
+  <HelpKINode Title="StatusCode property" Url="html/535ec00d-6abe-870c-221a-d5b33bd45b17.htm" />
+  <HelpKINode Title="Synonyms property" Url="html/23c034fe-92a2-4928-bb08-550e654209a4.htm" />
+  <HelpKINode Title="System property" Url="html/c2a4ed68-9797-758c-f788-64e7aac60347.htm" />
+  <HelpKINode Title="SystemAttributes class">
+    <HelpKINode Title="SystemAttributes Class" Url="html/e26d6202-1a2b-f091-8e5f-3161c314ed41.htm" />
+    <HelpKINode Title="constructor" Url="html/9ad42d92-1989-7966-b7d8-decea0f22ab7.htm" />
+    <HelpKINode Title="methods" Url="html/dfb4a389-6634-e98b-dff3-538978571c12.htm" />
+    <HelpKINode Title="properties" Url="html/e3ec3285-7878-bd5a-a151-fc003fe150a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SystemAttributes.ApiAccessToken property" Url="html/0a25a4aa-5f5c-6650-92b5-b6362203db84.htm" />
+  <HelpKINode Title="SystemAttributes.ApiEndpoint property" Url="html/579b2f5c-1657-b0f4-5d37-de6fb782eff0.htm" />
+  <HelpKINode Title="SystemAttributes.Application property" Url="html/7c95f1e0-1af1-111a-473a-ae2e1f0bb484.htm" />
+  <HelpKINode Title="SystemAttributes.Device property" Url="html/cb70a20b-1f97-24f8-9f60-c1bd929ede5c.htm" />
+  <HelpKINode Title="SystemAttributes.SystemAttributes constructor" Url="html/9ad42d92-1989-7966-b7d8-decea0f22ab7.htm" />
+  <HelpKINode Title="SystemAttributes.User property" Url="html/ddc23230-ac2c-8fa1-9053-ba06211d6202.htm" />
+  <HelpKINode Title="Text property">
+    <HelpKINode Title="CardAttributes.Text Property " Url="html/37da2084-3cc7-e5f0-705d-26b30cb506ef.htm" />
+    <HelpKINode Title="OutputSpeechAttributes.Text Property " Url="html/c9c09068-f0dc-6fb5-d17d-c1af8c6e39a1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Timestamp property" Url="html/5ac504a4-6ae1-5116-64e0-ca0c17066858.htm" />
+  <HelpKINode Title="TimestampEpoch property" Url="html/6b43bd7f-ca49-7338-5035-43e08d04ecee.htm" />
+  <HelpKINode Title="Title property" Url="html/07e50786-5352-b7b0-d17c-714f18d48afb.htm" />
+  <HelpKINode Title="Type property">
+    <HelpKINode Title="AlexaErrorAttributes.Type Property " Url="html/45eea978-c4a4-2c76-f6ee-c0433d5dccdd.htm" />
+    <HelpKINode Title="AlexaSecurityErrorResponse.Type Property " Url="html/79396f79-7444-213e-8556-ad660d894acc.htm" />
+    <HelpKINode Title="CardAttributes.Type Property " Url="html/f537a86e-74cc-dfee-e1c0-de506904f3c4.htm" />
+    <HelpKINode Title="OutputSpeechAttributes.Type Property " Url="html/922e89e1-33d9-a154-e93a-b79bb320cc85.htm" />
+    <HelpKINode Title="RequestAttributes.Type Property " Url="html/53d917fc-65d3-291c-48c0-3cf10a69ad50.htm" />
+    <HelpKINode Title="SlotModel.Type Property " Url="html/6ab25a82-81ae-ced2-8c8d-443a2cb1b85f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="User property">
+    <HelpKINode Title="AlexaSession.User Property " Url="html/f9945b72-4076-e9b5-9c21-53ed232c3435.htm" />
+    <HelpKINode Title="SystemAttributes.User Property " Url="html/ddc23230-ac2c-8fa1-9053-ba06211d6202.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserAttributes class">
+    <HelpKINode Title="UserAttributes Class" Url="html/cb8b8164-c0ab-2e28-0245-802689b8a759.htm" />
+    <HelpKINode Title="constructor" Url="html/14c32750-954c-351d-bd1f-704a4d7e4636.htm" />
+    <HelpKINode Title="methods" Url="html/c78294af-0ca9-2b45-8a03-5212efb0b17b.htm" />
+    <HelpKINode Title="properties" Url="html/6e54802d-81db-2c46-6c5d-5ba7c20adf41.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserAttributes.Permissions property" Url="html/4a58f98d-187c-1ddf-c055-0541365335ec.htm" />
+  <HelpKINode Title="UserAttributes.UserAttributes constructor" Url="html/14c32750-954c-351d-bd1f-704a4d7e4636.htm" />
+  <HelpKINode Title="UserAttributes.UserId property" Url="html/0c6d7de7-d22e-e27b-df28-3627fd5a7a0f.htm" />
+  <HelpKINode Title="UserId property" Url="html/0c6d7de7-d22e-e27b-df28-3627fd5a7a0f.htm" />
+  <HelpKINode Title="Value property">
+    <HelpKINode Title="SlotAttributes.Value Property " Url="html/b2f3bfdd-fee0-a730-0008-30ace3987e16.htm" />
+    <HelpKINode Title="SlotValueItem.Value Property " Url="html/9b19c094-dce9-f12e-0f2c-8663c415939f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Values property" Url="html/67d9c2b8-3bc0-4896-8d6b-3bb701394e1c.htm" />
+  <HelpKINode Title="Version property">
+    <HelpKINode Title="AlexaRequest.Version Property " Url="html/610a2ca5-e764-a2ed-f868-7320433a7851.htm" />
+    <HelpKINode Title="AlexaResponse.Version Property " Url="html/d71ac825-a15d-bf2f-da4a-54af6b6c9b40.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Whetstone.Alexa namespace" Url="html/1ec4830e-963f-d584-90a7-8ed42e80d07a.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaErrorAttributes class" Url="html/8fcabf03-a235-9fcb-7b48-e926c7789aa1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaImageAttributes class" Url="html/1daf0bf1-2a1e-c8eb-e2f2-a1914a2ffab4.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaRecord class" Url="html/585aa8a5-ca0e-8394-2191-203eeedd0763.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaRequest class" Url="html/1c4187b0-ac87-fd7c-56c5-4a3865224db5.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaResponse class" Url="html/17772634-ba75-f23b-4731-f6c1a5a8be04.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaResponseAttributes class" Url="html/33ee196c-4d4c-8671-8b30-a551827ded84.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaSession class" Url="html/78f9c7a7-ec14-a15b-7064-f9ab8e5d4925.htm" />
+  <HelpKINode Title="Whetstone.Alexa.AlexaSessionAttributes class" Url="html/817e3660-cebb-a040-a17a-7e67a11209ae.htm" />
+  <HelpKINode Title="Whetstone.Alexa.ApplicationAttributes class" Url="html/cfef0b35-890d-ea1b-0afe-655e7c35d746.htm" />
+  <HelpKINode Title="Whetstone.Alexa.BuiltInIntents class" Url="html/75e90cd2-f7a8-8fcf-4c0e-ed6bb1949588.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CanFulfill namespace" Url="html/7685a28c-1ea6-cd24-1596-aa31678eff74.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CanFulfill.CanFulfillEnum enumeration" Url="html/80c2dbae-89e8-92d7-e556-c89eb4a658c0.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CanFulfill.CanFulfillResponseAttributes class" Url="html/9decf012-0758-7e76-7d72-474298ecfc96.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CanFulfill.CanFulfillSlotResponse class" Url="html/22072cba-e636-8b06-a966-640323c3b476.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CardAttributes class" Url="html/a508e2cf-f64f-e07d-6ce7-679250a88452.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CardBuilder class" Url="html/4a958ae4-0277-2b9d-7ba7-036c104ce63d.htm" />
+  <HelpKINode Title="Whetstone.Alexa.CardType enumeration" Url="html/7bf18037-7f94-27f5-9a3d-9fdcc254ae31.htm" />
+  <HelpKINode Title="Whetstone.Alexa.ContextAttributes class" Url="html/f14b4008-7211-873d-977e-34e37391964b.htm" />
+  <HelpKINode Title="Whetstone.Alexa.DeviceAttributes class" Url="html/1339642a-07f9-997f-67e4-d5526f23bd49.htm" />
+  <HelpKINode Title="Whetstone.Alexa.IntentAttributes class" Url="html/9918941e-1114-d97b-c2b9-9c1dde54a866.htm" />
+  <HelpKINode Title="Whetstone.Alexa.IntentModel class" Url="html/ff82497b-5ed2-0b6a-3054-a1fa4d4275e1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.InteractionModel class" Url="html/d8894e4e-a0f9-e407-b37b-c651ffe8bf1f.htm" />
+  <HelpKINode Title="Whetstone.Alexa.LanguageModel class" Url="html/98f2a68b-74ed-2bcb-c904-34fd3c78c910.htm" />
+  <HelpKINode Title="Whetstone.Alexa.OutputSpeechAttributes class" Url="html/2c8506bf-2caa-d435-ec42-3c61c27590c3.htm" />
+  <HelpKINode Title="Whetstone.Alexa.OutputSpeechType enumeration" Url="html/27f497b7-d671-0606-444b-91ab9a8d851d.htm" />
+  <HelpKINode Title="Whetstone.Alexa.PermissionAttributes class" Url="html/1c2dce0e-43be-189e-58f0-a005e5fca24a.htm" />
+  <HelpKINode Title="Whetstone.Alexa.RepromptAttributes class" Url="html/2ed00e46-9a7c-bd7f-54b1-5d4ea9d36c16.htm" />
+  <HelpKINode Title="Whetstone.Alexa.RequestAttributes class" Url="html/123d9b02-c3d0-4992-3007-760b55030c53.htm" />
+  <HelpKINode Title="Whetstone.Alexa.RequestType enumeration" Url="html/a3a44099-11bc-2f19-8d94-642f7eb1c709.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security namespace" Url="html/d5b19e5a-b3db-e274-64df-b3417241d62e.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaSecurityErrorResponse class" Url="html/f512986e-a627-22da-81d6-2d411c39aa70.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaSecurityException class" Url="html/1fcb6307-e909-3a61-0174-1fea24c0f2c2.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaSecurityInfo class" Url="html/4fffcbdf-efb8-e5fb-2903-5f2c7a777316.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaUserDataManager class" Url="html/f6845cf5-ae32-e342-79a2-ae8f0d804dc1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaUserFullAddress class" Url="html/15d3ad14-a5a6-358f-38d9-6d4d55df6700.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaUserPhoneNumber class" Url="html/80d13131-a634-ca79-c08d-1894074ab683.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.AlexaUserPostalCode class" Url="html/d1b70fae-5b38-463b-1cef-c5f5374b9dc2.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Security.PersonalDataType enumeration" Url="html/7340353e-4c32-edf7-6b3a-6f6ecf0a4816.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization namespace" Url="html/9735a4a8-5525-974c-c974-e8b82024b82a.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization.CanFulfillSlotResponseConverter class" Url="html/8dbde76b-ec7c-f2bf-fcb5-0a0f0703850c.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization.JsonEnumConverter(Of T) class" Url="html/51a04c92-4d38-368c-78d3-583efe6db3e1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization.JsonEnumConverter&lt;T&gt; class" Url="html/51a04c92-4d38-368c-78d3-583efe6db3e1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization.SerializationExtensions class" Url="html/104aca1a-1f9b-d6d0-783a-8ad966cf6580.htm" />
+  <HelpKINode Title="Whetstone.Alexa.Serialization.SlotConverter class" Url="html/633ca819-2942-fa62-635e-aeb306466ecf.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SlotAttributes class" Url="html/aa448916-0700-2896-9d98-54c7ccda7ca1.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SlotEntry class" Url="html/a5b1198b-80eb-dcd2-a9e3-beed9b738ea7.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SlotModel class" Url="html/8fa9a0fa-5a06-ea78-f6cc-ee8bece4ee03.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SlotTypeModel class" Url="html/2db1ff3a-3133-d548-e070-37d3d99cdf3a.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SlotValueItem class" Url="html/43e77e46-25cd-af94-6ce0-d908977aeec7.htm" />
+  <HelpKINode Title="Whetstone.Alexa.SystemAttributes class" Url="html/e26d6202-1a2b-f091-8e5f-3161c314ed41.htm" />
+  <HelpKINode Title="Whetstone.Alexa.UserAttributes class" Url="html/cb8b8164-c0ab-2e28-0245-802689b8a759.htm" />
+  <HelpKINode Title="WriteJson method">
+    <HelpKINode Title="CanFulfillSlotResponseConverter.WriteJson Method " Url="html/cb7a2f2f-3dc7-e9ac-797a-ec0c9af2c36c.htm" />
+    <HelpKINode Title="JsonEnumConverter(T).WriteJson Method " Url="html/31f8dce3-3c92-c977-f7da-49ba3d299cbf.htm" />
+    <HelpKINode Title="SlotConverter.WriteJson Method " Url="html/8fc944f8-c1de-9539-a252-d3039f6e9356.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Yes enumeration member" Url="html/80c2dbae-89e8-92d7-e556-c89eb4a658c0.htm" />
+</HelpKI>
