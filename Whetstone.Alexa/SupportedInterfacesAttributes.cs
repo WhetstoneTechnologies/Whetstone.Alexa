@@ -16,35 +16,43 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
+using Whetstone.Alexa.Apl;
+using Whetstone.Alexa.Display;
 
 namespace Whetstone.Alexa
 {
-    [JsonObject]
-    public class AlexaRequest
+    public class SupportedInterfacesAttributes
     {
-        public AlexaRequest()
-        {
 
+        // {
+        //"AudioPlayer": {},
+        //  "Display": {
+        //    "templateVersion": "1.0",
+        //    "markupVersion": "1.0"
+        //  },
+        //  "Alexa.Presentation.APL": {
+        //    "runtime": {
+        //      "maxVersion": "1.0"
+        //    }
+        //  },
+        //  "VideoApp": {}
+        //}
 
-        }
+        [JsonProperty("AudioPlayer", NullValueHandling = NullValueHandling.Ignore)]
+        public dynamic AudioPlayer { get; set; }
 
+        [JsonProperty("VideoApp", NullValueHandling = NullValueHandling.Ignore)]
+        public dynamic VideoApp { get; set; }
 
-        [JsonProperty("version")]
-        public string Version { get; set; }
+        [JsonProperty("Display", NullValueHandling = NullValueHandling.Ignore)]
+        public DisplayInterfaceAttributes Display { get; set; }
 
-        [JsonProperty("session")]
-        public AlexaSessionAttributes Session { get; set; }
-
-        [JsonProperty("request")]
-        public RequestAttributes Request { get; set; }
-
-       
-        [JsonProperty("context")]
-         public ContextAttributes Context { get; set; }
+        [JsonProperty("Alexa.Presentation.APL", NullValueHandling = NullValueHandling.Ignore)]
+        public AplInterfaceAttributes AdvancedPresentationLanguage { get; set; }
 
     }
 }

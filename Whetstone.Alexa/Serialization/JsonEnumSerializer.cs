@@ -30,21 +30,32 @@ namespace Whetstone.Alexa.Serialization
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            Enum sourceEnum = value as Enum;
-
-            if (sourceEnum != null)
-
+            if (value != null)
             {
-                string enumText = sourceEnum.GetDescriptionFromEnumValue();
-                writer.WriteValue(enumText);
+                Enum sourceEnum = value as Enum;
+
+                if (sourceEnum != null)
+
+                {
+                    string enumText = sourceEnum.GetDescriptionFromEnumValue();
+                    writer.WriteValue(enumText);
+                }
             }
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var enumString = (string)reader.Value;
 
-            return Enum.Parse(typeof(T), enumString, true);
+            object val = reader.Value;
+
+            if (val != null)
+            {
+                var enumString = (string)reader.Value;
+
+                return Enum.Parse(typeof(T), enumString, true);
+            }
+
+            return null;
         }
 
         public override bool CanConvert(Type objectType)

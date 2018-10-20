@@ -18,6 +18,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -25,9 +26,21 @@ using Whetstone.Alexa.Serialization;
 
 namespace Whetstone.Alexa
 {
+    [DebuggerDisplay("Intent Name = {Name}")]
     [JsonObject("intent")]
     public class IntentAttributes
     {
+
+        public IntentAttributes()
+        {
+
+        }
+
+        public IntentAttributes(string intentName) : this()
+        {
+            Name = intentName;
+        }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -38,7 +51,8 @@ namespace Whetstone.Alexa
 
     }
 
-  
+
+    [DebuggerDisplay("Slot (Name: {Name}, Value: {Value})")]
     [JsonObject("slot")]
     public class SlotAttributes
     {

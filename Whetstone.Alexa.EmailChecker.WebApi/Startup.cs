@@ -47,7 +47,7 @@ namespace Whetstone.Alexa.EmailChecker.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,11 +61,11 @@ namespace Whetstone.Alexa.EmailChecker.WebApi
             //  app.Map("/api/alexa", alexaApp => { alexaApp.UseAlexaValidation(); });
             // If not in development, then apply strict certificate validation
             // checking.
-            //app.UseWhen(context => context.Request.Path.ToString().EndsWith("alexa"),
-            //    branch =>
-            //    {
-            //        branch.UseAlexaValidation();
-            //    });
+            app.UseWhen(context => context.Request.Path.ToString().EndsWith("alexa"),
+                branch =>
+                {
+                    branch.UseAlexaValidation();
+                });
 
 
             app.UseMvc();

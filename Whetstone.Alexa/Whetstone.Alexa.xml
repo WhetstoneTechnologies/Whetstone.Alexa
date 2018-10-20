@@ -4,12 +4,12 @@
         <name>Whetstone.Alexa</name>
     </assembly>
     <members>
-        <member name="P:Whetstone.Alexa.AlexaSession.User">
+        <member name="P:Whetstone.Alexa.AlexaSessionAttributes.User">
             <summary>
             Alexa user data, including the UserId.
             </summary>
         </member>
-        <member name="T:Whetstone.Alexa.Audio.PlayerActivityEnum">
+        <member name="T:Whetstone.Alexa.Audio.AudioPlayerActivityEnum">
             <summary>
             Indicates state of the audio player interface
             </summary>
@@ -17,12 +17,12 @@
             For more information see <a href="https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html">Audio Player Interface</a>.
             </remarks>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Idle">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.Idle">
             <summary>
             AudioPlayer is only in an idle state when a product is initially powered on or rebooted and prior to acting on a Play directive.
             </summary>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Playing">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.Playing">
             <summary>
             When your client initiates playback of an audio stream, AudioPlayer must transition from an idle state to playing.
             </summary>
@@ -45,7 +45,7 @@
             </list>
             </remarks>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Stopped">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.Stopped">
             <summary>
             Default value of the request when starting a new session.
             </summary>
@@ -61,20 +61,20 @@
             <para>AudioPlayer must transition from stopped to playing whenever your client receives a Play directive, starts playing an audio stream, and sends a PlaybackStarted event to the AVS.</para>
             </remarks>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Paused">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.Paused">
             <summary>
             AudioPlayer must transition to the paused state when audio on the Content channel is paused to accommodate a higher priority input/output (such as user or Alexa speech). 
             </summary>
             <remarks> Playback must resume when the prioritized activity completes. For more information on prioritizing audio input/outputs. See <a href="https://developer.amazon.com/docs/alexa-voice-service/interaction-model.html">Interaction Model</a></remarks>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.BufferUnderrun">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.BufferUnderrun">
             <summary>
             AudioPlayer must transition to the buffer_underrun state when the client is being fed data slower than it is being read. 
             AudioPlayer must remain in this state until the buffer is full enough to resume playback, 
             at which point it must return to the playing state.
             </summary>
         </member>
-        <member name="F:Whetstone.Alexa.Audio.PlayerActivityEnum.Finished">
+        <member name="F:Whetstone.Alexa.Audio.AudioPlayerActivityEnum.Finished">
             <summary>
             When a stream is finished playing, AudioPlayer must transition to the finished state. This is true for every stream in your playback queue. Even if there are streams queued to play, your client is required to send a PlaybackFinished event to AVS, 
             and subsequently, transition from the playing state to finished when each stream is finished playing.
@@ -87,7 +87,7 @@
             </list>
             </remarks>
         </member>
-        <member name="T:Whetstone.Alexa.Audio.AudioRequestAttributes">
+        <member name="T:Whetstone.Alexa.Audio.AudioPlayerRequestAttributes">
             <summary>
             Contains the state of audio player on the user's device.
             </summary>
@@ -95,7 +95,7 @@
             For more information about the audio player, see: https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html
             </remarks>
         </member>
-        <member name="P:Whetstone.Alexa.Audio.AudioRequestAttributes.PlayerActivity">
+        <member name="P:Whetstone.Alexa.Audio.AudioPlayerRequestAttributes.PlayerActivity">
             <summary>
             Indicates the client status of the audio player. Defaults to Stopped on launch.
             </summary>
@@ -527,7 +527,7 @@
         </member>
         <member name="P:Whetstone.Alexa.CanFulfill.CanFulfillResponseAttributes.CanFulfill">
             <summary>
-            Must be set to string "YES" or "NO"
+            Must be set to string "YES" or "NO" or "MAYBE"
             </summary>
         </member>
         <member name="P:Whetstone.Alexa.CanFulfill.CanFulfillSlotResponse.CanUnderstand">
@@ -539,6 +539,129 @@
             <summary>
             Serializes to "YES", "NO" or "MAYBE"
             </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.ExtraSmall">
+            <summary>
+            Displayed within extra small containers	(480x320)
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.Small">
+            <summary>
+             Displayed within small containers (720x480)
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.Medium">
+            <summary>
+             Displayed within medium containers	(960x640)
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.Large">
+            <summary>
+            Displayed within large containers (1200x800)
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.ExtraLarge">
+            <summary>
+            Displayed within extra large containers	(1920x1280)
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayTemplateTypeEnum.BodyTemplate2">
+            <summary>
+            Image is displayed on the right. Text is centered.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.Display.DisplayTemplateTypeEnum.BodyTemplate3">
+            <summary>
+            Image is displayed on the left. Text is centered.
+            </summary>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.Type">
+            <summary>
+            Name of the template.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.Token">
+            <summary>
+            Used to track selectable elements in the skill service code. The value can be any user-defined string.
+            </summary>
+            <value>
+            The token.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.Title">
+            <summary>
+            Used for title for a display template. The value can be any user-defined string.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.Image">
+            <summary>
+            References and describes the image. Multiple sources for the image can be provided. The same format is used for both `backgroundImage` and `image`.
+            </summary>
+            <value>
+            The image.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.TextContent">
+            <summary>
+            Contains primaryText, secondaryText, and tertiaryText.
+            </summary>
+            <value>
+            The content of the text.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.BackButtonDisplay">
+            <summary>
+            Used to place the back button on a display template. Defaults to VISIBLE.
+            </summary>
+            <value>
+            The back button display.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.BackgroundImage">
+            <summary>
+            Used to include a background image on a display template.
+            </summary>
+            <value>
+            The background image.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTemplate.ListItems">
+            <summary>
+            Contains the text and images of the list items.
+            </summary>
+            <value>
+            The list items.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTextContent.PrimaryText">
+            <summary>
+            Contains type (which is PlainText or RichText) and text (which is a string). Limit of 8000 characters.
+            </summary>
+            <value>
+            The primary text.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTextContent.SecondaryText">
+            <summary>
+            Contains type (which is PlainText or RichText) and text (which is a string). Limit of 8000 characters.
+            </summary>
+            <value>
+            The secondary text.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.Display.DisplayTextContent.TertiaryText">
+            <summary>
+            Contains type (which is PlainText or RichText) and text (which is a string). Limit of 8000 characters.
+            </summary>
+            <value>
+            The tertiary text.
+            </value>
         </member>
         <member name="T:Whetstone.Alexa.PermissionAttributes">
             <summary>
@@ -556,6 +679,31 @@
             This is used with the Alexa List management API.
             </summary>
             <remarks>If consent has not been granted, this value will not be present in the request.</remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.ProgressiveResponse.ProgressiveRequestDirective.Type">
+            <summary>
+            The type must be set to "VoicePlayer.Speak" and it is by default. Do not change this.
+            </summary>
+            <value>
+            Defaults to "VoicePlayer.Speak"
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.ProgressiveResponse.ProgressiveRequestDirective.Speech">
+            <summary>
+            Can be plain text or SSML. If audio tags are included, the audio playback must be 30 sec. or less.
+            </summary>
+            <value>
+            The speech text or SSML.
+            </value>
+        </member>
+        <member name="M:Whetstone.Alexa.ProgressiveResponse.ProgressiveResponseManager.SendProgressiveResponseAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends a response to let the Alexa user know that the skill is working on the request.
+            </summary>
+            <param name="apiEndpoint">The API endpoint.</param>
+            <param name="apiAccessToken"></param>
+            <param name="requestId">The request identifier.</param>
+            <param name="text">This can be plain text or ssml. If it contains any audio MP3 files, they cannot take more than 30 secs. to play.</param>
         </member>
         <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor">
             <summary>

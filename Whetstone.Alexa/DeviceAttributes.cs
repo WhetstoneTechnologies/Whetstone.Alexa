@@ -33,6 +33,11 @@ namespace Whetstone.Alexa
         public string DeviceId { get; set; }
 
 
-        // TODO - Determine how to handle Supported Interfaces
+        [JsonProperty(PropertyName = "supportedInterfaces", NullValueHandling = NullValueHandling.Ignore)]
+        public SupportedInterfacesAttributes SupportedInterfaces { get; set; }
+
+        [JsonProperty(PropertyName = "token", NullValueHandling = NullValueHandling.Ignore)]
+        public string Token { get; set; }
+
     }
 }

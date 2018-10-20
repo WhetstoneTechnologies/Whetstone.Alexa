@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.Test", "Whe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34D29979-2D87-43A8-84EA-4F9472646B4F}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -16,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.EmailChecke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.EmailChecker.Lambda.Tests", "Whetstone.Alexa.EmailChecker.Lambda.Tests\Whetstone.Alexa.EmailChecker.Lambda.Tests.csproj", "{2D288A74-4F0D-4E4C-838E-28A79D571A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whetstone.Alexa.EmailChecker.WebApi", "Whetstone.Alexa.EmailChecker.WebApi\Whetstone.Alexa.EmailChecker.WebApi.csproj", "{6464D03D-140B-433E-8E47-D0DCA68C0BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.EmailChecker.WebApi", "Whetstone.Alexa.EmailChecker.WebApi\Whetstone.Alexa.EmailChecker.WebApi.csproj", "{6464D03D-140B-433E-8E47-D0DCA68C0BE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Whetstone.Alexa.EmailChecker", "Whetstone.Alexa.EmailChecker\Whetstone.Alexa.EmailChecker.csproj", "{6A7269A9-1E7D-4515-9C8C-E0788FA76176}"
 EndProject

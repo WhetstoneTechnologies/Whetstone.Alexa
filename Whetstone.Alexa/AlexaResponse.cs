@@ -42,13 +42,13 @@ namespace Whetstone.Alexa
         public AlexaResponse()
         {
             Version = "1.0";
-            Session = null;
-            Response = new AlexaResponseAttributes();
+           
         }
 
         public AlexaResponse(string outputSpeechText)
             : this()
         {
+            Response = new AlexaResponseAttributes();
             Response.OutputSpeech.Text = outputSpeechText;
             Response.Card.Content = outputSpeechText;
         }

@@ -1,0 +1,54 @@
+﻿{
+  "session": {
+    "new": true,
+    "sessionId": "SessionId.40fabe8e-6a15-4085-8a1a-98126ef9fb45",
+    "application": {
+      "applicationId": "amzn1.ask.skill.01f23685-3492-4640-8995-26840fdec57c"
+    },
+    "attributes": {
+      "key": "string value"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.f4056b82-21ce-4498-95b7-284464baa5f8"
+    }
+  },
+  "request": {
+    "type": "CanFulfillIntentRequest",
+    "requestId": "amzn1.echo-api.request.f3931bf4-4ba6-439c-917e-6965006bbe0e",
+    "intent": {
+      "name": "FindTrialByCityAndConditionIntent",
+      "slots": {
+        "condition": {
+          "name": "condition",
+          "value": "epilepsy"
+        },
+        "city": {
+          "name": "city",
+          "value": "New York"
+        }
+      }
+    },
+    "locale": "en-US",
+    "timestamp": "2017-10-03T22:02:29Z"
+  },
+  "context": {
+    "AudioPlayer": {
+      "playerActivity": "IDLE"
+    },
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.01f23685-3492-4640-8995-26840fdec57c"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.EJ7P5P3CRPNPU23LK2JPVVVXEHKPROGNEYQMG45FBH7ZAEQVMRFZ636J5ZVBO5WNMIWCFFRPHB76HLR75PADSMBRQOM5HKR2S263AISPE543VC4SWMGBIHUMLDRRWJVFYQ6SC6UDQTIIQLSQPX7IJH6L4JCHQJTVIYLPXKNDZFCWO25NCR2E3QASFGCXJCN7YH3KK3VCWT2OPQY"
+      },
+      "device": {
+        "supportedInterfaces": {
+
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
+

@@ -16,35 +16,42 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 
-namespace Whetstone.Alexa
+namespace Whetstone.Alexa.ProgressiveResponse
 {
-    [JsonObject]
-    public class AlexaRequest
+    public class ProgressiveRequest
     {
-        public AlexaRequest()
-        {
+        //        { 
+        //  "header":{ 
+        //    "requestId":"amzn1.echo-api.request.xxxxxxx"
+        //  },
+        //  "directive":{ 
+        //    "type":"VoicePlayer.Speak",
+        //    "speech":"This text is spoken while your skill processes the full response."
+        //  }
+        //}
 
+        public ProgressiveRequest()
+        {
 
         }
 
+        public ProgressiveRequest(string requestId, string speech) : this()
+        {
+            Header = new ProgressiveRequestHeader(requestId);
+            Directive = new ProgressiveRequestDirective(speech);
 
-        [JsonProperty("version")]
-        public string Version { get; set; }
+        }
 
-        [JsonProperty("session")]
-        public AlexaSessionAttributes Session { get; set; }
+        [JsonProperty("header")]
+        public ProgressiveRequestHeader Header { get; set; }
 
-        [JsonProperty("request")]
-        public RequestAttributes Request { get; set; }
-
-       
-        [JsonProperty("context")]
-         public ContextAttributes Context { get; set; }
+        [JsonProperty("directive")]
+        public ProgressiveRequestDirective Directive { get; set; }
 
     }
 }

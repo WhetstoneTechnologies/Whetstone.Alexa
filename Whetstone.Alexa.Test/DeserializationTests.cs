@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Whetstone.Alexa.Audio;
 using Xunit;
 
 namespace Whetstone.Alexa.Test
@@ -33,7 +34,7 @@ namespace Whetstone.Alexa.Test
     {
 
         [Fact]
-        public void DeserializationTest()
+        public void EchoShowDeserializationTest()
         {
             string filePath = @"requestsamples\echoshowlaunchrequest.json";
 
@@ -42,10 +43,62 @@ namespace Whetstone.Alexa.Test
 
 
             AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
-
-
-
         }
 
+        [Fact]
+        public void AllInterfaceLaunchTest()
+        {
+            string filePath = @"requestsamples\allsupportedinterfaceslaunchrequest.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+            Assert.Equal("1.0", req.Context.System.Device.SupportedInterfaces.AdvancedPresentationLanguage.Runtime.MaxVersion);
+
+            Assert.Equal(AudioPlayerActivityEnum.Stopped, req.Context.AudioPlayer.PlayerActivity);
+
+            Assert.NotNull(req.Context.Display);
+                
+        }
+
+        [Fact]
+        public void CanInvokeDeserializationTest()
+        {
+            string filePath = @"requestsamples\caninvokesamplerequest.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+            Assert.Equal(RequestType.CanFulfillIntentRequest , req.Request.Type);
+
+            Assert.Equal("FindTrialByCityAndConditionIntent", req.Request.Intent.Name);
+
+            List<SlotAttributes> slots = req.Request.Intent.Slots;
+
+
+            Assert.Contains(slots, x => x.Name.Equals("condition") && x.Value.Equals("epilepsy"));
+
+
+            Assert.Contains(slots, x => x.Name.Equals("city") && x.Value.Equals("New York"));
+
+
+            //    "name": "condition",
+            //  "value": "epilepsy"
+            //},
+            //"city": {
+            //  "name": "city",
+            //  "value": "New York"
+        }
+
+
     }
+
+
+    
 }

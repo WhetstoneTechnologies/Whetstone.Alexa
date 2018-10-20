@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
-
+using Newtonsoft.Json;
 
 namespace Whetstone.Alexa.EmailChecker.Lambda.Tests
 {
@@ -43,11 +43,39 @@ namespace Whetstone.Alexa.EmailChecker.Lambda.Tests
             var context = new TestLambdaContext();
             AlexaRequest req = new AlexaRequest();
 
-            var upperCase = function.FunctionHandler(req, context);
+            var upperCase = function.FunctionHandlerAsync(req, context);
 
 
 
             //Assert.Equal("HELLO WORLD", upperCase);
+        }
+
+        [Fact]
+        public async Task FireCanFulfillRequestTest()
+        {
+
+            AlexaRequest req = new AlexaRequest();
+
+            req.Version = "1.0";
+
+            req.Request = new RequestAttributes();
+            req.Request.RequestId = Guid.NewGuid().ToString();
+            req.Request.Timestamp = DateTime.Now;
+            req.Request.Locale = "en-US";
+            req.Request.Type = RequestType.CanFulfillIntentRequest;
+            req.Session = new AlexaSessionAttributes();
+            req.Session.New = true;
+            req.Session.SessionId = Guid.NewGuid().ToString();
+            req.Request.Intent = new IntentAttributes("EmailCheckIntent");
+
+
+            var function = new Function();
+            var context = new TestLambdaContext();
+
+           AlexaResponse resp = await function.FunctionHandlerAsync(req, context);
+
+            string jsonText = JsonConvert.SerializeObject(resp);
+
         }
     }
 }

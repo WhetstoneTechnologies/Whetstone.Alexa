@@ -16,32 +16,12 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
-using Newtonsoft.Json;
+using System.Threading.Tasks;
 
-namespace Whetstone.Alexa
+namespace Whetstone.Alexa.ProgressiveResponse
 {
-    [JsonObject("session")]
-    public class AlexaSession
+    public interface IProgressiveResponseManager
     {
-        [JsonProperty("sessionId")]
-        public string SessionId { get; set; }
-
-        [JsonProperty("application")]
-        public ApplicationAttributes Application { get; set; }
-
-        [JsonProperty("attributes")]
-        public AlexaSessionAttributes Attributes { get; set; }
-
-
-
-        /// <summary>
-        /// Alexa user data, including the UserId.
-        /// </summary>
-        [JsonProperty("user")]
-        public UserAttributes User { get; set; }
-
-        [JsonProperty("new")]
-        public bool New { get; set; }
-
+        Task SendProgressiveResponseAsync(string apiEndpoint, string apiAccessToken, string requestId, string text);
     }
 }

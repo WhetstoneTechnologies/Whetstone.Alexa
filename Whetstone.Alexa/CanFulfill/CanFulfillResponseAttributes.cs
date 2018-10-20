@@ -26,9 +26,21 @@ namespace Whetstone.Alexa.CanFulfill
 {
     public class CanFulfillResponseAttributes
     {
+        public CanFulfillResponseAttributes()
+        {
+
+        }
+
+
+        public CanFulfillResponseAttributes(CanFulfillEnum canFulfill) : this()
+        {
+            CanFulfill = canFulfill;
+
+        }
+
 
         /// <summary>
-        /// Must be set to string "YES" or "NO"
+        /// Must be set to string "YES" or "NO" or "MAYBE"
         /// </summary>
         [JsonProperty("canFulfill")]
         [JsonConverter(typeof(JsonEnumConverter<CanFulfillEnum>))]
@@ -36,7 +48,7 @@ namespace Whetstone.Alexa.CanFulfill
 
 
         [JsonConverter(typeof(CanFulfillSlotResponseConverter))]
-        [JsonProperty("slots")]
+        [JsonProperty("slots", NullValueHandling = NullValueHandling.Ignore)]
         public List<CanFulfillSlotResponse> Slots { get; set; }
 
     }
