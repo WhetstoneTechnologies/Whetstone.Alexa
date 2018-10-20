@@ -27,6 +27,12 @@ namespace Whetstone.Alexa
     [JsonObject("response")]
     public class AlexaResponseAttributes
     {
+
+        public AlexaResponseAttributes()
+        {
+            ShouldEndSession = true;
+        }
+
         [JsonRequired]
         [JsonProperty("shouldEndSession")]
         public bool ShouldEndSession { get; set; }
@@ -43,13 +49,10 @@ namespace Whetstone.Alexa
         [JsonProperty("canFulfillIntent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CanFulfillResponseAttributes CanFulfill { get; set; }
 
-        public AlexaResponseAttributes()
-        {
-            ShouldEndSession = true;
-            OutputSpeech = new OutputSpeechAttributes();
-            CanFulfill = null;
-            Card = null;
-            Reprompt = new RepromptAttributes();
-        }
+
+       [JsonProperty("directives", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public List<DirectiveResponse> Directives { get; set; }
+
+
     }
 }

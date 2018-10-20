@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Whetstone.Alexa.EmailChecker\Whetstone.Alexa.EmailChecker.csproj" />
     <ProjectReference Include="..\Whetstone.Alexa\Whetstone.Alexa.csproj" />
   </ItemGroup>
 

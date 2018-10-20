@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <None Remove="RequestSamples\AllSupportedInterfacesLaunchRequest.json" />
+    <None Remove="RequestSamples\caninvokesamplerequest.json" />
     <None Remove="RequestSamples\echoshowlaunchrequest.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="RequestSamples\AllSupportedInterfacesLaunchRequest.json">
+    <Content Include="RequestSamples\allsupportedinterfaceslaunchrequest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RequestSamples\caninvokesamplerequest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="RequestSamples\echoshowlaunchrequest.json">

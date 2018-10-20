@@ -41,8 +41,8 @@ namespace Whetstone.Alexa
         [JsonProperty("Display", NullValueHandling = NullValueHandling.Ignore)]
         public dynamic Display { get; set; }
 
-        [JsonProperty("Audio", NullValueHandling = NullValueHandling.Ignore)]
-        public AudioRequestAttributes Audio { get; set; }
+        [JsonProperty("AudioPlayer", NullValueHandling = NullValueHandling.Ignore)]
+        public AudioPlayerRequestAttributes AudioPlayer { get; set; }
 
     }
 }

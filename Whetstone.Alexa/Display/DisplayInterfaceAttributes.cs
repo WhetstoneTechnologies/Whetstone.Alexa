@@ -16,21 +16,24 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 
-namespace Whetstone.Alexa
+namespace Whetstone.Alexa.Display
 {
-    [JsonObject("attributes")]
-    public class AlexaSessionAttributes
+    public class DisplayInterfaceAttributes
     {
-        [JsonProperty("memberId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string MemberId { get; set; }
 
-        [JsonProperty("nodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string NodeId { get; set; }
 
+        [JsonProperty("templateVersion")]
+        public string TemplateVersion { get; set; }
+
+        [JsonProperty("markupVersion")]
+        public string MarkupVersion { get; set; }
+
+
+        
     }
 }

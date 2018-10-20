@@ -16,35 +16,48 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 
-namespace Whetstone.Alexa
+namespace Whetstone.Alexa.ProgressiveResponse
 {
-    [JsonObject]
-    public class AlexaRequest
+    public class ProgressiveRequestDirective
     {
-        public AlexaRequest()
+
+        public ProgressiveRequestDirective()
         {
 
+            Type = "VoicePlayer.Speak";
+
+        }
+
+        public ProgressiveRequestDirective(string speech) : this()
+        {
+            Speech = speech;
 
         }
 
 
-        [JsonProperty("version")]
-        public string Version { get; set; }
+        /// <summary>
+        /// The type must be set to "VoicePlayer.Speak" and it is by default. Do not change this.
+        /// </summary>
+        /// <value>
+        /// Defaults to "VoicePlayer.Speak"
+        /// </value>
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
-        [JsonProperty("session")]
-        public AlexaSessionAttributes Session { get; set; }
 
-        [JsonProperty("request")]
-        public RequestAttributes Request { get; set; }
-
-       
-        [JsonProperty("context")]
-         public ContextAttributes Context { get; set; }
+        /// <summary>
+        /// Can be plain text or SSML. If audio tags are included, the audio playback must be 30 sec. or less.
+        /// </summary>
+        /// <value>
+        /// The speech text or SSML.
+        /// </value>
+        [JsonProperty("speech")]
+        public string Speech { get; set; }
 
     }
 }

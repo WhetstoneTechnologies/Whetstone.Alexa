@@ -1,6 +1,4 @@
-﻿extensions: designer.cs generated.cs
-extensions: .cs .cpp .h
-// Copyright (c) 2018 Whetstone Technologies (MIT)
+﻿// Copyright (c) 2018 Whetstone Technologies
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -18,13 +16,22 @@ extensions: .cs .cpp .h
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
-extensions: .aspx .ascx
-<%-- 
-Copyright (c) 2011 rubicon IT GmbH
---%>
-extensions: .vb
-'Sample license text.
-extensions:  .xml .config .xsd
-<!--
-Sample license text.
--->
+using System.Threading.Tasks;
+
+namespace Whetstone.Alexa.Security
+{
+    public interface IAlexaUserDataManager
+    {
+        Task<string> GetAlexaUserEmailAsync(string apiEndpoint, string apiToken);
+
+        Task<AlexaUserFullAddress> GetAlexaUserFullAddressAsync(string apiEndpoint, string apiToken, string deviceId);
+
+        Task<string> GetAlexaUserFullNameAsync(string apiEndpoint, string apiToken);
+
+        Task<string> GetAlexaUserGivenNameAsync(string apiEndpoint, string apiToken);
+
+        Task<AlexaUserPhoneNumber> GetAlexaUserPhoneNumberAsync(string apiEndpoint, string apiToken);
+
+        Task<AlexaUserPostalCode> GetAlexaUserPostalCodeAsync(string apiEndpoint, string apiToken, string deviceId);
+    }
+}

@@ -36,7 +36,7 @@ namespace Whetstone.Alexa.Security
 
     }
 
-    public class AlexaUserDataManager
+    public class AlexaUserDataManager : IAlexaUserDataManager
     {
 
         // For more information about getting user profile data:
@@ -64,7 +64,7 @@ namespace Whetstone.Alexa.Security
         private ILogger _logger = null;
 
 
-        public AlexaUserDataManager(ILogger logger)
+        public AlexaUserDataManager(ILogger logger) : this()
         {
             _logger = logger;
         }

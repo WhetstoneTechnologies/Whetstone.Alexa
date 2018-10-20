@@ -31,7 +31,7 @@ namespace Whetstone.Alexa.Audio
     /// For more information see <a href="https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html">Audio Player Interface</a>.
     /// </remarks>
     [Serializable]
-    public enum PlayerActivityEnum
+    public enum AudioPlayerActivityEnum
     {
         /// <summary>
         /// AudioPlayer is only in an idle state when a product is initially powered on or rebooted and prior to acting on a Play directive.
@@ -120,16 +120,16 @@ namespace Whetstone.Alexa.Audio
     /// <remarks>
     /// For more information about the audio player, see: https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html
     /// </remarks>
-    public class AudioRequestAttributes
+    public class AudioPlayerRequestAttributes
     {
 
 
         /// <summary>
         /// Indicates the client status of the audio player. Defaults to Stopped on launch.
         /// </summary>
-        [JsonConverter(typeof(JsonEnumConverter<PlayerActivityEnum>))]
+        [JsonConverter(typeof(JsonEnumConverter<AudioPlayerActivityEnum>))]
         [JsonProperty("playerActivity", NullValueHandling = NullValueHandling.Ignore)]
-        public PlayerActivityEnum PlayerActivity { get; set; }
+        public AudioPlayerActivityEnum PlayerActivity { get; set; }
 
     }
 }

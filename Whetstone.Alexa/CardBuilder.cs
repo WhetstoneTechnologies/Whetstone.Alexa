@@ -28,30 +28,22 @@ namespace Whetstone.Alexa
 
         public static CardAttributes GetPermissionRequestCard(PersonalDataType dataType)
         {
-            return GetPermissionRequestCard(new List<PersonalDataType> { dataType }, null);
-        }
-
-        public static CardAttributes GetPermissionRequestCard(PersonalDataType dataType, string text)
-        {
-            return GetPermissionRequestCard(new List<PersonalDataType> { dataType }, text);
+            return GetPermissionRequestCard(new List<PersonalDataType> { dataType });
         }
 
 
-
-        public static CardAttributes GetPermissionRequestCard(IEnumerable<PersonalDataType> dataTypes, string text)
+        public static CardAttributes GetPermissionRequestCard(IEnumerable<PersonalDataType> dataTypes)
         {
 
             if (dataTypes == null)
                 throw new ArgumentNullException("No permissions specified in dataTypes");
 
-            if (string.IsNullOrWhiteSpace(text))
-                throw new ArgumentNullException("text is null or empty.");
 
-            return InternalGetPermissionCardRequet(dataTypes, text);
+            return InternalGetPermissionCardRequet(dataTypes);
         }
 
 
-        private static CardAttributes InternalGetPermissionCardRequet(IEnumerable<PersonalDataType> dataTypes, string text)
+        private static CardAttributes InternalGetPermissionCardRequet(IEnumerable<PersonalDataType> dataTypes)
         {
             CardAttributes retCard = new CardAttributes();
 
@@ -64,8 +56,6 @@ namespace Whetstone.Alexa
                 retCard.Permissions.Add(permToken);
             }
 
-            if (!string.IsNullOrWhiteSpace(text))
-                retCard.Content = text;
 
             if (retCard.Permissions.Count == 0)
                 throw new ArgumentException("No permissions requested");

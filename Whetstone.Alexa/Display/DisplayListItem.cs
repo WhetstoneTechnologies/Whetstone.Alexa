@@ -1,6 +1,4 @@
-﻿extensions: designer.cs generated.cs
-extensions: .cs .cpp .h
-// Copyright (c) 2018 Whetstone Technologies (MIT)
+﻿// Copyright (c) 2018 Whetstone Technologies
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -18,13 +16,24 @@ extensions: .cs .cpp .h
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
-extensions: .aspx .ascx
-<%-- 
-Copyright (c) 2011 rubicon IT GmbH
---%>
-extensions: .vb
-'Sample license text.
-extensions:  .xml .config .xsd
-<!--
-Sample license text.
--->
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Whetstone.Alexa.Display
+{
+    public class DisplayListItem
+    {
+
+        [JsonProperty("token",NullValueHandling = NullValueHandling.Ignore)]
+        public string Token { get; set; }
+
+        [JsonProperty("image", NullValueHandling = NullValueHandling.Ignore)]
+        public DisplayDirectiveImage Image { get; set; } 
+
+        [JsonProperty("textContent", NullValueHandling = NullValueHandling.Ignore)]
+        public DisplayTextContent TextContent { get; set; }
+
+}
+}

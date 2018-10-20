@@ -1,4 +1,4 @@
-// Copyright (c) 2018 Whetstone Technologies. All rights reserved.
+﻿// Copyright (c) 2018 Whetstone Technologies
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -6,11 +6,7 @@
 // restriction, including without limitation the rights to use,
 // copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following
-// conditions:
-//
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
+// Software is furnished to do so.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
@@ -22,26 +18,44 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
+using System.Text;
 
-using Amazon.Lambda.Core;
-
-// Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
-[assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
-
-namespace Whetstone.Alexa.EmailChecker.Lambda
+namespace Whetstone.Alexa.ProgressiveResponse
 {
-    public class Function
+    public class ProgressiveRequestException : Exception
     {
-        
-        /// <summary>
-        /// A simple function that takes a string and does a ToUpper
-        /// </summary>
-        /// <returns></returns>
-        public async Task<AlexaResponse> FunctionHandlerAsync(AlexaRequest request, ILambdaContext context)
+
+
+        public ProgressiveRequestException() : base()
         {
-           return await EmailProcessor.ProcessEmailRequestAsync(request);
+
         }
+
+
+        public ProgressiveRequestException(string message) : base(message)
+        {
+
+
+        }
+
+        public ProgressiveRequestException(string message, int statusCode) : base(message)
+        {
+            StatusCode = statusCode;
+
+        }
+
+        public ProgressiveRequestException(string message, Exception innerException) : base(message, innerException)
+        {
+
+        }
+
+        public ProgressiveRequestException(string message, int statusCode, Exception innerException) : base(message, innerException)
+        {
+            StatusCode = statusCode;
+        }
+
+
+        public int? StatusCode { get; private set; }
     }
 }

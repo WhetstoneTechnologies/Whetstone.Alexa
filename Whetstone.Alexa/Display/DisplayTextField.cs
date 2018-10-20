@@ -1,4 +1,4 @@
-// Copyright (c) 2018 Whetstone Technologies. All rights reserved.
+﻿// Copyright (c) 2018 Whetstone Technologies
 //
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -6,11 +6,7 @@
 // restriction, including without limitation the rights to use,
 // copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the
-// Software is furnished to do so, subject to the following
-// conditions:
-//
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
+// Software is furnished to do so.
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 // EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
@@ -20,28 +16,49 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-using Amazon.Lambda.Core;
-
-// Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
-[assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.Json.JsonSerializer))]
-
-namespace Whetstone.Alexa.EmailChecker.Lambda
+namespace Whetstone.Alexa.Display
 {
-    public class Function
+
+    public enum DisplayTextTypeEnum
     {
-        
-        /// <summary>
-        /// A simple function that takes a string and does a ToUpper
-        /// </summary>
-        /// <returns></returns>
-        public async Task<AlexaResponse> FunctionHandlerAsync(AlexaRequest request, ILambdaContext context)
+        PlainText = 0,
+        RichText =1
+    }
+
+    public class DisplayTextField
+    {
+
+        public DisplayTextField()
         {
-           return await EmailProcessor.ProcessEmailRequestAsync(request);
+
         }
+
+        public DisplayTextField(string text) : this()
+        {
+            this.Text = text;
+            this.Type = DisplayTextTypeEnum.PlainText;
+        }
+
+        public DisplayTextField(string text, DisplayTextTypeEnum type) : this(text)
+        {
+            this.Type = type;
+        }
+
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonProperty("type")]
+        public DisplayTextTypeEnum Type { get; set; }
+
+
+        [JsonRequired]
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
     }
 }
