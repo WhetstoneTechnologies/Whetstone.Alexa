@@ -60,6 +60,16 @@ namespace Whetstone.Alexa.ProgressiveResponse
 
         }
 
+        public async Task SendProgressiveResponseAsync(AlexaRequest req, string text)
+        {
+                await SendProgressiveResponseAsync(req?.Context?.System?.ApiEndpoint,
+                    req?.Context?.System?.ApiAccessToken,
+                    req?.Request?.RequestId,
+                    text);
+        }
+
+
+
         /// <summary>
         /// Sends a response to let the Alexa user know that the skill is working on the request.
         /// </summary>
@@ -86,10 +96,12 @@ namespace Whetstone.Alexa.ProgressiveResponse
             using (HttpClient httpClient = new HttpClient())
             {
 
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                httpClient.DefaultRequestHeaders
+                    .Accept
+                    .Add(new MediaTypeWithQualityHeaderValue("application/json"));//ACCEPT header
+
+
                 _logger?.LogDebug("Setting bearer token '{0}'", apiAccessToken);
-
-
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiAccessToken);
 
 
@@ -105,13 +117,17 @@ namespace Whetstone.Alexa.ProgressiveResponse
                 {
                     progJsonText = JsonConvert.SerializeObject(progReq);
                 }
-                catch(Exception ex)
+                catch(JsonSerializationException serEx)
                 {
-
+                   
+                    string errMsg = string.Format("Error serializing progressive request");
+                    _logger?.LogError(serEx, errMsg);
+                    throw new ProgressiveRequestException(errMsg, serEx);
 
                 }
 
-                reqMessage.Content = new StringContent(progJsonText);
+                reqMessage.Content = new StringContent(progJsonText, Encoding.UTF8,
+                                    "application/json");
 
                 HttpResponseMessage respMessage = null;
 

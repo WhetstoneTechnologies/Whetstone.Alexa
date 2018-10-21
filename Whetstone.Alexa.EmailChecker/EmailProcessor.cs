@@ -29,6 +29,7 @@ using Whetstone.Alexa.Display;
 using Whetstone.Alexa.Security;
 using System.Net;
 using Whetstone.Alexa.CanFulfill;
+using Whetstone.Alexa.ProgressiveResponse;
 
 namespace Whetstone.Alexa.EmailChecker
 {
@@ -93,14 +94,8 @@ namespace Whetstone.Alexa.EmailChecker
 
         private static async Task<AlexaResponse> GetLaunchResponseAsync(AlexaRequest req)
         {
-            // Attempt to get the user's email address.
-
-           
 
             string emailAddress = null;
-
-
-
 
             AlexaResponse resp = new AlexaResponse
             {
@@ -117,6 +112,19 @@ namespace Whetstone.Alexa.EmailChecker
 
             if (ret.PermissionGranted)
             {
+
+                IProgressiveResponseManager progMan = new ProgressiveResponseManager();
+                try
+                {
+                    await progMan.SendProgressiveResponseAsync(req,
+                        "I'm working on it");
+                }
+                catch(Exception ex)
+                {
+                    // TODO - Log the error, don't fail the call
+
+                }
+
                 resp.Response.OutputSpeech.Type = OutputSpeechType.Ssml;
 
                 string[] emailParts = ret.Email.Split('@');
@@ -196,17 +204,10 @@ namespace Whetstone.Alexa.EmailChecker
                     resp.Response.Directives.Add(displayResponse);
                     resp.Response.Directives.Add(hintResponse);
                 }
-              //  resp.Response.Directives.Add(hintRepsonse);
+              
             }
             
-
-
             resp.Response.ShouldEndSession = true;
-
-
-
-            
-
             return resp;
         }
 
@@ -246,10 +247,7 @@ namespace Whetstone.Alexa.EmailChecker
                     isPermissionGranted = false;
 
                 }
-
             }
-
-
 
             return (PermissionGranted : isPermissionGranted, Email : emailAddress);
         }

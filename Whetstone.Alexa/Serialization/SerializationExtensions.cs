@@ -62,10 +62,47 @@ namespace Whetstone.Alexa.Serialization
                 .GetField(value.ToString())
                 .GetCustomAttributes(typeof(EnumMemberAttribute), false)
                 .SingleOrDefault() as EnumMemberAttribute;
+
+
             return attribute == null ? value.ToString() : attribute.Value;
 
 
             throw new NotImplementedException("Not supported in the version of .NET in use");
+        }
+
+        public static IEnumerable<T> GetEnumValues<T>() where T : Enum
+        {
+            return Enum.GetValues(typeof(T)).Cast<T>();
+        }
+
+
+        public static T GetEnumValue<T>(this string enumMemberText) where T : struct, Enum
+        {
+
+            T retVal = default(T);
+
+            if (Enum.TryParse<T>(enumMemberText, out retVal))
+                return retVal;
+          
+
+            var enumVals = GetEnumValues<T>();
+
+            Dictionary<string, T> enumMemberNameMappings = new Dictionary<string, T>();
+
+            foreach (T enumVal in enumVals)
+            {
+                string enumMember = enumVal.GetDescriptionFromEnumValue();
+                enumMemberNameMappings.Add(enumMember, enumVal);
+            }
+
+            if (enumMemberNameMappings.ContainsKey(enumMemberText))
+            {
+                retVal = enumMemberNameMappings[enumMemberText];
+            }
+            else
+                throw new SerializationException(string.Format("Could not resolve value {0} in enum {1}", enumMemberText, typeof(T).FullName));
+
+            return retVal;
         }
 
     }

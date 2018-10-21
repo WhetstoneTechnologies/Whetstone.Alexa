@@ -4,10 +4,182 @@
         <name>Whetstone.Alexa</name>
     </assembly>
     <members>
+        <member name="P:Whetstone.Alexa.RequestAttributes.Data">
+            <summary>
+            Free form class supplied in a <see cref="F:Whetstone.Alexa.RequestType.MessageReceived">Messaging.MessageReceived</see> from a customer application.
+            </summary>
+            <value>
+            Custom application data.
+            </value>
+        </member>
+        <member name="T:Whetstone.Alexa.UserInformationPersistedEnum">
+            <summary>
+            Used to indicate if the user data should be persisted or not when then the user disables the skill through a <see cref="F:Whetstone.Alexa.RequestType.SkillDisabled">AlexaSkillEvent.SkillDisabledEvent</see>.
+            </summary>
+            <remarks>
+            
+            </remarks>
+        </member>
+        <member name="F:Whetstone.Alexa.UserInformationPersistedEnum.Persisted">
+            <summary>
+            Returned if the user has made in-skill purchases that should be maintained.
+            </summary>
+        </member>
+        <member name="F:Whetstone.Alexa.UserInformationPersistedEnum.NotPersisted">
+            <summary>
+            Returned if a new user id is generated when the user enables the skill again.
+            </summary>
+        </member>
+        <member name="T:Whetstone.Alexa.AlexaRequestBodyAttributes">
+            <summary>
+            If the Alexa skill can receive events if the AlexaSkillEvent is enabled on the Alexa skill.
+            </summary>
+            <remarks>
+            <para>This is used to process AlexaSkillEvent</para>
+            </remarks>
+        </member>
+        <member name="P:Whetstone.Alexa.AlexaRequestBodyAttributes.AccessToken">
+            <summary>
+            Passed in the account linking event notification. <see cref="F:Whetstone.Alexa.RequestType.SkillAccountLinked">AlexaSkillEvent.SkillAccountLinked</see>
+            </summary>
+            <value>
+            The access token provided by the account linking process
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.AlexaRequestBodyAttributes.UserInformationPersistenceStatus">
+            <summary>
+            Gets or sets the user information persistence status. If it is <see cref="F:Whetstone.Alexa.UserInformationPersistedEnum.NotPersisted">NotPersisted</see> then user data
+            can be safely removed from storage. If it is <see cref="F:Whetstone.Alexa.UserInformationPersistedEnum.Persisted">Persisted</see>, then user data with purchase history 
+            must be maintained.
+            </summary>
+            <value>
+            The user information persistence status. 
+            </value>
+        </member>
         <member name="P:Whetstone.Alexa.AlexaSessionAttributes.User">
             <summary>
             Alexa user data, including the UserId.
             </summary>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Ambience">
+            <summary>
+            This is the list of all ambient sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/ambience-sounds.html">Ambience Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Animals">
+            <summary>
+            This is the list of all animal sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/animal-sounds.html">Animal Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Battle">
+            <summary>
+            This is the list of all battle sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/battle-sounds.html">Battle Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Cartoon">
+            <summary>
+            This is the list of all cartoon sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/cartoon-sounds.html">Cartoon Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Foley">
+            <summary>
+            This is the list of all Foley sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/foley-sounds.html">Foley Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.GameShowSounds">
+            <summary>
+            This is the list of all Game Show Sounds sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/ui-gameshow-sounds.html">Game Show Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Home">
+            <summary>
+            This is the list of all Home sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/home-sounds.html">Home Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Human">
+            <summary>
+            This is the list of all Human sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/human-sounds.html">Human Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Impact">
+            <summary>
+            This is the list of all Impact sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/impact-sounds.html">Impact Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Magic">
+            <summary>
+            This is the list of all Magic sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/magic-sounds.html">Magic Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Musical">
+            <summary>
+            This is the list of all Musical sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/musical-sounds.html">Musical Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Nature">
+            <summary>
+            This is the list of all Nature sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/nature-sounds.html">Nature Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Office">
+            <summary>
+            This is the list of all Office sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/office-sounds.html">Office Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.SciFi">
+            <summary>
+            This is the list of all Science Fiction sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/scifi-sounds.html">SciFi Sounds</a>
+            </remarks>
+        </member>
+        <member name="T:Whetstone.Alexa.Audio.AmazonSoundLibrary.Transportation">
+            <summary>
+            This is the list of all Transportation sound effects in the Amazon Sound Library.
+            </summary>
+            <remarks>
+            To play the sample files, go to <a href="https://developer.amazon.com/docs/custom-skills/transportation-sounds.html">Transportation Sounds</a>
+            </remarks>
         </member>
         <member name="T:Whetstone.Alexa.Audio.AudioPlayerActivityEnum">
             <summary>

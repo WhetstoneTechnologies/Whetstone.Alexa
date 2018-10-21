@@ -25,7 +25,7 @@ using Newtonsoft.Json;
 namespace Whetstone.Alexa.Serialization
 {
 
-    public class JsonEnumConverter<T> : JsonConverter where T : IComparable, IConvertible, IFormattable
+    public class JsonEnumConverter<T> : JsonConverter where T : struct, Enum, IComparable, IConvertible, IFormattable
     {
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
@@ -52,7 +52,7 @@ namespace Whetstone.Alexa.Serialization
             {
                 var enumString = (string)reader.Value;
 
-                return Enum.Parse(typeof(T), enumString, true);
+                return enumString.GetEnumValue<T>();
             }
 
             return null;

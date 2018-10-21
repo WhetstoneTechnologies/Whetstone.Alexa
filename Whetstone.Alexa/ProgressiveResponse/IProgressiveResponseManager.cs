@@ -22,6 +22,9 @@ namespace Whetstone.Alexa.ProgressiveResponse
 {
     public interface IProgressiveResponseManager
     {
+
+        Task SendProgressiveResponseAsync(AlexaRequest req, string text);
+
         Task SendProgressiveResponseAsync(string apiEndpoint, string apiAccessToken, string requestId, string text);
     }
 }

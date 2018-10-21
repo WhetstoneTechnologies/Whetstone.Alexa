@@ -26,6 +26,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Whetstone.Alexa.Audio;
+using Whetstone.Alexa.Security;
+using Whetstone.Alexa.Serialization;
 using Xunit;
 
 namespace Whetstone.Alexa.Test
@@ -61,7 +63,7 @@ namespace Whetstone.Alexa.Test
             Assert.Equal(AudioPlayerActivityEnum.Stopped, req.Context.AudioPlayer.PlayerActivity);
 
             Assert.NotNull(req.Context.Display);
-                
+
         }
 
         [Fact]
@@ -75,7 +77,7 @@ namespace Whetstone.Alexa.Test
 
             AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
 
-            Assert.Equal(RequestType.CanFulfillIntentRequest , req.Request.Type);
+            Assert.Equal(RequestType.CanFulfillIntentRequest, req.Request.Type);
 
             Assert.Equal("FindTrialByCityAndConditionIntent", req.Request.Intent.Name);
 
@@ -87,18 +89,64 @@ namespace Whetstone.Alexa.Test
 
             Assert.Contains(slots, x => x.Name.Equals("city") && x.Value.Equals("New York"));
 
-
-            //    "name": "condition",
-            //  "value": "epilepsy"
-            //},
-            //"city": {
-            //  "name": "city",
-            //  "value": "New York"
         }
 
+        [Fact]
+        public void GetRequestType()
+        {
+            RequestType reqType = RequestType.SkillEnabled;
+
+            string enabledMember = reqType.GetDescriptionFromEnumValue();
+
+
+            RequestType fromMemberString = enabledMember.GetEnumValue<RequestType>();
+
+
+
+        }
+
+        [Fact]
+        public void AcceptPermissionDeserializationTest()
+        {
+            string filePath = @"requestsamples\acceptpermissionrequest.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+            Assert.Equal<RequestType>(RequestType.SkillPermissionAccepted, req.Request.Type);
+
+            Assert.Contains<AcceptedPermission>(req.Request.Body.AcceptedPermissions, x => x.Scope.Equals(PermissionScopes.SCOPE_EMAIL_READ));
+
+            Assert.Null(req.Request.Body.UserInformationPersistenceStatus);
+        }
+
+
+        [Fact]
+        public void SkillDisabledTest()
+        {
+            string filePath = @"requestsamples\skilldisabledrequest.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+            Assert.Equal<RequestType>(RequestType.SkillDisabled, req.Request.Type);
+
+            Assert.Equal(UserInformationPersistedEnum.NotPersisted, req.Request.Body.UserInformationPersistenceStatus);
+
+            Assert.NotNull(req.Request.EventCreationTime);
+
+            Assert.NotNull(req.Request.EventPublishingTime);
+
+
+        }
 
     }
 
 
-    
 }

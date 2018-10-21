@@ -45,14 +45,6 @@ namespace Whetstone.Alexa.Security
         // For more information about getting device profile data:
         //  https://developer.amazon.com/docs/custom-skills/device-address-api.html
 
-        private const string PERM_TOKEN_FULLADDRESS = "read::alexa:device:all:address";
-        private const string PERM_TOKEN_POSTALCODE = "read::alexa:device:all:address:country_and_postal_code";
-        private const string PERM_TOKEN_FULLNAME = "alexa::profile:name:read";
-        private const string PERM_TOKEN_GIVENNAME = "alexa::profile:given_name:read";
-        private const string PERM_TOKEN_EMAIL = "alexa::profile:email:read";
-        private const string PERM_TOKEN_PHONENUMBER = "alexa::profile:mobile_number:read";
-
-
         private const string PROFILE_FRAG_FULLNAME = "{0}/v2/accounts/~current/settings/Profile.name";
         private const string PROFILE_FRAG_GIVENNAME = "{0}/v2/accounts/~current/settings/Profile.givenName";
         private const string PROFILE_FRAG_EMAIL = "{0}/v2/accounts/~current/settings/Profile.email";
@@ -90,22 +82,30 @@ namespace Whetstone.Alexa.Security
             switch(personalDataType)
             {
                 case PersonalDataType.Email:
-                    retToken = PERM_TOKEN_EMAIL;
+                    retToken = PermissionScopes.SCOPE_EMAIL_READ;
                     break;
                 case PersonalDataType.FullAddress:
-                    retToken = PERM_TOKEN_FULLADDRESS;
+                    retToken = PermissionScopes.SCOPE_FULLADDRESS;
+
+                      //  PERM_TOKEN_FULLADDRESS;
                     break;
                 case PersonalDataType.FullName:
-                    retToken = PERM_TOKEN_FULLNAME;
+                    retToken = PermissionScopes.SCOPE_FULLNAME_READ;
+                        
+                        //PERM_TOKEN_FULLNAME;
                     break;
                 case PersonalDataType.GivenName:
-                    retToken = PERM_TOKEN_GIVENNAME;
+                    retToken = PermissionScopes.SCOPE_GIVENNAME_READ;
+                        
+                        //PERM_TOKEN_GIVENNAME;
                     break;
                 case PersonalDataType.PhoneNumber:
-                    retToken = PERM_TOKEN_PHONENUMBER;
+                    retToken = PermissionScopes.SCOPE_MOBILENUMBER_READ;
+                        //PERM_TOKEN_PHONENUMBER;
                     break;
                 case PersonalDataType.PostalCode:
-                    retToken = PERM_TOKEN_POSTALCODE;
+                    retToken = PermissionScopes.SCOPE_POSTALCODE;
+                        //PERM_TOKEN_POSTALCODE;
                     break;
             }
 

@@ -18,19 +18,36 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Whetstone.Alexa.Serialization;
 
 namespace Whetstone.Alexa
 {
     public enum RequestType
     {
-
+        [EnumMember(Value = "LaunchRequest")]
         LaunchRequest,
+        [EnumMember(Value = "IntentRequest")]
         IntentRequest,
+        [EnumMember(Value = "SessionEndedRequest")]
         SessionEndedRequest,
-        CanFulfillIntentRequest
+        [EnumMember(Value = "CanFulfillIntentRequest")]
+        CanFulfillIntentRequest,
+        [EnumMember(Value = "AlexaSkillEvent.SkillPermissionAccepted")]
+        SkillPermissionAccepted,
+        [EnumMember(Value = "AlexaSkillEvent.SkillAccountLinked")]
+        SkillAccountLinked,
+        [EnumMember(Value = "AlexaSkillEvent.SkillEnabled")]
+        SkillEnabled,
+        [EnumMember(Value = "AlexaSkillEvent.SkillDisabled")]
+        SkillDisabled,
+        [EnumMember(Value = "AlexaSkillEvent.SkillPermissionChanged")]
+        SkillPermissionChanged,
+        [EnumMember(Value = "Messaging.MessageReceived")]
+        MessageReceived
 
     }
 
@@ -41,7 +58,7 @@ namespace Whetstone.Alexa
         private double _timestamp;
 
         [JsonProperty("type")]
-        [JsonConverter(typeof(StringEnumConverter))]
+        [JsonConverter(typeof(JsonEnumConverter<RequestType>))]
         public RequestType Type { get; set; }
 
         [JsonProperty("requestId")]
@@ -75,10 +92,10 @@ namespace Whetstone.Alexa
         [JsonProperty("intent")]
         public IntentAttributes Intent { get; set; }
 
-        [JsonProperty("reason")]
+        [JsonProperty("reason", NullValueHandling = NullValueHandling.Ignore)]
         public string Reason { get; set; }
 
-        [JsonProperty("locale")]
+        [JsonProperty("locale", NullValueHandling = NullValueHandling.Ignore)]
         public string Locale { get; set; }
 
         public RequestAttributes()
@@ -91,9 +108,30 @@ namespace Whetstone.Alexa
         public bool? ShouldLinkResultBeReturned { get; set; }
 
 
-        [JsonProperty("error")]
+        [JsonProperty("error", NullValueHandling = NullValueHandling.Ignore)]
         public AlexaErrorAttributes Error { get; set; }
 
+
+
+        [JsonProperty("eventCreationTime", NullValueHandling = NullValueHandling.Ignore)]
+        public DateTime? EventCreationTime { get; set; }
+
+        [JsonProperty("eventPublishingTime", NullValueHandling = NullValueHandling.Ignore)]
+        public DateTime? EventPublishingTime { get; set; }
+
+        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
+        public AlexaRequestBodyAttributes Body { get; set; }
+
+
+        /// <summary>
+        /// Free form class supplied in a <see cref="Whetstone.Alexa.RequestType.MessageReceived">Messaging.MessageReceived</see> from a customer application.
+        /// </summary>
+        /// <value>
+        /// Custom application data.
+        /// </value>
+        [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
+        public dynamic Data { get; set; }
+       
     }
 
 
