@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.3;netstandard1.6;netstandard2.0;net45;net47</TargetFrameworks>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>John Iwasz</Authors>
+    <Company>Whetstone Technologies, Inc.</Company>
+    <Description>Contains POCOs for serializing an deserializing Alexa requests and responses, including support for display directives for the Echo Show. It also includes handlers for requesting user profile data and device data as well as sending progressive responses for long-running requests.</Description>
+    <Copyright>Copyright 2018 Whetstone Technologies, Inc.</Copyright>
+    <RepositoryType>Github</RepositoryType>
+    <PackageLicenseUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>Alexa</PackageTags>
+    <RepositoryUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/WhetstoneTechnologies/Whetstone.Alexa/master/nugetlogo128x128.png</PackageIconUrl>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1.0</Version>
+    <SignAssembly>false</SignAssembly>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Whetstone.Alexa.xml</DocumentationFile>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+   
+  </ItemGroup>
+
+
+  <ItemGroup Condition="'$(TargetFramework)'=='net45' OR '$(TargetFramework)'=='net46' OR '$(TargetFramework)'=='net47'">
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard1.6' OR '$(TargetFramework)'=='netstandard1.1' OR '$(TargetFramework)'=='netstandard1.3'">
+    <PackageReference Update="NETStandard.Library" Version="1.6.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+  </ItemGroup>
+
+
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Update="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging">
+      <Version>2.1.1</Version>
+    </PackageReference>
+
+    <Reference Include="System.ComponentModel.Annotations">
+     <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
