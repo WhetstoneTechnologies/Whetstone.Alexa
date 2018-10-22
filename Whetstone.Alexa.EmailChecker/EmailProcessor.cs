@@ -30,6 +30,7 @@ using Whetstone.Alexa.Security;
 using System.Net;
 using Whetstone.Alexa.CanFulfill;
 using Whetstone.Alexa.ProgressiveResponse;
+using System.Diagnostics;
 
 namespace Whetstone.Alexa.EmailChecker
 {
@@ -58,11 +59,33 @@ namespace Whetstone.Alexa.EmailChecker
 
             switch (request.Request.Type)
             {
+                case RequestType.SkillPermissionAccepted:
+
+                    if(request.HasAcceptedPermission(PermissionScopes.SCOPE_EMAIL_READ))
+                    {
+                        // get the user's email.
+                        var emailResult = await GetEmailAddressAsync(request);
+
+                        if (emailResult.PermissionGranted)
+                        {
+                            string emailAddress = emailResult.Email;
+                            Debug.WriteLine("Email is {0}", emailAddress);
+                        }
+                    }
+
+                    response = new AlexaResponse(); 
+                    break;
+                case RequestType.SkillPermissionChanged:
+                case RequestType.SkillAccountLinked:
+                case RequestType.SkillDisabled:
+                case RequestType.SkillEnabled:
+                    response = new AlexaResponse();
+                    break;
                 case RequestType.LaunchRequest:
-                    response = await GetLaunchResponseAsync(request);
+                    response = await GetEmailResponseAsync(request);
                     break;
                 case RequestType.IntentRequest:
-
+                    response = await GetEmailResponseAsync(request);
                     break;
                 case RequestType.CanFulfillIntentRequest:
                     response = await GetCanFulfillResponse(request.Request.Intent);
@@ -92,7 +115,7 @@ namespace Whetstone.Alexa.EmailChecker
             return resp;
         }
 
-        private static async Task<AlexaResponse> GetLaunchResponseAsync(AlexaRequest req)
+        private static async Task<AlexaResponse> GetEmailResponseAsync(AlexaRequest req)
         {
 
             string emailAddress = null;

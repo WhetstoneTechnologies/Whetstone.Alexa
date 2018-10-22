@@ -958,6 +958,24 @@
             <param name="apiToken"></param>
             <returns></returns>
         </member>
+        <member name="M:Whetstone.Alexa.Security.SecurityExtensions.HasAcceptedPermission(Whetstone.Alexa.AlexaRequest,System.String)">
+            <summary>
+            <para>Determines whether the SkillPermissionChanged or SkillPermissionAccepted includes the permissionScope.</para>
+            </summary>
+            <param name="request">The <see cref="T:Whetstone.Alexa.AlexaRequest">AlexaRequest</see> to inspect.</param>
+            <param name="permissionScope">The permission scope which should be restricted to the scopes defined in <see cref="T:Whetstone.Alexa.Security.PermissionScopes">PermissionScopes</see></param>
+            <returns>
+              <c>true</c> if the permissionScope is in included in the <see cref="T:Whetstone.Alexa.Security.AcceptedPermission">acceptedPermissions</see> of the request 
+              <see cref="T:Whetstone.Alexa.AlexaRequestBodyAttributes">body</see>; otherwise, <c>false</c>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">request cannot be null</exception>
+            <exception cref="T:System.ArgumentException">
+            permissionScope cannot be null or empty
+            or
+            Request property on request cannot be null
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Whetstone.Alexa.UserAttributes">
             <summary>
             Represents the Alexa user. Encapsulates the UserId and the ConsentToken.

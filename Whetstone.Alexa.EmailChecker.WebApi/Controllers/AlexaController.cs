@@ -65,6 +65,8 @@ namespace Whetstone.Alexa.EmailChecker.WebApi.Controllers
                 Trace.TraceInformation("Alexa request was timestamped {0:0.00} seconds ago below the {1} second maximum.", diff.TotalSeconds, MAXREQUESTSENDTIME);
                 AlexaResponse resp = await EmailProcessor.ProcessEmailRequestAsync(request);
 
+
+
                 return Ok(resp);
             }
             else
