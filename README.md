@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/qshnu4qyhtpv3m06/branch/master?svg=true)](https://ci.appveyor.com/project/johniwasz/whetstone-alexa/branch/master)
+
 # Whetstone Alexa
 
 ## Introduction
@@ -131,7 +133,7 @@ The following sample shows how to include MP3 files in the response using the au
     ssmlSample.Append("<speak><audio src='https://dev-sbsstoryengine.s3.amazonaws.com/stories/animalfarmpi/audio/Act1-OpeningMusic-alexa.mp3'/> ");
     ssmlSample.Append("It was a dark and stormy night. <break time='500ms'/>");
     ssmlSample.Append("<say-as interpret-as='interjection'>no way!</say-as> ");
-    ssmlSample.Append("I'm not doing this. That doesn’t make any sense!  That music didn’t sound dark and stormy at ");
+    ssmlSample.Append("I'm not doing this. That doesnâ€™t make any sense!  That music didnâ€™t sound dark and stormy at ");
     ssmlSample.Append("<prosody volume='x-loud' pitch='+10%'>all!</prosody>");
     ssmlSample.Append(" It sounds to me more like a bright and chipper morning! Should we go with dark and stormy, or bright and chipper?");
     ssmlSample.Append("</speak>")
