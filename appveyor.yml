@@ -1,0 +1,7 @@
+version: 0.1.{build}
+image: Visual Studio 2017
+before_build:
+- cmd: nuget restore C:\projects\whetstone-alexa\src\Whetstone.Alexa.sln
+build:
+  publish_nuget: true
+  verbosity: minimal
