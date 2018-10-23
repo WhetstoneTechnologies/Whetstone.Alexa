@@ -1277,11 +1277,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/SecondArticle.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/SecondArticle.html",
+          "hash": "evq1ImKfd4QN6mIycmej/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "hNW4XLL5p5lfOL/VsycyHA=="
+          "hash": "ZMI3HVGWG21xyjijOMkQOA=="
         }
       },
       "is_incremental": true,
@@ -1293,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+          "hash": "YS/Vt30ziefQhZGbjo18fQ=="
         }
       },
       "is_incremental": false,
@@ -1305,7 +1317,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "BRvVCjsqNzU4jfUtb00pNQ=="
+          "hash": "r3SZJXStdFf3jWRvLBQYFA=="
         }
       },
       "is_incremental": true,
@@ -1336,11 +1348,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }
