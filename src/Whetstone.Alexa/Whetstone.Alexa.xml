@@ -712,6 +712,27 @@
             Serializes to "YES", "NO" or "MAYBE"
             </summary>
         </member>
+        <member name="T:Whetstone.Alexa.AlexaImageAttributes">
+            <summary>
+            Image urls must be publicly accessible, JPG or PNG, and less than 500KB.
+            </summary>
+        </member>
+        <member name="P:Whetstone.Alexa.AlexaImageAttributes.SmallImageUrl">
+            <summary>
+            Displayed on smaller screens, like smart phones (720w x 480w)
+            </summary>
+            <value>
+            The small image URL.
+            </value>
+        </member>
+        <member name="P:Whetstone.Alexa.AlexaImageAttributes.LargeImageUrl">
+            <summary>
+             Displayed on larger screens like the Echo Show. (1200w x 800h)
+            </summary>
+            <value>
+            The large image URL.
+            </value>
+        </member>
         <member name="F:Whetstone.Alexa.Display.DisplayImageSizeEnum.ExtraSmall">
             <summary>
             Displayed within extra small containers	(480x320)
@@ -834,6 +855,13 @@
             <value>
             The tertiary text.
             </value>
+        </member>
+        <member name="M:Whetstone.Alexa.IntentAttributes.GetSlotValue(System.String)">
+            <summary>
+            Returns the string value of the slot based on the name. If the slot list is null or empty, the result is null. The slot name comparison is case insensitive.
+            </summary>
+            <param name="slotName">Name of the slot.</param>
+            <returns>User-provided slot value. Null if slot is not found or slot attributes are missing.</returns>
         </member>
         <member name="T:Whetstone.Alexa.PermissionAttributes">
             <summary>

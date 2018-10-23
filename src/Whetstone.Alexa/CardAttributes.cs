@@ -66,13 +66,30 @@ namespace Whetstone.Alexa
         }
     }
 
+
+    /// <summary>
+    /// Image urls must be publicly accessible, JPG or PNG, and less than 500KB.
+    /// </summary>
     [JsonObject("image")]
     public class AlexaImageAttributes
     {
 
+        /// <summary>
+        /// Displayed on smaller screens, like smart phones (720w x 480w)
+        /// </summary>
+        /// <value>
+        /// The small image URL.
+        /// </value>
         [JsonProperty("smallImageUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SmallImageUrl { get; set; }
 
+
+        /// <summary>
+        ///  Displayed on larger screens like the Echo Show. (1200w x 800h)
+        /// </summary>
+        /// <value>
+        /// The large image URL.
+        /// </value>
         [JsonProperty("largeImageUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string LargeImageUrl { get; set; }
 

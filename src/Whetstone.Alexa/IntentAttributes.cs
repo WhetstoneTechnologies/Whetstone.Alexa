@@ -25,6 +25,7 @@ using System.Diagnostics;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 using Whetstone.Alexa.Serialization;
 
 namespace Whetstone.Alexa
@@ -52,6 +53,22 @@ namespace Whetstone.Alexa
         [JsonConverter(typeof(SlotConverter))]
         public List<SlotAttributes> Slots { get; set; }
 
+
+        /// <summary>
+        /// Returns the string value of the slot based on the name. If the slot list is null or empty, the result is null. The slot name comparison is case insensitive.
+        /// </summary>
+        /// <param name="slotName">Name of the slot.</param>
+        /// <returns>User-provided slot value. Null if slot is not found or slot attributes are missing.</returns>
+        public string GetSlotValue(string slotName)
+        {
+
+            SlotAttributes slotAttribs = Slots?.FirstOrDefault(x => x.Name.Equals(slotName, StringComparison.OrdinalIgnoreCase));
+
+            if (slotAttribs != null)
+                return slotAttribs.Value;
+
+            return null;
+        }
     }
 
 

@@ -59,7 +59,26 @@ namespace Whetstone.Alexa
 
         public OutputSpeechAttributes()
         {
-            Type = OutputSpeechType.PlainText;
+          
         }
+
+        public OutputSpeechAttributes(OutputSpeechType outputType, string contents)
+        {
+
+            switch(outputType)
+            {
+                case OutputSpeechType.PlainText:
+                    this.Text = contents;
+                    break;
+                case OutputSpeechType.Ssml:
+                    this.Ssml = contents;
+                    break;
+            }
+
+            this.Type = outputType;
+
+        }
+
+
     }
 }

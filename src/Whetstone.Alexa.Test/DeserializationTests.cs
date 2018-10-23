@@ -21,9 +21,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Whetstone.Alexa.Audio;
 using Whetstone.Alexa.Security;
@@ -56,8 +58,10 @@ namespace Whetstone.Alexa.Test
 
             string fileContents = File.ReadAllText(filePath);
 
+            JsonSerializerSettings serializerSettings = new JsonSerializerSettings();
+            serializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents, serializerSettings);
 
             Assert.Equal("1.0", req.Context.System.Device.SupportedInterfaces.AdvancedPresentationLanguage.Runtime.MaxVersion);
 
@@ -87,17 +91,22 @@ namespace Whetstone.Alexa.Test
 
             AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
 
+            RequestType reqType = req.Request.Type;
+
+            string intent = req.Request.Intent.Name;
+
             Assert.Equal(RequestType.CanFulfillIntentRequest, req.Request.Type);
 
             Assert.Equal("FindTrialByCityAndConditionIntent", req.Request.Intent.Name);
 
-            List<SlotAttributes> slots = req.Request.Intent.Slots;
 
 
-            Assert.Contains(slots, x => x.Name.Equals("condition") && x.Value.Equals("epilepsy"));
+            string selectedCity = req.Request.Intent.GetSlotValue("city");           
+
+            Assert.Contains("epilepsy", req.Request.Intent.GetSlotValue("condition"));
 
 
-            Assert.Contains(slots, x => x.Name.Equals("city") && x.Value.Equals("New York"));
+            Assert.Equal("New York", req.Request.Intent.GetSlotValue("city"));
 
         }
 
