@@ -224,8 +224,6 @@ using Whetstone.Alexa.ProgressiveResponse;
 
     public async Task<AlexaResponse> GetAlexaAsync(AlexaRequest req)
     {
-        IProgressiveResponseManager progMan = new ProgressiveResponseManager();
-        
         try
         {
             await _progMan.SendProgressiveResponseAsync(req, "I'm working on it");
