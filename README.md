@@ -59,8 +59,6 @@ namespace Whetstone.Alexa.EmailChecker.Lambda
         }
 ```
 <br/>
-<br/>
-
 
 ## Processing the AlexaRequest
 
@@ -103,43 +101,145 @@ AlexaResponse resp = new AlexaResponse
         Reprompt = new RepromptAttributes
         {
             OutputSpeech = OutputSpeechBuilder.GetPlainTextSpeech("Left or right?"),
-        }
+        },
+        ShouldEndSession = false
     },
 };
 ```
 
-To include an image in the card response, provide a publicly accessible URL for both a small image (720wx480h) and large image (1200w x 800h).
+To include an image in the card response, provide a publicly accessible URL for both a small image (720w x 480h) and large image (1200w x 800h).
 For more information, please see [Create a Home Card to Display Text and an Image](https://developer.amazon.com/docs/custom-skills/include-a-card-in-your-skills-response.html#create-a-home-card-to-display-text-and-an-image).
 
 ```csharp
    . . .
         Card = CardBuilder.GetStandardCardResponse("Fork in the Road",
                 textResponse,
-                "https://dev-custom.s3.amazonaws.com/adventuregame/images/forkintheroad_720x800.png",
-                "https://dev-custom.s3.amazonaws.com/adventuregame/images/forkintheroad_1200x800.png"
+                "https://dev-customapp.s3.amazonaws.com/adventuregame/images/forkintheroad_720x800.png",
+                "https://dev-customapp.s3.amazonaws.com/adventuregame/images/forkintheroad_1200x800.png"
                 ),
    . . .
 ```
 
 
+### Embedding MP3 files and SSML Tags
 
+The following sample shows how to include MP3 files in the response using the audio tag along with supported SSML tags. For a comprehensive list of Alexa-supported SSML tags, please see [Speech Synthesis Markup Language (SSML) Reference](https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html).
 
-### Embedding MP3 files
+```csharp
+    StringBuilder ssmlSample = new StringBuilder();
 
-string textResp = "You are following a path in forest and have come to a fork. Would you like to go left or right?";
-AlexaResponse resp = new AlexaResponse
-{
-    Version = "1.0",
-    Response = new AlexaResponseAttributes
+    ssmlSample.Append("<speak><audio src='https://dev-sbsstoryengine.s3.amazonaws.com/stories/animalfarmpi/audio/Act1-OpeningMusic-alexa.mp3'/> ");
+    ssmlSample.Append("It was a dark and stormy night. <break time='500ms'/>");
+    ssmlSample.Append("<say-as interpret-as='interjection'>no way!</say-as> ");
+    ssmlSample.Append("I'm not doing this. That doesn’t make any sense!  That music didn’t sound dark and stormy at ");
+    ssmlSample.Append("<prosody volume='x-loud' pitch='+10%'>all!</prosody>");
+    ssmlSample.Append(" It sounds to me more like a bright and chipper morning! Should we go with dark and stormy, or bright and chipper?");
+    ssmlSample.Append("</speak>")
+
+    AlexaResponse resp = new AlexaResponse
     {
-        OutputSpeech = OutputSpeechBuilder.GetPlainTextSpeech(textResp),
-        Card = CardBuilder.GetSimpleCardResponse("Fork in the Road", textResp),
-        Reprompt = new RepromptAttributes
+        Version = "1.0",
+        Response = new AlexaResponseAttributes
         {
-            OutputSpeech = OutputSpeechBuilder.GetPlainTextSpeech("Left or right?"),
+            OutputSpeech = OutputSpeechBuilder.GetSsmlSpeech(ssmlSample.ToString()),
+```
+
+#### Using the Alexa Skills Kit Sound Library
+
+Amazon has provided a sound library that includes animal, game show, and other sounds. This may be a viable alternative if the needs for sounds is limited. The **Whetstone.Alexa** Nuget package includes 
+constants that link to all of the sounds provided in the [Alexa Skills Kit Sound Library](https://developer.amazon.com/docs/custom-skills/ask-soundlibrary.html).
+
+```csharp
+using Whetstone.Alexa.Audio.AmazonSoundLibrary;
+
+  . . .
+
+    StringBuilder librarySample = new StringBuilder();
+    librarySample.Append("<speak>");
+    librarySample.Append(Office.ELEVATOR_BELL_1X_01);
+    librarySample.Append("Your hotel is booked!");
+    librarySample.Append("</speak>");
+```
+
+# Media Hosting Tips
+
+If you'd like to include and reference MP3 files and images, they must be publicly available. If hosting on S3 storage, then use a [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) 
+to limit the public files only to directories need to be exposed.
+<br/>
+
+The following bucket policy exposes only the files in the audio and image subfolders to the public. 
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": [
+                "arn:aws:s3:::bucketname/projects/*/audio/*",
+                "arn:aws:s3:::bucketname/projects/*/image/*"
+            ]
         }
-    },
-};
+    ]
+}
+```
+
+In order to allow the Alexa mobile app to download the image, CORS restrictions must allow for GET requests from ask-ifr-download.s3.amazonaws.com.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+<CORSRule>
+    <AllowedOrigin>http://ask-ifr-download.s3.amazonaws.com</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+</CORSRule>
+<CORSRule>
+    <AllowedOrigin>https://ask-ifr-download.s3.amazonaws.com</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+</CORSRule>
+</CORSConfiguration>
+```
+## Sending Progressive Response
+
+If the skill invokes a third-party API or performs a database search, the response could be delayed by a few seconds. A blue light will flash on the Alexa device while waiting for a response and
+ the user may get the impression the skill is no longer responding.
+<br/>
+A progressive response informs the user that the skill is processing the request. The **Whetstone.Alexa** Nuget package wraps this in an easy-to-use class.
+
+```csharp
+using Whetstone.Alexa.ProgressiveResponse;
+
+      . . .
+
+    private IProgressiveResponseManager _progMan;
+    private ILogger _logger;
+
+    public EmailProcessor(ILogger<EmailProcessor> logger, IProgressiveResponseManager progMan)
+    {
+        _logger = logger;
+        _progMan = progMan;
+    }
+
+    public async Task<AlexaResponse> GetAlexaAsync(AlexaRequest req)
+    {
+        IProgressiveResponseManager progMan = new ProgressiveResponseManager();
+        
+        try
+        {
+            await _progMan.SendProgressiveResponseAsync(req, "I'm working on it");
+        }
+        catch(Exception ex)
+        {
+            // Log the error, don't fail the call
+            _logger.LogError(ex, "Error sending progressive response");
+
+        }
+
+        AlexaResponse ret = await CallLongRunningProcess(req);
+
+```
 
 ## TODO
 The following enhancements are planned:
