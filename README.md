@@ -10,6 +10,14 @@ This goal of the Nuget package is:
 * Integrate with the Amazon's Alexa related services to:
   * Get users security information like the user name, device address, etc.
 
+These Alexa Skills are in production and use this project:
+
+[Animal Farm P.I.](https://www.amazon.com/Small-Basket-Studios-Animal-Farm/dp/B079K8HX15) <br/>
+[Eye of the Elder Gods](https://www.amazon.com/Eye-of-the-Elder-Gods/dp/B07JF9Y7PY) <br/>
+[Clinical Trial Finder](https://www.amazon.com/Whetstone-Technologies-Inc-Clinical-Finder/dp/B07GR4MGLK) <br/>
+
+If you release any Alexa Skills using this library, please let us know at info@whetstonetechnologies.io and we'll add it to the list.
+
 ## Table of Contents
 
 [CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md) <br/>
