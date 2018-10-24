@@ -1,7 +1,7 @@
 # Sending Progressive Response
 
 If the skill invokes a third-party API or performs a database search, the response could be delayed by a few seconds. A blue light will flash on the Alexa device while waiting for a response and the user may get the impression the skill is no longer responding. 
-A progressive response informs the user that the skill is processing the request. 
+A progressive response informs the user that the skill is processing the request. This is the voice equivalent of a spinner icon on a web page while it's refreshing.
 
 The **Whetstone.Alexa** Nuget package wraps this in an easy-to-use class.
 
