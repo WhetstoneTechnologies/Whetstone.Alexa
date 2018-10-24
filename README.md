@@ -12,7 +12,7 @@ This goal of the Nuget package is:
 
 ## Table of Contents
 
-[CanFulfillIntent Processing](CanfulfillIntent.md)
+[CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md)
 
 ## Processing Requests and Responses
 
