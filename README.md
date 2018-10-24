@@ -13,12 +13,12 @@ This goal of the Nuget package is:
 ## Table of Contents
 
 [CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md)
+[Sending a Progressive Response](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/ProgressiveResponse.md)
 
 ## Processing Requests and Responses
 
 The Whetstone.Alexa Nuget package includes classes for serialization and deserializing common requests and responses passed to and from 
 Alexa Skills. The same structures apply irrespective of whether the client service is deployed as a web API or a Lambda Function. 
-
 
 ### Web Api Sample
 
@@ -42,7 +42,6 @@ namespace Whetstone.Alexa.EmailChecker.WebApi.Controllers
         }
 
 ```
-
 
 ### Lambda Function Sample
  ```csharp
@@ -206,43 +205,6 @@ In order to allow the Alexa mobile app to download the image, CORS restrictions 
     <AllowedMethod>GET</AllowedMethod>
 </CORSRule>
 </CORSConfiguration>
-```
-## Sending Progressive Response
-
-If the skill invokes a third-party API or performs a database search, the response could be delayed by a few seconds. A blue light will flash on the Alexa device while waiting for a response and
- the user may get the impression the skill is no longer responding.
-<br/>
-A progressive response informs the user that the skill is processing the request. The **Whetstone.Alexa** Nuget package wraps this in an easy-to-use class.
-
-```csharp
-using Whetstone.Alexa.ProgressiveResponse;
-
-      . . .
-
-    private IProgressiveResponseManager _progMan;
-    private ILogger _logger;
-
-    public EmailProcessor(ILogger<EmailProcessor> logger, IProgressiveResponseManager progMan)
-    {
-        _logger = logger;
-        _progMan = progMan;
-    }
-
-    public async Task<AlexaResponse> GetAlexaAsync(AlexaRequest req)
-    {
-        try
-        {
-            await _progMan.SendProgressiveResponseAsync(req, "I'm working on it");
-        }
-        catch(Exception ex)
-        {
-            // Log the error, don't fail the call
-            _logger.LogError(ex, "Error sending progressive response");
-
-        }
-
-        AlexaResponse ret = await CallLongRunningProcess(req);
-
 ```
 
 ## TODO
