@@ -20,8 +20,8 @@ If you release any Alexa Skills using this library, please let us know at info@w
 
 ## Table of Contents
 
-[CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md) <br/>
-[Sending a Progressive Response](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/ProgressiveResponse.md)
+[CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md) - Details on how to use [nameless invocation](https://developer.amazon.com/blogs/alexa/post/352e9834-0a98-4868-8d94-c2746b794ce9/improve-alexa-skill-discovery-and-name-free-use-of-your-skill-with-canfulfillintentrequest-beta) <br/>
+[Sending a Progressive Response](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/ProgressiveResponse.md) - Send the user a message while processing long running Alexa requests<br/>
 
 ## Processing Requests and Responses
 
