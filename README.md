@@ -10,6 +10,10 @@ This goal of the Nuget package is:
 * Integrate with the Amazon's Alexa related services to:
   * Get users security information like the user name, device address, etc.
 
+## Table of Contents
+
+[CanFulfillIntent Processing](CanfulfillIntent.md)
+
 ## Processing Requests and Responses
 
 The Whetstone.Alexa Nuget package includes classes for serialization and deserializing common requests and responses passed to and from 

@@ -27,10 +27,10 @@ namespace Whetstone.Alexa
     [JsonObject("session")]
     public class AlexaSessionAttributes
     {
-        [JsonProperty("sessionId")]
+        [JsonProperty("sessionId", NullValueHandling = NullValueHandling.Ignore)]
         public string SessionId { get; set; }
 
-        [JsonProperty("application")]
+        [JsonProperty("application", NullValueHandling = NullValueHandling.Ignore)]
         public ApplicationAttributes Application { get; set; }
 
         [JsonProperty("attributes", NullValueHandling = NullValueHandling.Ignore)]
@@ -41,7 +41,7 @@ namespace Whetstone.Alexa
         /// <summary>
         /// Alexa user data, including the UserId.
         /// </summary>
-        [JsonProperty("user")]
+        [JsonProperty("user", NullValueHandling = NullValueHandling.Ignore)]
         public UserAttributes User { get; set; }
 
         [JsonProperty("new")]

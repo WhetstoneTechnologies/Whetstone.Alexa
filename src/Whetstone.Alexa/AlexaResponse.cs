@@ -35,10 +35,13 @@ namespace Whetstone.Alexa
         public string Version { get; set; }
 
         [JsonProperty("sessionAttributes", Order = 1, NullValueHandling = NullValueHandling.Ignore)]
-        public AlexaSessionAttributes Session { get; set; }
+        public Dictionary<string, dynamic> SessionAttributes { get; set; }
 
         [JsonProperty("response", Order = 2, NullValueHandling = NullValueHandling.Ignore)]
         public AlexaResponseAttributes Response { get; set; }
+
+
+
 
         public AlexaResponse()
         {
