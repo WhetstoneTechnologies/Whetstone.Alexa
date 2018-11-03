@@ -14,11 +14,12 @@
     <RepositoryUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</RepositoryUrl>
     <PackageProjectUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/WhetstoneTechnologies/Whetstone.Alexa/master/nugetlogo128x128.png</PackageIconUrl>
-    <AssemblyVersion>0.1.0.0</AssemblyVersion>
-    <FileVersion>0.1.0.0</FileVersion>
-    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <Version>0.1.1</Version>
     <SignAssembly>false</SignAssembly>
     <LangVersion>7.3</LangVersion>
+    <PackageReleaseNotes>Updated the Alexa Response to support custom session attributes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
