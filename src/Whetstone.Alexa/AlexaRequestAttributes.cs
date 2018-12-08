@@ -51,7 +51,6 @@ namespace Whetstone.Alexa
         SkillPermissionChanged,
         [EnumMember(Value = "Messaging.MessageReceived")]
         MessageReceived
-
     }
 
     [JsonObject("request")]
