@@ -10,15 +10,29 @@ This goal of the Nuget package is:
 * Integrate with the Amazon's Alexa related services to:
   * Get users security information like the user name, device address, etc.
 
+<<<<<<< HEAD
 ## Table of Contents
 
 [CanFulfillIntent Processing](CanfulfillIntent.md)
+=======
+These Alexa Skills are in production and use this project:
+
+[Animal Farm P.I.](https://www.amazon.com/Small-Basket-Studios-Animal-Farm/dp/B079K8HX15) <br/>
+[Eye of the Elder Gods](https://www.amazon.com/Eye-of-the-Elder-Gods/dp/B07JF9Y7PY) <br/>
+[Clinical Trial Finder](https://www.amazon.com/Whetstone-Technologies-Inc-Clinical-Finder/dp/B07GR4MGLK) <br/>
+
+If you release any Alexa Skills using this library, please let us know at info@whetstonetechnologies.io and we'll add it to the list.
+
+## Table of Contents
+
+[CanFulfillIntent Processing](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/CanFulfillIntent.md) - Details on how to use [nameless invocation](https://developer.amazon.com/blogs/alexa/post/352e9834-0a98-4868-8d94-c2746b794ce9/improve-alexa-skill-discovery-and-name-free-use-of-your-skill-with-canfulfillintentrequest-beta) <br/>
+[Sending a Progressive Response](https://github.com/WhetstoneTechnologies/Whetstone.Alexa/blob/master/ProgressiveResponse.md) - Send the user a message while processing long running Alexa requests<br/>
+>>>>>>> master
 
 ## Processing Requests and Responses
 
 The Whetstone.Alexa Nuget package includes classes for serialization and deserializing common requests and responses passed to and from 
 Alexa Skills. The same structures apply irrespective of whether the client service is deployed as a web API or a Lambda Function. 
-
 
 ### Web Api Sample
 
@@ -42,7 +56,6 @@ namespace Whetstone.Alexa.EmailChecker.WebApi.Controllers
         }
 
 ```
-
 
 ### Lambda Function Sample
  ```csharp
@@ -206,43 +219,6 @@ In order to allow the Alexa mobile app to download the image, CORS restrictions 
     <AllowedMethod>GET</AllowedMethod>
 </CORSRule>
 </CORSConfiguration>
-```
-## Sending Progressive Response
-
-If the skill invokes a third-party API or performs a database search, the response could be delayed by a few seconds. A blue light will flash on the Alexa device while waiting for a response and
- the user may get the impression the skill is no longer responding.
-<br/>
-A progressive response informs the user that the skill is processing the request. The **Whetstone.Alexa** Nuget package wraps this in an easy-to-use class.
-
-```csharp
-using Whetstone.Alexa.ProgressiveResponse;
-
-      . . .
-
-    private IProgressiveResponseManager _progMan;
-    private ILogger _logger;
-
-    public EmailProcessor(ILogger<EmailProcessor> logger, IProgressiveResponseManager progMan)
-    {
-        _logger = logger;
-        _progMan = progMan;
-    }
-
-    public async Task<AlexaResponse> GetAlexaAsync(AlexaRequest req)
-    {
-        try
-        {
-            await _progMan.SendProgressiveResponseAsync(req, "I'm working on it");
-        }
-        catch(Exception ex)
-        {
-            // Log the error, don't fail the call
-            _logger.LogError(ex, "Error sending progressive response");
-
-        }
-
-        AlexaResponse ret = await CallLongRunningProcess(req);
-
 ```
 
 ## TODO
