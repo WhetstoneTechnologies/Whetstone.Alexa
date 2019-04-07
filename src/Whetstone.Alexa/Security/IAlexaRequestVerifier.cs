@@ -19,49 +19,21 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Whetstone.Alexa.Display
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+
+namespace Whetstone.Alexa.Security
 {
-
-    public enum DisplayTextTypeEnum
-    {
-        PlainText = 0,
-        RichText =1
-    }
-
-    public class DisplayTextField
+    public interface IAlexaRequestVerifier
     {
 
-        public DisplayTextField()
-        {
-
-        }
-
-        public DisplayTextField(string text) : this()
-        {
-            this.Text = text;
-            this.Type = DisplayTextTypeEnum.PlainText;
-        }
-
-        public DisplayTextField(string text, DisplayTextTypeEnum type) : this(text)
-        {
-            this.Type = type;
-        }
+        Task<bool> IsCertificateValidAsync(HttpRequest req);
 
 
-        [JsonConverter(typeof(StringEnumConverter))]
-        [JsonProperty("type")]
-        public DisplayTextTypeEnum Type { get; set; }
-
-
-        [JsonRequired]
-        [JsonProperty("text")]
-        public string Text { get; set; }
+        bool IsRequestValid(AlexaRequest alexaReq);
 
     }
+
+
 }
