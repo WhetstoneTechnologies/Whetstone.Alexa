@@ -21,6 +21,7 @@
 // SOFTWARE.
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
@@ -80,8 +81,19 @@ namespace Whetstone.Alexa.Serialization
         {
             List<SlotAttributes> slots =null;
 
-            JObject jsonObject = JObject.Load(reader);
-            if (jsonObject.Properties() != null)
+
+            JObject jsonObject = null;
+            try
+            {
+               jsonObject =  JObject.Load(reader);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error deserializing slots: {ex}");
+            }
+ 
+            if (jsonObject?.Properties() != null)
             {
                 slots = new List<SlotAttributes>();
                 var properties = jsonObject.Properties().ToList();

@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "session": {
+    "sessionId": "amzn1.echo-api.session.redacted",
+    "application": {
+      "applicationId": "amzn1.ask.skill.redacted"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.redacted",
+      "permissions": null
+    },
+    "new": true
+  },
+  "request": {
+    "type": "CanFulfillIntentRequest",
+    "requestId": "amzn1.echo-api.request.redacted",
+    "timestamp": "2019-10-13T15:37:45Z",
+    "intent": {
+      "name": "GetContactInfo",
+      "slots": null
+    }
+  },
+  "context": {
+    "system": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.redacted"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.redacted",
+        "permissions": null
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device.redacted",
+        "supportedInterfaces": {
+          "audioPlayer": {
+
+          }
+        }
+      },
+      "apiEndpoint": null,
+      "apiAccessToken": null
+    },
+    "audioPlayer": {
+      "playerActivity": "IDLE"
+    }
+  }
+}

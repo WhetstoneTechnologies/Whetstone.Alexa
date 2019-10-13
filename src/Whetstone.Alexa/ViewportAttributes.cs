@@ -49,7 +49,7 @@ namespace Whetstone.Alexa
  //     "keyboard": []
  //   }
 
-    [Serializable]
+  //  [Serializable]
     public enum ViewportShape
     {
         [EnumMember(Value = "RECTANGLE")]

@@ -33,7 +33,7 @@ namespace Whetstone.Alexa.Audio
     /// <remarks>
     /// For more information see <a href="https://developer.amazon.com/docs/alexa-voice-service/audioplayer.html">Audio Player Interface</a>.
     /// </remarks>
-    [Serializable]
+   //  [Serializable]
     public enum AudioPlayerActivityEnum
     {
         /// <summary>

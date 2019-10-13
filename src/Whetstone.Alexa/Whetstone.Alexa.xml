@@ -1,7 +1,4 @@
 <?xml version="1.0"?>
-<!--
-Sample license text.
--->
 <doc>
     <assembly>
         <name>Whetstone.Alexa</name>
@@ -907,6 +904,12 @@ Sample license text.
             <param name="apiAccessToken"></param>
             <param name="requestId">The request identifier.</param>
             <param name="text">This can be plain text or ssml. If it contains any audio MP3 files, they cannot take more than 30 secs. to play.</param>
+        </member>
+        <member name="M:Whetstone.Alexa.Security.AlexaCertificateVerifier.VerifyCertificateUrl(System.String)">
+            <summary>
+            Verifying the Signature Certificate URL per requirements documented at
+            https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-web-service
+            </summary>
         </member>
         <member name="M:Whetstone.Alexa.Security.AlexaSecurityException.#ctor">
             <summary>

@@ -30,35 +30,35 @@ using Whetstone.Alexa.Serialization;
 
 namespace Whetstone.Alexa.FrameworkTest
 {
-    [TestClass]
-    public class SerializationTests
-    {
-        [TestCategory("UnitTest")]
-        [TestMethod]
-        public void CanFulfillEnumSerializationTest()
-        {
-            CanFulfillEnum fulfillEnum = CanFulfillEnum.Yes;
-            string textVal = null;
+    //[TestClass]
+    //public class SerializationTests
+    //{
+    //    [TestCategory("UnitTest")]
+    //    [TestMethod]
+    //    public void CanFulfillEnumSerializationTest()
+    //    {
+    //        CanFulfillEnum fulfillEnum = CanFulfillEnum.Yes;
+    //        string textVal = null;
 
 
-            EnumMemberAttribute attribute = fulfillEnum.GetType().GetRuntimeField(fulfillEnum.ToString())
-    .GetCustomAttributes(typeof(EnumMemberAttribute), false)
-    .SingleOrDefault() as EnumMemberAttribute;
+    //        EnumMemberAttribute attribute = fulfillEnum.GetType().GetRuntimeField(fulfillEnum.ToString())
+    //.GetCustomAttributes(typeof(EnumMemberAttribute), false)
+    //.SingleOrDefault() as EnumMemberAttribute;
 
-            textVal = attribute == null ? fulfillEnum.ToString() : attribute.Value;
-
-
-
-            textVal = fulfillEnum.GetDescriptionFromEnumValue();
-
-            Assert.AreEqual("YES", textVal);
-
-            CanFulfillEnum yesVal = textVal.GetEnumValue<CanFulfillEnum>();
+    //        textVal = attribute == null ? fulfillEnum.ToString() : attribute.Value;
 
 
 
-            Assert.AreEqual(CanFulfillEnum.Yes, yesVal);
+    //        textVal = fulfillEnum.GetDescriptionFromEnumValue();
 
-        }
-    }
+    //        Assert.AreEqual("YES", textVal);
+
+    //        CanFulfillEnum yesVal = textVal.GetEnumValue<CanFulfillEnum>();
+
+
+
+    //        Assert.AreEqual(CanFulfillEnum.Yes, yesVal);
+
+    //    }
+    //}
 }

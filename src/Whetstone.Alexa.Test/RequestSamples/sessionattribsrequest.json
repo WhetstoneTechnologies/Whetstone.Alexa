@@ -1,0 +1,74 @@
+﻿{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.redacted",
+    "application": {
+      "applicationId": "amzn1.ask.skill.redacted"
+    },
+    "attributes": {
+      "engineState": {
+        "userId": "redacted",
+        "sessionId": "redacted",
+        "titleVersion": {
+          "shortName": "eyeoftheeldergods",
+          "version": "0.8",
+          "titleId": "sdfdsfsdfdsg",
+          "versionId": "sdfdsgdsgdsgsdfg",
+          "deploymentId": "sadgfdsafsfdasdfasfdds"
+        },
+        "badIntentCounter": 0,
+        "sessionStartType": 0
+      }
+    },
+    "user": {
+      "userId": "amzn1.ask.account.1234"
+    }
+  },
+  "context": {
+    "System": {
+      "application": {
+        "applicationId": "amzn1.ask.skill.notshowingyoumyskillid"
+      },
+      "user": {
+        "userId": "amzn1.ask.account.notshowingyoumyuserid"
+      },
+      "device": {
+        "deviceId": "amzn1.ask.device.notshowingyoumydeviceid",
+        "supportedInterfaces": {}
+      },
+      "apiEndpoint": "https://api.amazonalexa.com",
+      "apiAccessToken": "someaccesstoken"
+    },
+    "Viewport": {
+      "experiences": [
+        {
+          "arcMinuteWidth": 246,
+          "arcMinuteHeight": 144,
+          "canRotate": false,
+          "canResize": false
+        }
+      ],
+      "shape": "RECTANGLE",
+      "pixelWidth": 1024,
+      "pixelHeight": 600,
+      "dpi": 160,
+      "currentPixelWidth": 1024,
+      "currentPixelHeight": 600,
+      "touch": [
+        "SINGLE"
+      ]
+    }
+  },
+  "request": {
+    "type": "SessionEndedRequest",
+    "requestId": "amzn1.echo-api.request.1234",
+    "timestamp": "2019-04-22T20:56:28Z",
+    "locale": "en-US",
+    "reason": "ERROR",
+    "error": {
+      "type": "INVALID_RESPONSE",
+      "message": "An exception occurred while dispatching the request to the skill."
+    }
+  }
+}

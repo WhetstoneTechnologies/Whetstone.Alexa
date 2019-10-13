@@ -34,7 +34,7 @@ namespace Whetstone.Alexa
 {
 
 
-    [Serializable]
+   // [Serializable]
     public enum OutputSpeechType
     {
         [EnumMember(Value = "PlainText")]
@@ -43,7 +43,7 @@ namespace Whetstone.Alexa
         Ssml = 1
     }
 
-    [Serializable]
+  //  [Serializable]
     [JsonObject("outputSpeech")]
     public class OutputSpeechAttributes
     {

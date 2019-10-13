@@ -21,6 +21,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ using System.Text;
 using Whetstone.Alexa.Audio;
 using Whetstone.Alexa.Security;
 using Whetstone.Alexa.Serialization;
+using Whetstone.Alexa.Test.Models;
 using Xunit;
 
 namespace Whetstone.Alexa.Test
@@ -107,6 +109,53 @@ namespace Whetstone.Alexa.Test
 
 
             Assert.Equal("New York", req.Request.Intent.GetSlotValue("city"));
+
+        }
+
+
+        [Trait("Type", "UnitTest")]
+        [Fact]
+        public void CanFulfillDeserializationTest()
+        {
+            string filePath = @"requestsamples\canfulfill.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+
+            Assert.NotNull(req);
+
+        }
+
+
+        [Trait("Type", "UnitTest")]
+        [Fact]
+        public void CanDeserializationAttribsTest()
+        {
+            string filePath = @"requestsamples\sessionattribsrequest.json";
+
+
+            string fileContents = File.ReadAllText(filePath);
+
+
+            AlexaRequest req = JsonConvert.DeserializeObject<AlexaRequest>(fileContents);
+
+
+           var attribs =  req.Session.Attributes;
+
+            var sessionVal = attribs["engineState"];
+
+
+            EngineContext context = sessionVal as EngineContext;
+
+
+            JObject jcontext = sessionVal as JObject;
+
+            // Copy to a static Album instance
+            context = jcontext.ToObject<EngineContext>();
 
         }
 

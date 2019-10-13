@@ -15,8 +15,10 @@
   <ItemGroup>
     <None Remove="RequestSamples\acceptpermissionrequest.json" />
     <None Remove="RequestSamples\AllSupportedInterfacesLaunchRequest.json" />
+    <None Remove="RequestSamples\canfulfill.json" />
     <None Remove="RequestSamples\caninvokesamplerequest.json" />
     <None Remove="RequestSamples\echoshowlaunchrequest.json" />
+    <None Remove="RequestSamples\sessionattribsrequest.json" />
     <None Remove="RequestSamples\skilldisabledrequest.json" />
   </ItemGroup>
 
@@ -27,10 +29,16 @@
     <Content Include="RequestSamples\allsupportedinterfaceslaunchrequest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="RequestSamples\canfulfill.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="RequestSamples\caninvokesamplerequest.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="RequestSamples\echoshowlaunchrequest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RequestSamples\sessionattribsrequest.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="RequestSamples\skilldisabledrequest.json">
@@ -39,10 +47,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="xunit" Version="2.4.0" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
