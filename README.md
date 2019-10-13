@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/qshnu4qyhtpv3m06/branch/master?svg=true)](https://ci.appveyor.com/project/johniwasz/whetstone-alexa/branch/master)
+
 
 # Whetstone Alexa
 
