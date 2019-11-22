@@ -33,8 +33,21 @@ namespace Whetstone.Alexa
         public ApplicationAttributes Application { get; set; }
 
 
+
+        /// <summary>
+        /// An object that describes the Amazon account for which the skill is enabled. The user object is different than the person object, because user refers to the Amazon account for which the skill is enabled, whereas person refers
+        /// to a user whom Alexa recognizes by voice.
+        /// </summary>
         [JsonProperty("user", NullValueHandling = NullValueHandling.Ignore)]
         public UserAttributes User { get; set; }
+
+
+        /// <summary>
+        /// An object that describes the person who is making the request to Alexa.
+        /// The person object is different than the user object, because person refers to a user whom Alexa recognizes by voice, whereas user refers to the Amazon account for which the skill is enabled.
+        /// </summary>
+        [JsonProperty("person", NullValueHandling = NullValueHandling.Ignore)]
+        public PersonAttributes Person { get; set; }
 
 
         [JsonProperty("device", NullValueHandling = NullValueHandling.Ignore)]

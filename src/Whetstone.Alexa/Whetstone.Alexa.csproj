@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard1.3;netstandard1.6;netstandard2.0;net451;net47</TargetFrameworks>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>John Iwasz</Authors>
     <Company>Whetstone Technologies, Inc.</Company>
     <Description>Contains POCOs for serializing an deserializing Alexa requests and responses, including support for display directives for the Echo Show. It also includes handlers for requesting user profile data and device data as well as sending progressive responses for long-running requests.</Description>
@@ -14,12 +14,15 @@
     <RepositoryUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</RepositoryUrl>
     <PackageProjectUrl>https://github.com/WhetstoneTechnologies/Whetstone.Alexa</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/WhetstoneTechnologies/Whetstone.Alexa/master/nugetlogo128x128.png</PackageIconUrl>
-    <AssemblyVersion>0.1.3.0</AssemblyVersion>
-    <FileVersion>0.1.3.0</FileVersion>
-    <Version>0.1.3</Version>
+    <AssemblyVersion>0.1.6.0</AssemblyVersion>
+    <FileVersion>0.1.6.0</FileVersion>
+    <Version>0.1.6</Version>
     <SignAssembly>false</SignAssembly>
     <LangVersion>7.3</LangVersion>
-    <PackageReleaseNotes>Adding Alexa certificate verification logic. See the IAlexaRequestVerifier</PackageReleaseNotes>
+    <PackageReleaseNotes>Added support for person attribute in the System context. This is provided by Alexa if the user has set up their voice profile and the skill is configured to support personalization.</PackageReleaseNotes>
+    <Product>Whetstone.Alexa</Product>
+    <PackageId>Whetstone.Alexa</PackageId>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

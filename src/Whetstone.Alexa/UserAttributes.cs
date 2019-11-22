@@ -55,8 +55,19 @@ namespace Whetstone.Alexa
         /// <summary>
         /// Permissions are populated if the user has granted the skill access to user information like email, address, etc.
         /// </summary>
-        /// <remarks>If permissions have not been granted, this value will be missing from the response.</remarks>
+        /// <remarks>Deprecated. An object that contains a consentToken allowing the skill access to information that the customer has consented to provide, such as address information. Because consentToken is deprecated, instead use the apiAccessToken available in the context object to determine the user's permissions. See Permissions for more details.</remarks>
+        [Obsolete("Deprecated. An object that contains a consentToken allowing the skill access to information that the customer has consented to provide, such as address information. Because consentToken is deprecated, instead use the apiAccessToken available in the context object to determine the user's permissions.")]
         [JsonProperty(PropertyName ="permissions")]
         public PermissionAttributes Permissions { get; set; }
+
+
+        /// <summary>
+        /// The access token is generated when the user completed skill account linking.
+        /// </summary>
+        /// <remarks>
+        /// A token identifying the user in another system. This token is only provided if the user has successfully linked their account. 
+        /// </remarks>
+        [JsonProperty(PropertyName = "accessToken")]
+        public string AccessToken { get; set; }
     }
 }
