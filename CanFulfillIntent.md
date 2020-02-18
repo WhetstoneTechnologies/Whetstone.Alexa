@@ -47,11 +47,11 @@ if(intent.Name.Equals("FindTrialByCityAndConditionIntent", StringComparison.Ordi
 
         foreach (SlotAttributes slotAttribs in intent.Slots)
         {
-            if (intent.Name.Equals("city") || intent.Name.Equals("condition"))
+            if (slotAttribs.Name.Equals("city") || slotAttribs.Name.Equals("condition"))
             {
                 resp.Response.CanFulfillIntent.Slots.Add(new CanFulfillSlotResponse()
                 {
-                    Name = intent.Name,
+                    Name = slotAttribs.Name,
                     CanFulfill = CanFulfillEnum.Maybe,
                     CanUnderstand = CanFulfillEnum.Yes
                 });
@@ -61,7 +61,7 @@ if(intent.Name.Equals("FindTrialByCityAndConditionIntent", StringComparison.Ordi
             {
                 resp.Response.CanFulfillIntent.Slots.Add(new CanFulfillSlotResponse()
                 {
-                    Name = intent.Name,
+                    Name = slotAttribs.Name,
                     CanFulfill = CanFulfillEnum.No,
                     CanUnderstand = CanFulfillEnum.No
                 });
